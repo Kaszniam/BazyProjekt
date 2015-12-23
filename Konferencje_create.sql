@@ -8,16 +8,14 @@ CREATE TABLE Clients (
     ClientID int  NOT NULL AUTO_INCREMENT,
     Company tinyint  NOT NULL,
     Name nvarchar(50)  NOT NULL,
-    Phone nvarchar(50)  NOT NULL,
+    Phone nvarchar(50)  NOT NULL CHECK(Phone LIKE '+[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]'),
     Adress nvarchar(50)  NOT NULL,
     City nvarchar(50)  NOT NULL,
-    PostalCode nvarchar(50)  NOT NULL,
+    PostalCode nvarchar(50)  NOT NULL CHECK(PostalCode LIKE '[0-9][0-9]-[0-9][0-9][0-9]'),
     Country nvarchar(50)  NOT NULL,
     StudentID nvarchar(50)  NULL,
     NIP nvarchar(50)  NULL,
-    CONSTRAINT Clients_pk PRIMARY KEY  (ClientID),
-	CONSTRAINT Phone_C CHECK (Phone LIKE '+[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]'),
-	CONSTRAINT PostalCode_C CHECK (PostalCode LIKE '[0-9][0-9]-[0-9][0-9][0-9]')
+    CONSTRAINT Clients_pk PRIMARY KEY  (ClientID)
 )
 ;
 
@@ -61,7 +59,7 @@ CREATE TABLE ConfReservation (
     Slots int  NOT NULL,
     Cancelled tinyint  NOT NULL,
     CONSTRAINT ConfReservation_pk PRIMARY KEY  (ConfResID),
-    CONSTRAINT Slots_CR CHECK (Slots > 0)
+    CONSTRAINT Slots_CR CHECK(Slots > 0)
 )
 ;
 
@@ -75,14 +73,12 @@ CREATE TABLE Conferences (
     Name nvarchar(50)  NOT NULL,
     Description TINYTEXT  NULL,
     StartDate date  NOT NULL,
-    EndDate date  NOT NULL,
+    EndDate date  NOT NULL CHECK(StartDate < EndDate),
     Cancelled tinyint  NOT NULL,
     CONSTRAINT ConferenceID_Unique UNIQUE (ConferenceID),
     CONSTRAINT StartDate_Unique UNIQUE (StartDate),
     CONSTRAINT EndDate_Unique UNIQUE (EndDate),
-    CONSTRAINT Conferences_pk PRIMARY KEY  (ConferenceID),
-	CONSTRAINT StartDate_C CHECK (StartDate > CURDATE()),
-	CONSTRAINT StartDateEndDate_C CHECK (StartDate < EndDate)
+    CONSTRAINT Conferences_pk PRIMARY KEY  (ConferenceID)
 )
 ;
 
@@ -122,12 +118,11 @@ CREATE TABLE People (
 -- Table: Prices
 CREATE TABLE Prices (
     DayID int  NOT NULL AUTO_INCREMENT,
-    DaysBefore int  NOT NULL,
+    DaysBefore int  NOT NULL CHECK(DaysBefore > 0),
     Discount decimal(3,2)  NOT NULL,
     StudentDiscount decimal(3,2)  NOT NULL,
     PricePerSlot decimal(15,2)  NOT NULL,
-    CONSTRAINT Prices_pk PRIMARY KEY  (DayID),
-	CONSTRAINT DaysBefore_P CHECK (DaysBefore > 0)
+    CONSTRAINT Prices_pk PRIMARY KEY  (DayID)
 )
 ;
 
@@ -154,10 +149,9 @@ CREATE TABLE WorkReservation (
     WorkshopID int  NOT NULL,
     ConfResID int  NOT NULL,
     ReservationDate DATETIME NOT NULL,
-    Slots int  NOT NULL,
+    Slots int  NOT NULL CHECK (Slots > 0),
     Cancelled tinyint DEFAULT 0 NOT NULL,
-    CONSTRAINT WorkReservation_pk PRIMARY KEY  (WorkResID),
-    CONSTRAINT Slots_WR CHECK (Slots > 0)
+    CONSTRAINT WorkReservation_pk PRIMARY KEY  (WorkResID)
 )
 ;
 
@@ -170,15 +164,13 @@ CREATE TABLE Workshops (
     WorkshopID int  NOT NULL AUTO_INCREMENT,
     DayID int  NOT NULL,
     Description tinytext  NULL,
-    Slots int  NOT NULL,
+    Slots int  NOT NULL CHECK(Slots > 0),
     StartTime datetime  NOT NULL,
-    EndTime datetime  NOT NULL,
+    EndTime datetime  NOT NULL CHECK(StartTime < EndTime),
     PricePerSlot decimal(15,2)  NOT NULL,
     Cancelled tinyint  NOT NULL,
     CONSTRAINT WorkshopID_Unique UNIQUE (WorkshopID),
-    CONSTRAINT Workshops_pk PRIMARY KEY  (WorkshopID),
-    CONSTRAINT Slots_W CHECK (Slots > 0),
-	CONSTRAINT StartTimeEndTime_W CHECK (StartTime < EndTime)
+    CONSTRAINT Workshops_pk PRIMARY KEY  (WorkshopID)
 )
 ;
 
@@ -274,4 +266,3 @@ ALTER TABLE Workshops ADD CONSTRAINT Workshops_ConfDay
     FOREIGN KEY (DayID)
     REFERENCES ConfDay (DayID)
 ;
-
