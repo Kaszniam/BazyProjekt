@@ -8,10 +8,10 @@ CREATE TABLE Clients (
     ClientID int  NOT NULL AUTO_INCREMENT,
     Company tinyint  NOT NULL,
     Name nvarchar(50)  NOT NULL,
-    Phone nvarchar(50)  NOT NULL CHECK(Phone LIKE '+[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]'),
+    Phone nvarchar(50)  NOT NULL,
     Adress nvarchar(50)  NOT NULL,
     City nvarchar(50)  NOT NULL,
-    PostalCode nvarchar(50)  NOT NULL CHECK(PostalCode LIKE '[0-9][0-9]-[0-9][0-9][0-9]'),
+    PostalCode nvarchar(50)  NOT NULL,
     Country nvarchar(50)  NOT NULL,
     StudentID nvarchar(50)  NULL,
     NIP nvarchar(50)  NULL,
@@ -58,8 +58,7 @@ CREATE TABLE ConfReservation (
     ReservationDate DATETIME NOT NULL,
     Slots int  NOT NULL,
     Cancelled tinyint  NOT NULL,
-    CONSTRAINT ConfReservation_pk PRIMARY KEY  (ConfResID),
-    CONSTRAINT Slots_CR CHECK(Slots > 0)
+    CONSTRAINT ConfReservation_pk PRIMARY KEY  (ConfResID)
 )
 ;
 
@@ -92,8 +91,7 @@ CREATE TABLE PaymentDone (
     ConfResID int  NOT NULL,
     Amount decimal(15,2)  NOT NULL,
     Date date  NOT NULL,
-    CONSTRAINT PaymentDone_pk PRIMARY KEY  (PaymentID),
-	CONSTRAINT Amount_PD CHECK (Amount > 0)
+    CONSTRAINT PaymentDone_pk PRIMARY KEY  (PaymentID)
 )
 ;
 
@@ -118,7 +116,7 @@ CREATE TABLE People (
 -- Table: Prices
 CREATE TABLE Prices (
     DayID int  NOT NULL AUTO_INCREMENT,
-    DaysBefore int  NOT NULL CHECK(DaysBefore > 0),
+    DaysBefore int  NOT NULL,
     Discount decimal(3,2)  NOT NULL,
     StudentDiscount decimal(3,2)  NOT NULL,
     PricePerSlot decimal(15,2)  NOT NULL,
@@ -149,7 +147,7 @@ CREATE TABLE WorkReservation (
     WorkshopID int  NOT NULL,
     ConfResID int  NOT NULL,
     ReservationDate DATETIME NOT NULL,
-    Slots int  NOT NULL CHECK (Slots > 0),
+    Slots int  NOT NULL,
     Cancelled tinyint DEFAULT 0 NOT NULL,
     CONSTRAINT WorkReservation_pk PRIMARY KEY  (WorkResID)
 )
@@ -164,9 +162,9 @@ CREATE TABLE Workshops (
     WorkshopID int  NOT NULL AUTO_INCREMENT,
     DayID int  NOT NULL,
     Description tinytext  NULL,
-    Slots int  NOT NULL CHECK(Slots > 0),
+    Slots int  NOT NULL,
     StartTime datetime  NOT NULL,
-    EndTime datetime  NOT NULL CHECK(StartTime < EndTime),
+    EndTime datetime  NOT NULL,
     PricePerSlot decimal(15,2)  NOT NULL,
     Cancelled tinyint  NOT NULL,
     CONSTRAINT WorkshopID_Unique UNIQUE (WorkshopID),
