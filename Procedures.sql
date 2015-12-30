@@ -139,9 +139,6 @@ AS
 	GROUP BY c.Name, conf.Name, cd.Date
 GO
 
---platnosci_rezerwacja - wyswietla platnosci dla podanego id rezerwacji
-
-
 
 --progi_cenowe - wyswietla progi cenowe dla danego id konferencji
 
@@ -157,35 +154,259 @@ GO
 
 --dodaj_klient_prywatny - dodaje prywatnego klienta (imie, tel, adres, miasto, kod, kraj, studentid)
 
+dodaj_klient_prywatny 'pizderyja Ala', '+48223333000', 'Smieszna ulica', 'Krakow', '00-123', 'Polska', NULL
+SELECT * FROM Clients
+DROP PROCEDURE dodaj_klient_prywatny
+
+CREATE PROCEDURE dodaj_klient_prywatny
+(
+@imie nvarchar(50),
+@tel nvarchar(12),
+@adres nvarchar(50),
+@miasto nvarchar(50),
+@kod nvarchar(6),
+@kraj nvarchar(50),
+@studentid nvarchar(50)
+)
+AS
+	INSERT INTO Clients VALUES(0, @imie, @tel, @adres, @miasto, @kod, @kraj, @studentid, NULL)
+GO
+
 
 
 --dodaj_klient_firma - dodaje firme (imie,tel, adres, miasto, kod, kraj, nip)
 
 
+dodaj_klient_firma 'Stink ci', '+48666555333', 'Smieszna ulica 5', 'Krakow', '00-143', 'Polska', '3334445566'
+SELECT * FROM Clients
+DROP PROCEDURE dodaj_klient_firma
 
---zmien_dane_prywatny- zmienia dane klienta prywatnego, jesli czeogs nie zmienia przekazujemy null
+CREATE PROCEDURE dodaj_klient_firma
+(
+@imie nvarchar(50),
+@tel nvarchar(12),
+@adres nvarchar(50),
+@miasto nvarchar(50),
+@kod nvarchar(6),
+@kraj nvarchar(50),
+@nip nvarchar(50)
+)
+AS
+	INSERT INTO Clients VALUES(1, @imie, @tel, @adres, @miasto, @kod, @kraj, NULL, @nip)
+GO
+
+
+
+--zmien_dane_prywatny- zmienia dane klienta prywatnego, jesli czegos nie zmienia przekazujemy null
+
+zmien_dane_prywatny 1, 'Alicja Ka', NULL, NULL, NULL, NULL, NULL, NULL
+SELECT * FROM Clients
+DROP PROCEDURE zmien_dane_prywatny
+
+CREATE PROCEDURE zmien_dane_prywatny
+(
+@id int,
+@imie nvarchar(50)=NULL,
+@tel nvarchar(12)=NULL,
+@adres nvarchar(50)=NULL,
+@miasto nvarchar(50)=NULL,
+@kod nvarchar(6)=NULL,
+@kraj nvarchar(50)=NULL,
+@studentid nvarchar(50)=NULL
+)
+AS
+	IF @imie IS NOT NULL
+	BEGIN
+		UPDATE Clients
+		SET Clients.Name = @imie
+		WHERE Clients.ClientID = @id AND Clients.Company = 0
+	END
+
+	IF @tel IS NOT NULL
+	BEGIN
+		UPDATE Clients
+		SET Clients.Phone = @tel
+		WHERE Clients.ClientID = @id AND Clients.Company = 0
+	END
+
+	IF @adres IS NOT NULL
+	BEGIN
+		UPDATE Clients
+		SET Clients.Adress = @adres
+		WHERE Clients.ClientID = @id AND Clients.Company = 0
+	END
+
+	IF @miasto IS NOT NULL
+	BEGIN
+		UPDATE Clients
+		SET Clients.City = @miasto
+		WHERE Clients.ClientID = @id AND Clients.Company = 0
+	END
+
+	IF @kod IS NOT NULL
+	BEGIN
+		UPDATE Clients
+		SET Clients.PostalCode = @kod
+		WHERE Clients.ClientID = @id AND Clients.Company = 0
+	END
+
+	IF @kraj IS NOT NULL
+	BEGIN
+		UPDATE Clients
+		SET Clients.Country = @kraj
+		WHERE Clients.ClientID = @id AND Clients.Company = 0
+	END
+
+	IF @studentid IS NOT NULL
+	BEGIN
+		UPDATE Clients
+		SET Clients.StudentID = @studentid
+		WHERE Clients.ClientID = @id AND Clients.Company = 0
+	END
+GO
 
 
 
 --zmien_dane_firma- zmienia dane firmy, jesli czeogs nie zmienia przekazujemy null
 
+zmien_dane_firma 2, NULL, NULL, 'Sliczna3', NULL, NULL, NULL, NULL
+SELECT * FROM Clients
+DROP PROCEDURE zmien_dane_firma
+
+CREATE PROCEDURE zmien_dane_firma
+(
+@id int,
+@imie nvarchar(50)=NULL,
+@tel nvarchar(12)=NULL,
+@adres nvarchar(50)=NULL,
+@miasto nvarchar(50)=NULL,
+@kod nvarchar(6)=NULL,
+@kraj nvarchar(50)=NULL,
+@nip nvarchar(50)=NULL
+)
+AS
+	IF @imie IS NOT NULL
+	BEGIN
+		UPDATE Clients
+		SET Clients.Name = @imie
+		WHERE Clients.ClientID = @id AND Clients.Company = 1
+	END
+
+	IF @tel IS NOT NULL
+	BEGIN
+		UPDATE Clients
+		SET Clients.Phone = @tel
+		WHERE Clients.ClientID = @id AND Clients.Company = 1
+	END
+
+	IF @adres IS NOT NULL
+	BEGIN
+		UPDATE Clients
+		SET Clients.Adress = @adres
+		WHERE Clients.ClientID = @id AND Clients.Company = 1
+	END
+
+	IF @miasto IS NOT NULL
+	BEGIN
+		UPDATE Clients
+		SET Clients.City = @miasto
+		WHERE Clients.ClientID = @id AND Clients.Company = 1
+	END
+
+	IF @kod IS NOT NULL
+	BEGIN
+		UPDATE Clients
+		SET Clients.PostalCode = @kod
+		WHERE Clients.ClientID = @id AND Clients.Company = 1
+	END
+
+	IF @kraj IS NOT NULL
+	BEGIN
+		UPDATE Clients
+		SET Clients.Country = @kraj
+		WHERE Clients.ClientID = @id AND Clients.Company = 1
+	END
+
+	IF @nip IS NOT NULL
+	BEGIN
+		UPDATE Clients
+		SET Clients.NIP = @nip
+		WHERE Clients.ClientID = @id AND Clients.Company = 1
+	END
+GO
 
 
 
 --dodaj_osoba - dodaje osobe (imie, nazwisko, studentid)
 
+dodaj_osoba 'Agnieszka', 'W³odarczyk', NULL
+SELECT * FROM People
+DROP PROCEDURE dodaj_osoba
+
+CREATE PROCEDURE dodaj_osoba
+(
+@imie nvarchar(50),
+@nazwisko nvarchar(50),
+@studentid nvarchar(50)
+)
+AS
+	INSERT INTO People VALUES(@imie, @nazwisko, @studentid)
+GO
+
 
 
 --zmien_student - zmienia studentid danej osobie (PersonID, studentID)
 
+zmien_student 46, '223344'
+SELECT * FROM People
+DROP PROCEDURE zmien_student
 
+CREATE PROCEDURE zmien_student
+(
+@id int,
+@studentid nvarchar(50)
+)
+AS
+	BEGIN
+		UPDATE People
+		SET People.StudentID = @studentid
+		WHERE People.PersonID = @id
+	END
+GO
+	
 
 
 --dodaj_konferencje - dodaje konferencje (nazwa, opis, start, koniec, domyslna ilosc miejsc), pododawac confDayitd
 
+dodaj_konferencje 'Zjazd kupy biskupa', 'no taak', '2016/06/08', '2016/06/11', 30
+SELECT * FROM Conferences
+SELECT * FROM ConfDays
+DROP PROCEDURE dodaj_konferencje
+
+CREATE PROCEDURE dodaj_konferencje
+(
+@nazwa nvarchar(50),
+@opis text,
+@start date,
+@koniec date,
+@slots int
+)
+AS
+	INSERT INTO Conferences VALUES (@nazwa, @opis, @start, @koniec,0);
+	DECLARE @days int  = DATEDIFF(DAY, @start, @koniec) + 1;
+	DECLARE @cnt int = 0;
+	DECLARE @currentDate date = @start;
+	DECLARE @confId int = (SELECT ConferenceID FROM Conferences WHERE Name = @nazwa AND StartDate = @start AND EndDate = @koniec);
+	WHILE @cnt < @days
+	BEGIN
+		INSERT INTO ConfDays VALUES(@confId, @slots, @currentDate);
+		SET @currentDate = DATEADD(DAY, 1, @currentDate);
+		SET @cnt = @cnt + 1;
+	END;
+GO
 
 
---zmien_ilosc_miejsc - zmienia ilosc miejsc w dniu o podanym dayid (dayid, slots)
+--zmien_ilosc_miejsc_konf - zmienia ilosc miejsc w dniu o podanym dayid (dayid, slots)
 
 
 
@@ -209,6 +430,8 @@ GO
 
 --dodaj_rezerwacja_warsztat - dodaje rezerwacje na dany warsztat dla danej rezerwacji z konferencji na okreslona ilosc miejsc (WorkshopID, confResID, Slots)
 
+
+--zmien_miejsca_wars - zmienia ilosc miejsc na dany warsztat (workshopId, slots)
 
 
 --dodaj_osoba_do_rez_warsztat - dodaje osobe do rezerwacji na warsztat (WorkResID, PersonID, ConfResID)
