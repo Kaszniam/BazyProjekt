@@ -140,9 +140,23 @@ AS
 GO
 
 
---progi_cenowe - wyswietla progi cenowe dla danego id konferencji
+--progi_cenowe - wyswietla progi cenowe dla danego id konferencji (ConferenceID)
 
+progi_cenowe 1
+SELECT * FROM Prices
+DROP PROCEDURE progi_cenowe
 
+CREATE PROCEDURE progi_cenowe
+(
+@confid int
+)
+AS
+	SELECT pr.DayID, pr.DaysBefore, FORMAT(pr.PricePerSlot*(1-pr.Discount), 'N', 'en-us') AS [Cena normalna],
+	 FORMAT(pr.PricePerSlot*(1-pr.StudentDiscount), 'N', 'en-us') AS [Cena studencka] FROM Prices AS pr
+	 JOIN ConfDays AS cd
+	 ON pr.DayID = cd.DayID
+	 WHERE cd.ConferenceID = @confid
+GO
 
 --osoby_firma - wyswietla osoby z firmy o podanym id
 
@@ -175,7 +189,6 @@ GO
 
 
 --dodaj_klient_firma - dodaje firme (imie,tel, adres, miasto, kod, kraj, nip)
-
 
 dodaj_klient_firma 'Stink ci', '+48666555333', 'Smieszna ulica 5', 'Krakow', '00-143', 'Polska', '3334445566'
 SELECT * FROM Clients
@@ -367,11 +380,9 @@ CREATE PROCEDURE zmien_student
 @studentid nvarchar(50)
 )
 AS
-	BEGIN
-		UPDATE People
-		SET People.StudentID = @studentid
-		WHERE People.PersonID = @id
-	END
+	UPDATE People
+	SET People.StudentID = @studentid
+	WHERE People.PersonID = @id
 GO
 	
 
@@ -406,36 +417,146 @@ AS
 GO
 
 
+
 --zmien_ilosc_miejsc_konf - zmienia ilosc miejsc w dniu o podanym dayid (dayid, slots)
 
+zmien_ilosc_miejsc_konf 2, 40
+DROP PROCEDURE zmien_ilosc_miejsc_konf
 
+CREATE PROCEDURE zmien_ilosc_miejsc_konf
+(
+@dayid int,
+@slots int
+)
+AS
+	UPDATE ConfDays
+	SET	ConfDays.Slots = @slots
+	WHERE ConfDays.DayID = @dayid
+GO
 
 --dodaj_rezerwacja_konf - dodaje rezerwacje klienta na konferencje na ustalona ilosc miejsc (ClientID, DayId, Slots)
 
+dodaj_rezerwacja_konf 2, 2, 20
+SELECT * FROM ConfReservation
+DROP PROCEDURE dodaj_rezerwacja_konf
+
+CREATE PROCEDURE dodaj_rezerwacja_konf
+(
+@clientid int,
+@dayid int,
+@slots int
+)
+AS
+	INSERT INTO ConfReservation VALUES (@clientid, @dayid, GETDATE(), @slots, 0)
+GO
 
 
---dodaj_osoba_do_rez_konf - dodaje osobe do rezerwacji na konferencje (confResID, PersonId, StudentId)
+--dodaj_osoba_do_rez_konf - dodaje osobe do rezerwacji na konferencje (confResID, PersonID)
+
+dodaj_osoba_do_rez_konf 1, 9
+SELECT * FROM ConfResDetails
+DROP PROCEDURE dodaj_osoba_do_rez_konf
+
+CREATE PROCEDURE dodaj_osoba_do_rez_konf
+(
+@confresid int,
+@personid int
+)
+AS
+	INSERT INTO ConfResDetails VALUES(@confresid, @personid, (SELECT StudentID FROM People WHERE PersonID = @personid))
+GO
 
 
 
+--dodaj_prog_cenowy - dodaje prog cenowy do konferencji (dayid, dni przed, znizka, studencka, cena standard)
 
---dodaj_prog_cenowy - dodaje prog cenowy do konferencji (dni przed, znizka, studencka, cena standard)
+dodaj_prog_cenowy 1, 10, 0.1, 0.2, 100
+SELECT * FROM Prices
+DROP PROCEDURE dodaj_prog_cenowy
+
+CREATE PROCEDURE dodaj_prog_cenowy
+(
+@dayid int,
+@daysbefore int,
+@discount decimal(3,2),
+@studentdisc decimal(3,2),
+@price money
+)
+AS
+	INSERT INTO Prices VALUES(@dayid, @daysbefore, @discount, @studentdisc, @price)
+GO
 
 
 
+--dodaj_warsztat - dodaje warsztat (dayid, opis, miejsca, start, koniec, cena)
 
---dodaj_warsztat - dodaje warsztat (dzien, opis, miejsca, start, koniec, cena)
+dodaj_warsztat 1, 'Chujowy warsztat', 20, '2016/01/01 12:00', '2016/01/01 14:00', 30
+SELECT * FROM Workshops
+DROP PROCEDURE dodaj_warsztat
+
+CREATE PROCEDURE dodaj_warsztat
+(
+@dayid int,
+@desc text,
+@slots int,
+@starttime datetime,
+@endtime datetime,
+@price money
+)
+AS
+	INSERT INTO Workshops VALUES(@dayid, @desc, @slots, @starttime, @endtime, @price, 0)
+GO
 
 
 
 --dodaj_rezerwacja_warsztat - dodaje rezerwacje na dany warsztat dla danej rezerwacji z konferencji na okreslona ilosc miejsc (WorkshopID, confResID, Slots)
 
+dodaj_rezerwacja_warsztat 1, 1, 15
+SELECT * FROM WorkReservation
+DROP PROCEDURE dodaj_rezerwacja_warsztat
+
+CREATE PROCEDURE dodaj_rezerwacja_warsztat
+(
+@workid int,
+@confresid int,
+@slots int
+)
+AS
+	INSERT INTO WorkReservation VALUES (@workid, @confresid, GETDATE(), @slots, 0)
+GO
+
+
 
 --zmien_miejsca_wars - zmienia ilosc miejsc na dany warsztat (workshopId, slots)
 
+zmien_miejsca_wars 1, 18
+SELECT * FROM Workshops
 
---dodaj_osoba_do_rez_warsztat - dodaje osobe do rezerwacji na warsztat (WorkResID, PersonID, ConfResID)
+CREATE PROCEDURE zmien_miejsca_wars
+(
+@workid int,
+@slots int
+)
+AS
+		UPDATE Workshops
+		SET	Workshops.Slots = @slots
+		WHERE WorkshopID = @workid
+GO
 
+--dodaj_osoba_do_rez_wars - dodaje osobe do rezerwacji na warsztat (WorkResID, PersonID)
+
+dodaj_osoba_do_rez_wars 1, 11
+SELECT * FROM WorkResDetails
+DROP PROCEDURE dodaj_osoba_do_rez_wars
+
+CREATE PROCEDURE dodaj_osoba_do_rez_wars
+(
+@workresid int,
+@personid int
+)
+AS
+	INSERT INTO WorkResDetails VALUES(@workresid, @personid, (SELECT ConfResID FROM WorkReservation WHERE WorkResId = @workresid))
+GO
 
 
 --policz_cena_osoba - liczy cene osoby za jego konferencje i warsztaty (PersonID)
@@ -448,18 +569,163 @@ GO
 
 --anuluj_konferencja - anuluje konferencje (ConferenceID). UWAGA! ANULUJAC KONFERENCJE ANUUJEMY WARSZTATY I WSZYSTKIE REZERWACJE!
 
+anuluj_konferencja 1
+SELECT * FROM Conferences
+SELECT * FROM Workshops
+SELECT * FROM ConfReservation
+SELECT * FROM WorkReservation
+
+DROP PROCEDURE anuluj_konferencja 
+
+CREATE PROCEDURE anuluj_konferencja 
+(
+@confid int
+)
+AS
+	--konferencja
+	UPDATE Conferences
+	SET Conferences.Cancelled = 1
+	WHERE ConferenceID = @confid
+	
+	--rezerwacje konferencja
+	UPDATE cr
+	SET cr.Cancelled =1
+	FROM ConfReservation AS cr
+		JOIN ConfDays AS cd
+		ON cr.DayID = cd.DayID
+		JOIN Conferences AS c
+		ON cd.ConferenceID = c.ConferenceID 
+		WHERE c.ConferenceID = @confid
+		
+	--warsztaty
+	UPDATE w
+	SET w.Cancelled = 1
+	FROM WorkShops AS w
+		JOIN ConfDays AS cd
+		ON w.DayID = cd.DayID
+		JOIN Conferences AS c
+		ON cd.ConferenceID = c.ConferenceID 
+		WHERE c.ConferenceID = @confid
+
+	--rezerwacje warsztaty
+	UPDATE wr
+	SET wr.Cancelled = 1
+	FROM WorkReservation AS wr
+		JOIN ConfReservation AS cr
+		ON wr.ConfResID = cr.ConfResID
+		JOIN ConfDays AS cd
+		ON cr.DayID = cd.DayID
+		JOIN Conferences AS c
+		ON cd.ConferenceID = c.ConferenceID 
+		WHERE c.ConferenceID = @confid
+		
+GO
+
 
 
 --anuluj_rezerwacja_konf - anuluje dana rezerwacje na konferencje (ConfResID) UWAGA! REZERWACJA NA WARSZTATY TAKZE IDZIE W ZAPOMNIENIE!
 
+anuluj_rezerwacja_konf 1
+SELECT * FROM ConfReservation
+SELECT * FROM WorkReservation
+DROP PROCEDURE anuluj_rezerwacja_konf
+
+CREATE PROCEDURE anuluj_rezerwacja_konf
+(
+@confresid int
+)
+AS
+	--konferencja rezerwacja
+	UPDATE ConfReservation
+	SET ConfReservation.Cancelled = 1
+	WHERE ConfResID = @confresid
+
+	--warsztat rezerwacja
+	UPDATE WorkReservation
+	SET WorkReservation.Cancelled = 1
+	WHERE ConfResID = @confresid
+GO
 
 
 --anuluj_warsztat - anuluje warsztat (WorkshopID) UWAGA! REZERWACJE NA TEN WARSZTAT TAKZE!
+
+anuluj_warsztat 1
+SELECT * FROM Workshops
+SELECT * FROM WorkReservation
+DROP PROCEDURE anuluj_warsztat
+
+CREATE PROCEDURE anuluj_warsztat
+(
+@workid int
+)
+AS
+	--warsztat
+	UPDATE Workshops
+	SET Workshops.Cancelled = 1
+	WHERE WorkshopID = @workid
+
+	--workreservation
+	UPDATE WorkReservation
+	SET WorkReservation.Cancelled = 1
+	WHERE WorkshopID = @workid
+GO
 
 
 
 --anuluj_rezerwacja_warsztat - anuluje rezerwacje na warsztat (WorkResID) PRZY REZERWACJACH WARTO UWZGLEDNIC AKTUALIZACJE CEN
 
+anuluj_rezerwacja_warsztat 1
+SELECT * FROM WorkReservation
+DROP PROCEDURE anuluj_rezerwacja_warsztat
+
+CREATE PROCEDURE anuluj_rezerwacja_warsztat
+(
+@workresid int
+)
+AS
+		UPDATE WorkReservation
+		SET WorkReservation.Cancelled = 1
+		WHERE WorkResID = @workresid
+GO
 
 
 
+--pokaz_rezerwacja_konf - pokazuje liste osob z danej rezerwacji na konferencje (ConfResID)
+
+pokaz_rezerwacja_konf 1
+DROP PROCEDURE pokaz_rezerwacja_konf
+
+CREATE PROCEDURE pokaz_rezerwacja_konf
+(
+@confresid int
+)
+AS
+	SELECT p.FirstName, p.LastName, p.StudentID, cr.Cancelled
+	FROM People AS p
+	JOIN ConfResDetails AS crd
+	ON p.PersonID = crd.PersonID
+	JOIN ConfReservation AS cr
+	ON crd.ConfResID = cr.ConfResID
+	WHERE cr.ConfResID = @confresid
+GO
+
+
+
+--pokaz_rezerwacja_wars - pokazuje liste osob z danej rezerwacji na warsztat (WorkResID)
+
+pokaz_rezerwacja_wars 1
+DROP PROCEDURE pokaz_rezerwacja_wars
+
+CREATE PROCEDURE pokaz_rezerwacja_wars
+(
+@workresid int
+)
+AS
+	SELECT p.FirstName, p.LastName, p.StudentID, wr.Cancelled
+	FROM People AS p
+	JOIN WorkResDetails AS wrd
+	ON p.PersonID = wrd.PersonID
+	JOIN WorkReservation AS wr
+	ON wrd.WorkResID = wr.WorkResID
+	WHERE wr.WorkResID = @workresid
+GO
