@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-=======
--- Created by Vertabelo (http://vertabelo.com)
--- Last modification date: 2015-12-23 13:14:46.113
-
-
-
->>>>>>> 340e76865007adbce25ae048430adc4aeec20138
 
 CREATE TABLE Clients (
     ClientID int  NOT NULL IDENTITY(1,1),
@@ -30,11 +22,7 @@ CREATE TABLE Clients (
 CREATE TABLE ConfDay (
     DayID int  NOT NULL IDENTITY(1,1),
     ConferenceID int  NOT NULL,
-<<<<<<< HEAD
     Slots int  CHECK (Slots > 0) NOT NULL,
-=======
-    Slots int  NOT NULL,
->>>>>>> 340e76865007adbce25ae048430adc4aeec20138
     Date date  NOT NULL,
     CONSTRAINT ConfDay_pk PRIMARY KEY  (DayID)
 )
@@ -63,13 +51,8 @@ CREATE TABLE ConfReservation (
     ClientID int  NOT NULL,
     DayID int  NOT NULL,
     ReservationDate DATETIME NOT NULL,
-<<<<<<< HEAD
     Slots int Check(Slots > 0)  NOT NULL,
     Cancelled tinyint NOT NULL DEFAULT 0,
-=======
-    Slots int  NOT NULL,
-    Cancelled tinyint  NOT NULL,
->>>>>>> 340e76865007adbce25ae048430adc4aeec20138
     CONSTRAINT ConfReservation_pk PRIMARY KEY  (ConfResID),
     CONSTRAINT Slots_CR CHECK (Slots > 0)
 )
@@ -86,11 +69,7 @@ CREATE TABLE Conferences (
     Description varchar(255)  NULL,
     StartDate date  NOT NULL CHECK (StartDate >  GETDATE()),
     EndDate date  NOT NULL CHECK (EndDate >  GETDATE()),
-<<<<<<< HEAD
     Cancelled tinyint NOT NULL DEFAULT 0,
-=======
-    Cancelled tinyint  NOT NULL,
->>>>>>> 340e76865007adbce25ae048430adc4aeec20138
     CONSTRAINT ConferenceID_Unique UNIQUE (ConferenceID),
     CONSTRAINT StartDate_Unique UNIQUE (StartDate),
     CONSTRAINT EndDate_Unique UNIQUE (EndDate),
@@ -134,17 +113,10 @@ CREATE TABLE People (
 -- Table: Prices
 CREATE TABLE Prices (
     DayID int  NOT NULL IDENTITY(1,1),
-<<<<<<< HEAD
     DaysBefore int  NOT NULL CHECK (DaysBefore >= 0),
     Discount decimal(3,2) CHECK (Discount >= 0) NOT NULL,
     StudentDiscount decimal(3,2) CHECK(StudentDiscount >= 0)  NOT NULL,
     PricePerSlot decimal(15,2) CHECK (PricePerSlot >= 0)  NOT NULL,
-=======
-    DaysBefore int  NOT NULL CHECK (DaysBefore > 0),
-    Discount decimal(3,2)  NOT NULL,
-    StudentDiscount decimal(3,2)  NOT NULL,
-    PricePerSlot decimal(15,2)  NOT NULL,
->>>>>>> 340e76865007adbce25ae048430adc4aeec20138
     CONSTRAINT Prices_pk PRIMARY KEY  (DayID)
 )
 ;
@@ -173,11 +145,7 @@ CREATE TABLE WorkReservation (
     ConfResID int  NOT NULL,
     ReservationDate DATETIME NOT NULL,
     Slots int  NOT NULL CHECK (Slots > 0),
-<<<<<<< HEAD
     Cancelled tinyint NOT NULL DEFAULT 0,
-=======
-    Cancelled tinyint DEFAULT 0 NOT NULL,
->>>>>>> 340e76865007adbce25ae048430adc4aeec20138
     CONSTRAINT WorkReservation_pk PRIMARY KEY  (WorkResID)
 )
 ;
@@ -194,13 +162,8 @@ CREATE TABLE Workshops (
     Slots int  NOT NULL CHECK (Slots > 0),
     StartTime datetime  NOT NULL CHECK (StartTime >  GETDATE()),
     EndTime datetime  NOT NULL CHECK (EndTime >  GETDATE()),
-<<<<<<< HEAD
     PricePerSlot decimal(15,2) CHECK (PricePerSlot >= 0) NOT NULL,
     Cancelled tinyint NOT NULL DEFAULT 0,
-=======
-    PricePerSlot decimal(15,2)  NOT NULL,
-    Cancelled tinyint  NOT NULL,
->>>>>>> 340e76865007adbce25ae048430adc4aeec20138
     CONSTRAINT WorkshopID_Unique UNIQUE (WorkshopID),
     CONSTRAINT Workshops_pk PRIMARY KEY  (WorkshopID),
 	CONSTRAINT StartTimeEndTime_W CHECK (StartTime < EndTime)
