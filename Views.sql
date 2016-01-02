@@ -1,13 +1,10 @@
 --------------------------------------------VIEWS---------------------------------------------
 
 
---niepelne_zgloszenia -  pokazuje zgloszenia, ktore jeszcze nie sa wypelnione
+--Niepelne_zgloszenia -  pokazuje zgloszenia, ktore jeszcze nie sa wypelnione
 --mozna ulepszyc
 
-SELECT * FROM niepelne_zgloszenia
-DROP VIEW niepelne_zgloszenia
-
-CREATE VIEW niepelne_zgloszenia
+CREATE VIEW Niepelne_zgloszenia
  AS
 	SELECT cr.ConfResID, c.Name AS 'Nazwa klienta', c.Phone, 
 		conf.Name AS 'Nazwa Konferencji', cd.Date AS 'Data Konferencji', cr.Slots AS 'Ile powinno byc', 
@@ -27,12 +24,9 @@ GO
 
 
 	
---najpopularniejsze_konferencje - podlicza ilosc chetnych zgloszonych na konferencje i porzadkuje po ilosci osob
+--Najpopularniejsze_konferencje - podlicza ilosc chetnych zgloszonych na konferencje i porzadkuje po ilosci osob
 
-SELECT * FROM najpopularniejsze_konferencje
-DROP VIEW najpopularniejsze_konferencje
-
-CREATE VIEW najpopularniejsze_konferencje
+CREATE VIEW Najpopularniejsze_konferencje
 AS
 	SELECT conf.ConferenceID, conf.Name, COUNT(*) AS [Ilosc chetnych]
 	FROM Conferences AS conf
@@ -49,12 +43,9 @@ GO
 
 
 
---najpopularniejsze_warsztaty - podlicza ilosc chetnych zgloszonych na warsztaty i porzadkuje po ilosci osob
+--Najpopularniejsze_warsztaty - podlicza ilosc chetnych zgloszonych na warsztaty i porzadkuje po ilosci osob
 
-SELECT * FROM najpopularniejsze_warsztaty
-DROP VIEW najpopularniejsze_warsztaty
-
-CREATE VIEW najpopularniejsze_warsztaty
+CREATE VIEW Najpopularniejsze_warsztaty
 AS
 	SELECT work.WorkshopID, work.Description, work.StartTime, work.EndTime, COUNT(*) AS [Ilosc chetnych]
 	FROM Workshops AS work
@@ -69,7 +60,7 @@ GO
 
 
 
---najczestsi_klienci - wyswietla klientow najczesciej korzystajacych z us³ug
+--Najczestsi_klienci - wyswietla klientow najczesciej korzystajacych z us³ug (z tym ze podajac ile przechodzi to na procedure)
 
 
 
@@ -79,29 +70,29 @@ GO
 
 
 
---anulowane_konferencje - wyswietla anulowane konferencje
+--Anulowane_konferencje - wyswietla anulowane konferencje
 
 
 
---anulowane_konf_rezerwacje - wyswietla anulowane rezerwacje konferencje
+--Anulowane_konf_rezerwacje - wyswietla anulowane rezerwacje konferencje
 
 
 
---anulowane_warsztaty - wyswietla anulowane warsztaty
+--Anulowane_warsztaty - wyswietla anulowane warsztaty
 
 
 
---anulowane_wars_rezerwacje - wyswietla anulowane rezerwacje na warsztaty
+--Anulowane_wars_rezerwacje - wyswietla anulowane rezerwacje na warsztaty
 
 
 
---klienci_prywatni - wyswietla klientow prywatnych
+--Klienci_prywatni - wyswietla klientow prywatnych
 
 
 
 
---klienci_firmowi - wyswietla firmy, ktore sa klientami
+--Klienci_firmowi - wyswietla firmy, ktore sa klientami
 
 
 
---nie_zaplacili - wyswietla zaleglosci w finansach dla klientw
+--Nie_zaplacili - wyswietla zaleglosci w finansach dla klientw
