@@ -1,8 +1,3 @@
--- Created by Vertabelo (http://vertabelo.com)
--- Last modification date: 2015-12-23 13:14:46.113
-
-
-
 
 CREATE TABLE Clients (
     ClientID int  NOT NULL IDENTITY(1,1),
@@ -27,7 +22,7 @@ CREATE TABLE Clients (
 CREATE TABLE ConfDay (
     DayID int  NOT NULL IDENTITY(1,1),
     ConferenceID int  NOT NULL,
-    Slots int  NOT NULL,
+    Slots int  CHECK (Slots > 0) NOT NULL,
     Date date  NOT NULL,
     CONSTRAINT ConfDay_pk PRIMARY KEY  (DayID)
 )
@@ -56,10 +51,9 @@ CREATE TABLE ConfReservation (
     ClientID int  NOT NULL,
     DayID int  NOT NULL,
     ReservationDate DATETIME NOT NULL,
-    Slots int  NOT NULL,
-    Cancelled tinyint  NOT NULL,
-    CONSTRAINT ConfReservation_pk PRIMARY KEY  (ConfResID),
-    CONSTRAINT Slots_CR CHECK (Slots > 0)
+    Slots int Check(Slots > 0)  NOT NULL,
+    Cancelled tinyint NOT NULL DEFAULT 0,
+    CONSTRAINT ConfReservation_pk PRIMARY KEY  (ConfResID)
 )
 ;
 
@@ -74,10 +68,8 @@ CREATE TABLE Conferences (
     Description varchar(255)  NULL,
     StartDate date  NOT NULL CHECK (StartDate >  GETDATE()),
     EndDate date  NOT NULL CHECK (EndDate >  GETDATE()),
-    Cancelled tinyint  NOT NULL,
+    Cancelled tinyint NOT NULL DEFAULT 0,
     CONSTRAINT ConferenceID_Unique UNIQUE (ConferenceID),
-    CONSTRAINT StartDate_Unique UNIQUE (StartDate),
-    CONSTRAINT EndDate_Unique UNIQUE (EndDate),
     CONSTRAINT Conferences_pk PRIMARY KEY  (ConferenceID)
 )
 ;
@@ -90,10 +82,9 @@ CREATE TABLE Conferences (
 CREATE TABLE PaymentDone (
     PaymentID int  NOT NULL IDENTITY(1,1),
     ConfResID int  NOT NULL,
-    Amount decimal(15,2)  NOT NULL,
+    Amount decimal(15,2) CHECK (Amount > 0)  NOT NULL,
     Date date  NOT NULL,
-    CONSTRAINT PaymentDone_pk PRIMARY KEY  (PaymentID),
-	CONSTRAINT Amount_PD CHECK (Amount > 0)
+    CONSTRAINT PaymentDone_pk PRIMARY KEY  (PaymentID)
 )
 ;
 
@@ -106,7 +97,7 @@ CREATE TABLE People (
     PersonID int  NOT NULL IDENTITY(1,1),
     FirstName nvarchar(50)  NOT NULL,
     LastName nvarchar(50)  NOT NULL,
-    StudentID nvarchar(50)  NOT NULL,
+    StudentID nvarchar(50)  NULL,
     CONSTRAINT People_pk PRIMARY KEY  (PersonID)
 )
 ;
@@ -118,10 +109,10 @@ CREATE TABLE People (
 -- Table: Prices
 CREATE TABLE Prices (
     DayID int  NOT NULL IDENTITY(1,1),
-    DaysBefore int  NOT NULL CHECK (DaysBefore > 0),
-    Discount decimal(3,2)  NOT NULL,
-    StudentDiscount decimal(3,2)  NOT NULL,
-    PricePerSlot decimal(15,2)  NOT NULL,
+    DaysBefore int  NOT NULL CHECK (DaysBefore >= 0),
+    Discount decimal(3,2) CHECK (Discount >= 0) NOT NULL,
+    StudentDiscount decimal(3,2) CHECK(StudentDiscount >= 0)  NOT NULL,
+    PricePerSlot decimal(15,2) CHECK (PricePerSlot >= 0)  NOT NULL,
     CONSTRAINT Prices_pk PRIMARY KEY  (DayID)
 )
 ;
@@ -150,7 +141,7 @@ CREATE TABLE WorkReservation (
     ConfResID int  NOT NULL,
     ReservationDate DATETIME NOT NULL,
     Slots int  NOT NULL CHECK (Slots > 0),
-    Cancelled tinyint DEFAULT 0 NOT NULL,
+    Cancelled tinyint NOT NULL DEFAULT 0,
     CONSTRAINT WorkReservation_pk PRIMARY KEY  (WorkResID)
 )
 ;
@@ -167,8 +158,8 @@ CREATE TABLE Workshops (
     Slots int  NOT NULL CHECK (Slots > 0),
     StartTime datetime  NOT NULL CHECK (StartTime >  GETDATE()),
     EndTime datetime  NOT NULL CHECK (EndTime >  GETDATE()),
-    PricePerSlot decimal(15,2)  NOT NULL,
-    Cancelled tinyint  NOT NULL,
+    PricePerSlot decimal(15,2) CHECK (PricePerSlot >= 0) NOT NULL,
+    Cancelled tinyint NOT NULL DEFAULT 0,
     CONSTRAINT WorkshopID_Unique UNIQUE (WorkshopID),
     CONSTRAINT Workshops_pk PRIMARY KEY  (WorkshopID),
 	CONSTRAINT StartTimeEndTime_W CHECK (StartTime < EndTime)
