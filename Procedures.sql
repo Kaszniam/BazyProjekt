@@ -206,13 +206,13 @@ CREATE PROCEDURE osoby_firma
 @param int
 )
 AS
-	SELECT *
+	SELECT p.PersonID, p.FirstName, p.LastName, p .StudentID
 	FROM People as p
 	JOIN ConfResDetails as crd
 	ON p.PersonID = crd.PersonID
 	JOIN ConfReservation as cr
 	ON crd.ConfResID = cr.ConfResID
-	JOIN Clents as c
+	JOIN Clients as c
 	ON cr.ClientID = c.ClientID
 	WHERE c.ClientID = @param
 GO
