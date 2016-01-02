@@ -16,9 +16,10 @@ public class PeopleAndCustomers {
     private final static StringBuilder builder = new StringBuilder();
     private static int companyCounter = -1;
     private final static int DEC = 10;
-    private final static String COUNTRY = "Polska";
-    private final static int AMOUNT_OF_PEOPLE = 700;
-    private final static int AMOUNT_OF_CLIENTS = 60;
+    public final static String COUNTRY = "Polska";
+    public final static int AMOUNT_OF_PEOPLE = 500;
+    public final static int AMOUNT_OF_STUDENTS = 200;
+    public final static int AMOUNT_OF_CLIENTS = 60;
     
     private static final String[] NAMES = {"Anna", "Piotr", " Maria", "Krzysztof", "Katarzyna", "Andrzej",
             "Małgorzata", "Jan", "Agnieszka", "Stanisław", "Barbara", "Tomasz", "Krystyna", "Paweł",
@@ -64,6 +65,7 @@ public class PeopleAndCustomers {
     public static void generate(BufferedWriter writer) throws IOException {
         generateClients(writer);
         generatePeople(writer);
+        generateStudents(writer);
     }
     
     private static void generateClients(BufferedWriter writer) throws IOException {
@@ -76,15 +78,15 @@ public class PeopleAndCustomers {
         for(int i = 0; i < AMOUNT_OF_CLIENTS; i++) {
             mainBuilder.delete(0, mainBuilder.length());
             if(r.nextInt(2) == 0) {
-                mainBuilder.append("dodaj_klient_prywatny " + generatePrivateCustomerName() + ", " +generatePhoneNumber()
+                mainBuilder.append("INSERT INTO Clients VALUES (0," + generatePrivateCustomerName() + ", " +generatePhoneNumber()
                     + ", " + generateAddress() + ", " + generateCity() + ", " +generatePostalCode() + ", " +
-                COUNTRY + ", " + generateStudentID());
+                generateCountry() + ", " + generateStudentID() + ", NULL)");
                 writer.write(mainBuilder.toString());
                 writer.newLine();
             } else {
-                mainBuilder.append("dodaj_klient_firma " + generateCompanyName() + ", " +generatePhoneNumber()
+                mainBuilder.append("INSERT INTO Clients VALUES (1," + generateCompanyName() + ", " +generatePhoneNumber()
                         + ", " + generateAddress() + ", " + generateCity() + ", " +generatePostalCode() + ", " +
-                        COUNTRY + ", " + generateNIP());
+                        generateCountry() + ", NULL, " + generateNIP() +")");
                 writer.write(mainBuilder.toString());
                 writer.newLine();
             }
@@ -102,13 +104,31 @@ public class PeopleAndCustomers {
         
         for(int i = 0; i < AMOUNT_OF_PEOPLE; i++) {
             mainBuilder.delete(0, mainBuilder.length());
-            mainBuilder.append("dodaj_osoba " + generateName() + "', '" + generateSurname() + ", " + generateStudentID());
+            mainBuilder.append("INSERT INTO People VALUES (" + generateName() + "', '" + generateSurname() + ", NULL)");
             writer.write(mainBuilder.toString());
             writer.newLine();
         }
         
         writer.newLine();
 
+    }
+    
+    private static void generateStudents(BufferedWriter writer) throws IOException {
+
+        writer.newLine();
+        writer.write("--GENERATED STUDENTS:");
+        writer.newLine();
+        writer.newLine();
+
+        for(int i = 0; i < AMOUNT_OF_STUDENTS; i++) {
+            mainBuilder.delete(0, mainBuilder.length());
+            mainBuilder.append("INSERT INTO People VALUES (" + generateName() + "', '" + generateSurname() + ", "
+                    + generateStudentID() + ")");
+            writer.write(mainBuilder.toString());
+            writer.newLine();
+        }
+
+        writer.newLine();
     }
     
     
@@ -124,7 +144,7 @@ public class PeopleAndCustomers {
 
 
     private static String generateCompanyName() {
-        if(companyCounter < COMPANIES.length) { companyCounter++; }
+        if(companyCounter+1 < COMPANIES.length) { companyCounter++; }
         return "'" + COMPANIES[companyCounter] + "'";
     }
     
@@ -145,7 +165,7 @@ public class PeopleAndCustomers {
 
     private static String generateAddress() {
         builder.delete(0, builder.length());
-        int nr = r.nextInt(120);
+        int nr = r.nextInt(120)+1;
         builder.append("'" + ADDRESSES[r.nextInt(ADDRESSES.length)] + " " + Integer.toString(nr) + "'");
         return builder.toString();
     }
@@ -175,18 +195,13 @@ public class PeopleAndCustomers {
     }
 
     private static String generateStudentID() {
-        int generate = r.nextInt(3);
-        if(generate == 0) {
-            builder.delete(0, builder.length());
-            builder.append("'");
-            for(int i = 0; i < 6; i++) {
-                builder.append(r.nextInt(DEC));
-            }
-            builder.append("'");
-            return builder.toString();
-        } else {
-            return "NULL";    
+        builder.delete(0, builder.length());
+        builder.append("'");
+        for(int i = 0; i < 6; i++) {
+            builder.append(r.nextInt(DEC));
         }
+        builder.append("'");
+        return builder.toString();
     }
 
     private static String generateNIP() {

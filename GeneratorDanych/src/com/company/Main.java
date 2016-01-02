@@ -3,6 +3,7 @@ package com.company;
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.text.ParseException;
 import java.util.Random;
 
 public class Main {
@@ -19,8 +20,11 @@ public class Main {
                 BufferedWriter writer = new BufferedWriter(new FileWriter(FILENAME, false));
         ) {
             PeopleAndCustomers.generate(writer);
+            Conferences.generate(writer);
         } catch (IOException e) {
             System.err.println("Błąd zapisu do pliku");
+        } catch (ParseException e) {
+            System.err.println("Błąd parsowania");
         }
 
 
