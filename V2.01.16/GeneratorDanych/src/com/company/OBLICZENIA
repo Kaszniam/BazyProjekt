@@ -1,0 +1,12 @@
+Specyfika firmy
+ Firma organizuje średnio 2 konferencje w miesiącu, każda z nich trwa zwykle 2-3 dni,
+w tym średnio w każdym dniu są 4 warsztaty. Na każdą konferencję średnio rejestruje się
+200 osób. Stworzona baza danych powinna zostać wypełniona w takim stopniu, aby
+odpowiadała 3-letniej działalności firmy. 
+
+3 lata, a więc:
+Konferencje: 1-3 w miesiącu, a w sumie 36
+Czas trwania konferencji: 1-4 dni
+Warsztaty w dniu: 2-6
+Osób na konferencje: 100-300
+Klientów: 60
