@@ -2,11 +2,9 @@ package com.company;
 
 import java.io.BufferedWriter;
 import java.io.IOException;
-import java.text.DateFormat;
 import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.util.Calendar;
-import java.util.Random;
+import java.util.LinkedList;
 
 /**
  * Created by czopo on 1/2/16.
@@ -15,49 +13,62 @@ public class Days {
 
     //FIELDS
 
-    private final static Random r = new Random();
-    private final static StringBuilder mainBuilder = new StringBuilder();
-    private final static StringBuilder builder = new StringBuilder();
-    private final static DateFormat formatconf = new SimpleDateFormat("yyyy-MM-dd");
-    private final static Calendar c = Calendar.getInstance();
-    private static String dateToAdd;
-    private static int currentDay = -1;
+//    private final static Random r = new Random();
+//    private final static StringBuilder mainBuilder = new StringBuilder();
+//    private final static StringBuilder builder = new StringBuilder();
+//    private final static DateFormat formatconf = new SimpleDateFormat("yyyy-MM-dd");
+//    private final static Calendar c = Calendar.getInstance();
+//    public static String currentDate;
+//    public static int currentDayID = 0;
+//    public static List<Integer> workshopsIDs;
     
     public static void generate(BufferedWriter writer) throws IOException, ParseException {
-        dateToAdd = Conferences.date;
-        for(int i = 0; i <= Conferences.currentConfDays; i++) {
+        Data.currentDate = Data.startConfDate;
+        Data.workshopsIDs = new LinkedList<Integer>();
+        for(int i = 0; i <= Data.currentConfDays; i++) {
             generateDay(writer);
             Prices.generate(writer);
+            Workshops.generate(writer);
+            Reservations.generate(writer);
+            updateDate();
         }
         writer.newLine();
     }
     
     private static void generateDay(BufferedWriter writer) throws IOException, ParseException {
-        currentDay++;
+        Data.currentDayID++;
         writer.newLine();
-        mainBuilder.delete(0, mainBuilder.length());
-        mainBuilder.append("INSERT INTO ConfDays VALUES (" + Conferences.currentConfId + ", " + generateSlots() + 
-                ", '" + dateToAdd + "')");
+        Data.mainBuilder.delete(0, Data.mainBuilder.length());
+        Data.mainBuilder.append("   INSERT INTO ConfDays VALUES (");
+        Data.mainBuilder.append(Data.currentConfId);
+        Data.mainBuilder.append(", ");
+        Data.mainBuilder.append(generateSlots());
+        Data.mainBuilder.append(", '");
+        Data.mainBuilder.append(Data.currentDate);
+        Data.mainBuilder.append("')");
 
-        writer.write(mainBuilder.toString());
+        writer.write(Data.mainBuilder.toString());
+        writer.newLine();
         
-        c.setTime(formatconf.parse(dateToAdd));
-        c.add(Calendar.DATE, 1);
-        dateToAdd = formatconf.format(c.getTime());
-
     }
     
     private static String generateSlots() {
-        if(r.nextInt(4) != 0) {
-            return Integer.toString(Conferences.currentSlots);
+        if(Data.r.nextInt(4) != 0) {
+            return Integer.toString(Data.currentConfSlots);
         }
         else {
-            if(r.nextInt(2) != 0) {
-                return Integer.toString(Conferences.currentSlots+10);
+            if(Data.r.nextInt(2) != 0) {
+                return Integer.toString(Data.currentConfSlots+10);
             }
             else {
-                return Integer.toString(Conferences.currentSlots-10);
+                return Integer.toString(Data.currentConfSlots-10);
             }
         }
+    }
+    
+    private static void updateDate() throws ParseException {
+        Data.c.setTime(Data.formatconf.parse(Data.currentDate));
+        Data.c.add(Calendar.DATE, 1);
+        Data.currentDate = Data.formatconf.format(Data.c.getTime());
     }
 }
