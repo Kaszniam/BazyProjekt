@@ -2,7 +2,7 @@ package com.czopekartur;
 
 import java.io.BufferedWriter;
 import java.io.IOException;
-import java.text.DecimalFormat;
+import java.math.BigDecimal;
 import java.text.ParseException;
 import java.util.Calendar;
 
@@ -14,7 +14,7 @@ public class Payments {
     public static void generate(BufferedWriter writer, boolean workshop) throws ParseException, IOException {
         
         boolean generatedPrice = false;
-        Data.priceForReservation = 0f;
+        Data.priceForReservation = BigDecimal.valueOf(0);
         
         for(int i = 0; i < Data.amountOfPrices; i++) {
             generateDate();
@@ -23,7 +23,7 @@ public class Payments {
             if(!generatedPrice) {
                 generateAmountOfPrices();
                 generatePrice(workshop);
-                Data.onePaymentPrice = Float.parseFloat(new DecimalFormat("#.##").format(Data.priceForReservation / Data.amountOfPrices));
+                Data.onePaymentPrice = Data.priceForReservation.divide(BigDecimal.valueOf(Data.amountOfPrices));
                 generatedPrice = true;
             }
 
@@ -51,27 +51,27 @@ public class Payments {
     private static void generatePrice(boolean workshop) {
 
             if(Data.daysToConf >= 30) {
-                Data.priceForReservation += (Data.amountOfAdults * Data.pricesTbl[0].getAdultPrice());
-                Data.priceForReservation += (Data.amountOfStudents * Data.pricesTbl[0].getStudentPrice());
+                Data.priceForReservation.add(Data.pricesTbl[0].getAdultPrice().multiply(BigDecimal.valueOf(Data.amountOfAdults)));
+                Data.priceForReservation.add(Data.pricesTbl[0].getStudentPrice().multiply(BigDecimal.valueOf(Data.amountOfStudents)));
 //                System.out.println("30 Dorosly: " + Data.amountOfAdults * Data.pricesTbl[0].getAdultPrice() +
 //                        " Student: " +Data.amountOfStudents * Data.pricesTbl[0].getStudentPrice());
             } else if(Data.daysToConf < 30 && Data.daysToConf >= 20) {
-                Data.priceForReservation += (Data.amountOfAdults *  Data.pricesTbl[1].getAdultPrice());
-                Data.priceForReservation += (Data.amountOfStudents * Data.pricesTbl[1].getStudentPrice());
+                Data.priceForReservation.add(Data.pricesTbl[1].getAdultPrice().multiply(BigDecimal.valueOf(Data.amountOfAdults)));
+                Data.priceForReservation.add(Data.pricesTbl[1].getStudentPrice().multiply(BigDecimal.valueOf(Data.amountOfStudents)));
 //                System.out.println("20 Dorosly: " + Data.amountOfAdults * Data.pricesTbl[1].getAdultPrice() +
 //                        " Student: " +Data.amountOfStudents * Data.pricesTbl[1].getStudentPrice());
             } else if(Data.daysToConf < 20 && Data.daysToConf >= 10) {
-                Data.priceForReservation += (Data.amountOfAdults *  Data.pricesTbl[2].getAdultPrice());
-                Data.priceForReservation += (Data.amountOfStudents * Data.pricesTbl[2].getStudentPrice());
+                Data.priceForReservation.add(Data.pricesTbl[2].getAdultPrice().multiply(BigDecimal.valueOf(Data.amountOfAdults)));
+                Data.priceForReservation.add(Data.pricesTbl[2].getStudentPrice().multiply(BigDecimal.valueOf(Data.amountOfStudents)));
 //                System.out.println("10 Dorosly: " + Data.amountOfAdults * Data.pricesTbl[2].getAdultPrice() +
 //                        " Student: " +Data.amountOfStudents * Data.pricesTbl[2].getStudentPrice());
             } else {
 //                System.out.println("0 Dorosly: " + Data.confResSize *  Data.pricePerSlot +
 //                        " Student: " +Data.confResSize *  Data.pricePerSlot);
-                Data.priceForReservation += (Data.confResSize *  Data.pricePerSlot);
+                Data.priceForReservation.add(BigDecimal.valueOf(Data.confResSize).multiply(BigDecimal.valueOf(Data.pricePerSlot)));
             }
         
-        if(workshop) Data.priceForReservation += (Data.confResSize * Data.workPrices.get(Data.workResWorkId));
+        if(workshop) Data.priceForReservation.add(BigDecimal.valueOf(Data.confResSize).multiply(BigDecimal.valueOf(Data.workPrices.get(Data.workResWorkId))));
 
     }
     

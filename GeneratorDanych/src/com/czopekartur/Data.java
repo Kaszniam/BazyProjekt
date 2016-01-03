@@ -1,7 +1,7 @@
 package com.czopekartur;
 
+import java.math.BigDecimal;
 import java.text.DateFormat;
-import java.text.DecimalFormat;
 import java.text.SimpleDateFormat;
 import java.util.*;
 
@@ -14,6 +14,19 @@ public class Data {
     public final static StringBuilder mainBuilder = new StringBuilder();
     public final static String FILENAME = "Data.sql";
     public final static Calendar c = Calendar.getInstance();
+    
+    
+    //CANCEL
+    public final static int CONF_CANCEL = 13;
+    public final static int CONF_RES_CANCEL = 31;
+    public final static int WORK_CANCEL = 37;
+    public final static int WORK_RES_CANCEL = 47;
+    public static int confsToCancel;
+    public static int confRessToCancel;
+    public static int worksToCancel;
+    public static int workRessToCancel;
+    
+    
     
     //CONFS
     public final static int AMOUNT_OF_CONFS = 72;
@@ -78,11 +91,11 @@ public class Data {
     
     //PRICES
     public final static int PRICE_DAY_DIFF = 10;
-    public static float studentDisc = 0.5f;
-    public static float normalDisc = 0.3f;
-    public static float currentStudentDiscount;
-    public static float currentNormalDiscount;
-    public static float DIFF = 0.02f;
+    public static BigDecimal studentDisc = BigDecimal.valueOf(0.5);
+    public static BigDecimal normalDisc = BigDecimal.valueOf(0.3);
+    public static BigDecimal currentStudentDiscount;
+    public static BigDecimal currentNormalDiscount;
+    public static BigDecimal DIFF = BigDecimal.valueOf(0.02);
     public static int MIN_PRICE = 20;
     public static int MAX_PRICE = 300;
     public static int daysBefore = 30;
@@ -90,7 +103,7 @@ public class Data {
     public static int currentDayId = 0;
     public static Record[] pricesTbl;
     public static Map<Integer, Integer> workPrices = new HashMap<>();
-    public static float onePaymentPrice;
+    public static BigDecimal onePaymentPrice;
     
     
     //PAYMENTS
@@ -98,7 +111,7 @@ public class Data {
     public static int amountOfPrices = 1;
     public static String dateOfPayment;
     public static int delay;
-    public static float priceForReservation;
+    public static BigDecimal priceForReservation;
     public static int daysToConf;
     
     
@@ -200,14 +213,14 @@ public class Data {
 
     public static class Record {
         public int daysBefore;
-        public float adultPrice;
-        public float studentPrice;
+        public BigDecimal adultPrice;
+        public BigDecimal studentPrice;
 
 
-        public Record(int daysBefore, float adultPrice, float studentPrice) {
+        public Record(int daysBefore, BigDecimal adultPrice, BigDecimal studentPrice) {
             this.daysBefore = daysBefore;
-            this.adultPrice = Float.parseFloat(new DecimalFormat("#.##").format(adultPrice));
-            this.studentPrice = Float.parseFloat(new DecimalFormat("#.##").format(studentPrice));
+            this.adultPrice = adultPrice;
+            this.studentPrice = studentPrice;
         }
 
         public int getDaysBefore() {
@@ -218,20 +231,20 @@ public class Data {
             this.daysBefore = daysBefore;
         }
 
-        public float getAdultPrice() {
+        public BigDecimal getAdultPrice() {
             return adultPrice;
         }
 
-        public void setAdultPrice(float adultPrice) {
-            this.adultPrice = Float.parseFloat(new DecimalFormat("#.##").format(adultPrice));
+        public void setAdultPrice(BigDecimal adultPrice) {
+            this.adultPrice = adultPrice;
         }
 
-        public float getStudentPrice() {
+        public BigDecimal getStudentPrice() {
             return studentPrice;
         }
 
-        public void setStudentPrice(float studentPrice) {
-            this.studentPrice = Float.parseFloat(new DecimalFormat("#.##").format(studentPrice));
+        public void setStudentPrice(BigDecimal studentPrice) {
+            this.studentPrice = studentPrice;
         }
     }
 }

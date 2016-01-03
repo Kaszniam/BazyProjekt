@@ -145,7 +145,11 @@ public class PeopleAndCustomers {
     private static String generateAddress() {
         Data.builder.delete(0, Data.builder.length());
         int nr = Data.r.nextInt(120)+1;
-        Data.builder.append("'" + Data.ADDRESSES[Data.r.nextInt(Data.ADDRESSES.length)] + " " + Integer.toString(nr) + "'");
+        Data.builder.append("'");
+        Data.builder.append(Data.ADDRESSES[Data.r.nextInt(Data.ADDRESSES.length)]);
+        Data.builder.append(" ");
+        Data.builder.append(Integer.toString(nr));
+        Data.builder.append("'");
         return Data.builder.toString();
     }
 

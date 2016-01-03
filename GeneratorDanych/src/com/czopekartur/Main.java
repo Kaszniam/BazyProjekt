@@ -7,11 +7,6 @@ import java.text.ParseException;
 
 public class Main {
     
-//    final static Random r = new Random();
-//    final static StringBuilder builder = new StringBuilder();
-//    final static String FILENAME = "Data.sql";
-    
-
     public static void main(String[] args) {
 
 
@@ -20,6 +15,7 @@ public class Main {
         ) {
             PeopleAndCustomers.generate(writer);
             Conferences.generate(writer);
+            //Cancel.generate(writer);
         } catch (IOException e) {
             System.err.println("Błąd zapisu do pliku");
         } catch (ParseException e) {

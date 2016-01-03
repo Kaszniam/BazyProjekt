@@ -4,7 +4,7 @@ import com.sun.istack.internal.NotNull;
 
 import java.io.BufferedWriter;
 import java.io.IOException;
-import java.text.DecimalFormat;
+import java.math.BigDecimal;
 import java.text.ParseException;
 
 /**
@@ -16,8 +16,9 @@ public class Prices {
         Data.pricesTbl = new Data.Record[3];
         Data.daysBefore = 30;
         Data.currentDayId++;
-        Data.DIFF = 0.02f * (Data.r.nextInt(4) + 1);
-        Data.pricePerSlot = generatePrice();
+        Data.DIFF = BigDecimal.valueOf(0.02);
+        Data.DIFF.multiply(BigDecimal.valueOf(Data.r.nextInt(4) + 1));
+        Data.pricePerSlot = generatePricePerSlot();
         int i = 0;
         while(Data.daysBefore > 0) {
             generatePrice(writer, i);
@@ -32,9 +33,10 @@ public class Prices {
         Data.currentNormalDiscount = generateNormalDiscount(i);
         Data.currentStudentDiscount = generateStudentDiscount(i);
         Data.pricesTbl[i] = new Data.Record(Data.daysBefore,
-                Float.parseFloat(new DecimalFormat("#.##").format(Data.pricePerSlot*(1-Data.currentNormalDiscount))), 
-                Float.parseFloat(new DecimalFormat("#.##").format(Data.pricePerSlot*(1-Data.currentStudentDiscount))));
-        
+                BigDecimal.valueOf(Data.pricePerSlot).multiply(BigDecimal.valueOf(1).subtract(Data.currentNormalDiscount)), 
+                        BigDecimal.valueOf(Data.pricePerSlot).multiply(BigDecimal.valueOf(1).subtract(Data.currentStudentDiscount))
+                        );
+                
 //        System.out.println("Dni przed: " + Data.pricesTbl[i].getDaysBefore() + " cena normal "  + Data.pricesTbl[i].getAdultPrice() + " cena student " + Data.pricesTbl[i].getStudentPrice());
 //        
         Data.mainBuilder.delete(0, Data.mainBuilder.length());
@@ -54,16 +56,16 @@ public class Prices {
     }
     
     @NotNull
-    private static float generateNormalDiscount(int i) {
-        return Float.parseFloat(new DecimalFormat("#.##").format(Data.normalDisc - Data.DIFF *i).toString());        
+    private static BigDecimal generateNormalDiscount(int i) {
+        return Data.normalDisc.subtract(Data.DIFF.multiply(BigDecimal.valueOf(i)));    
     }
 
     @NotNull
-    private static float generateStudentDiscount(int i) {
-        return Float.parseFloat(new DecimalFormat("#.##").format(Data.studentDisc - Data.DIFF * i));
+    private static BigDecimal generateStudentDiscount(int i) {
+        return Data.studentDisc.subtract(Data.DIFF.multiply(BigDecimal.valueOf(i)));
     }
     
-    private static int generatePrice() {
+    private static int generatePricePerSlot() {
         return Data.MIN_PRICE+Data.r.nextInt((Data.MAX_PRICE-Data.MIN_PRICE)/5)*5;
     }
 }
