@@ -128,7 +128,7 @@ Moje_warsztaty 18
 Platnosci_konferencja 2
 Platnosci_rezerwacja 2
 Progi_cenowe 1
-Osoby_firma 5
+Osoby_klient 5
 Dodaj_klient_prywatny 'pizderyja Ala', '+48223333000', 'Smieszna ulica', 'Krakow', '00-123', 'Polska', NULL
 Dodaj_klient_firma 'Stink ci', '+48666555333', 'Smieszna ulica 5', 'Krakow', '00-143', 'Polska', '3334445566'
 Zmien_dane_prywatny 1, 'Alicja Ka', NULL, NULL, NULL, NULL, NULL, NULL
@@ -155,9 +155,12 @@ Pokaz_rezerwacja_wars 1
 SELECT * FROM Niepelne_zgloszenia
 SELECT * FROM Najpopularniejsze_konferencje
 SELECT * FROM Najpopularniejsze_warsztaty
-
-
-
+SELECT * FROM Anulowane_konferencje
+SELECT * FROM Anulowane_konf_rezerwacje
+SELECT * FROM Anulowane_warsztaty
+SELECT * FROM Anulowane_wars_rezerwacje
+SELECT * FROM Klienci_prywatni
+SELECT * FROM Klienci_firma
 
 
 

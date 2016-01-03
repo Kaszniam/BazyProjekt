@@ -1,912 +1,2062 @@
-
+ba
 --GENERATED CLIENTS:
 
-EXEC dodaj_klient_firma 'Activmed', '+48409185834', 'Dobrowolska 66', 'Szczecin', '78-201', Polska, '8893606876';
-EXEC dodaj_klient_firma 'Activity', '+48097941203', 'Czarnobylska 94', 'Poznan', '16-745', Polska, '2342727199';
-EXEC dodaj_klient_prywatny 'Kazimierz Dziedzic', '+48533182056', 'Czarnowiejska 38', 'Gdańsk', '11-026', Polska, NULL;
-EXEC dodaj_klient_firma 'Vodafone', '+48237008491', 'Bobrowa 96', 'Krakow', '24-016', Polska, '1979058439';
-EXEC dodaj_klient_prywatny 'Agnieszka Mucha', '+48870855496', 'Mickiewicza 75', 'Wieliczka', '84-641', Polska, NULL;
-EXEC dodaj_klient_prywatny 'Teresa Baran', '+48615995757', 'Czarnowiejska 46', 'Niepolomice', '02-572', Polska, NULL;
-EXEC dodaj_klient_firma 'Nokia', '+48745934421', 'Długa 107', 'Gdynia', '44-675', Polska, '7413629853';
-EXEC dodaj_klient_prywatny 'Mariusz Cieslak', '+48202929392', 'Szkolna 93', 'Niepolomice', '91-601', Polska, NULL;
-EXEC dodaj_klient_firma 'Samsung', '+48836505905', 'Łąkowa 1', 'Inowroclaw', '33-529', Polska, '3663062379';
-EXEC dodaj_klient_firma 'Microsoft', '+48884209686', 'Bobrowskiego 113', 'Gdynia', '47-379', Polska, '8706521919';
-EXEC dodaj_klient_prywatny 'Jakub Szewczyk', '+48935268187', 'Dobrowolska 105', 'Bydgoszcz', '40-378', Polska, '155585';
-EXEC dodaj_klient_prywatny 'Teresa Przybysz', '+48503751007', 'Popiełuszki 53', 'Inowroclaw', '73-616', Polska, '190234';
-EXEC dodaj_klient_prywatny 'Anna Nowak', '+48495817057', 'Brzozowa 25', 'Bukowina Tatrzanska', '41-317', Polska, '671084';
-EXEC dodaj_klient_firma 'Audi', '+48446548601', 'Leśna 68', 'Bukowina Tatrzanska', '94-438', Polska, '4282700737';
-EXEC dodaj_klient_prywatny 'Elzbieta Mucha', '+48684291251', 'Kopernika 45', 'Wieliczka', '42-024', Polska, NULL;
-EXEC dodaj_klient_firma 'Fiat', '+48532092937', 'Bobrowa 38', 'Warszawa', '27-034', Polska, '2162952771';
-EXEC dodaj_klient_prywatny 'Jerzy Polak', '+48257877850', 'Szewska 90', 'Szczecin', '10-454', Polska, '458233';
-EXEC dodaj_klient_prywatny 'Jolanta Mucha', '+48470068703', 'Reymana 89', 'Zamosc', '98-320', Polska, '663041';
-EXEC dodaj_klient_prywatny 'Marek Kaczmarczyk', '+48213415965', 'Konopnickiej 2', 'Inowroclaw', '52-806', Polska, '779579';
-EXEC dodaj_klient_firma 'LG', '+48847994258', 'Słoneczna 72', 'Przemysl', '48-957', Polska, '7892838436';
-EXEC dodaj_klient_prywatny 'Marcin Matysiak', '+48497888200', 'Długa 46', 'Krakow', '90-908', Polska, '309400';
-EXEC dodaj_klient_prywatny 'Marta Wlodarczyk', '+48649411074', 'Bobrowa 12', 'Podzamcze', '43-785', Polska, NULL;
-EXEC dodaj_klient_firma 'Nike', '+48645711480', 'Długa 66', 'Piekary', '14-362', Polska, '6222774385';
-EXEC dodaj_klient_firma 'Citroen', '+48807195289', 'Krótka 21', 'Bydgoszcz', '98-830', Polska, '7245109579';
-EXEC dodaj_klient_firma 'H&M', '+48697412472', 'Konopnickiej 69', 'Przemysl', '65-574', Polska, '2398285442';
-EXEC dodaj_klient_firma 'LuxMed', '+48483374884', 'Czarnowiejska 43', 'Szczecin', '12-902', Polska, '0637447675';
-EXEC dodaj_klient_firma 'Hp', '+48403208182', 'Konopnickiej 37', 'Niepolomice', '82-341', Polska, '6967981104';
-EXEC dodaj_klient_firma 'Apple', '+48243056584', 'Lipowa 42', 'Zakopane', '66-070', Polska, '4538326080';
-EXEC dodaj_klient_prywatny 'Helena Cieslak', '+48513658236', 'Szkolna 79', 'Zakopane', '66-399', Polska, '175093';
-EXEC dodaj_klient_firma 'Siemens', '+48840008693', 'Kwiatowa 84', 'Szczecin', '86-810', Polska, '1172507402';
-EXEC dodaj_klient_prywatny 'Krystyna Piątek', '+48121577756', 'Szewska 68', 'Warszawa', '41-711', Polska, NULL;
-EXEC dodaj_klient_firma 'Orlen', '+48946003644', 'Mickiewicza 70', 'Niepolomice', '62-041', Polska, '9071069779';
-EXEC dodaj_klient_prywatny 'Karolina Pająk', '+48832513899', 'Mickiewicza 23', 'Czestochowa', '15-107', Polska, '789289';
-EXEC dodaj_klient_firma 'Shell', '+48809963596', 'Czarnowiejska 56', 'Laskowa', '13-571', Polska, '4280062934';
-EXEC dodaj_klient_prywatny 'Jan Adamczyk', '+48864587426', 'Spółdzielców 23', 'Przemysl', '23-476', Polska, NULL;
-EXEC dodaj_klient_prywatny 'Irena Lis', '+48142721385', 'Szkolna 26', 'Warszawa', '18-753', Polska, NULL;
-EXEC dodaj_klient_prywatny 'Paweł Łuczak', '+48391998711', 'Kwiatowa 6', 'Ujastek', '81-230', Polska, '056357';
-EXEC dodaj_klient_prywatny 'Adam Olejniczak', '+48742863099', 'Ogrodowa 23', 'Laskowa', '08-584', Polska, NULL;
-EXEC dodaj_klient_firma 'Empik', '+48829405625', 'Bobrowa 24', 'Piekary', '69-658', Polska, '5052753447';
-EXEC dodaj_klient_prywatny 'Małgorzata Stepien', '+48400366899', 'Krótka 71', 'Jaworzna', '69-879', Polska, NULL;
-EXEC dodaj_klient_prywatny 'Grażyna Stankiewicz', '+48388892718', 'Reymana 97', 'Laskowa', '81-558', Polska, NULL;
-EXEC dodaj_klient_firma 'Filmweb', '+48538805191', 'Słowackiego 14', 'Krakow', '21-498', Polska, '8324642333';
-EXEC dodaj_klient_prywatny 'Marcin Kruk', '+48195554338', 'Popiełuszki 31', 'Czestochowa', '22-563', Polska, NULL;
-EXEC dodaj_klient_prywatny 'Dariusz Polak', '+48428550774', 'Dobrowolska 94', 'Zakopane', '09-771', Polska, NULL;
-EXEC dodaj_klient_prywatny 'Henryk Kurek', '+48699599539', 'Szkolna 7', 'Ujastek', '88-379', Polska, NULL;
-EXEC dodaj_klient_prywatny 'Jacek Leśniak', '+48187499303', 'Bobrowa 92', 'Zamosc', '40-777', Polska, '158547';
-EXEC dodaj_klient_firma 'Gazeta', '+48232090720', 'Zamkowa 41', 'Szczecin', '84-182', Polska, '4395226093';
-EXEC dodaj_klient_prywatny 'Karolina Krawczyk', '+48242698314', 'Krótka 70', 'Szczecin', '72-522', Polska, NULL;
-EXEC dodaj_klient_firma 'TVN', '+48643719763', 'Reymana 4', 'Warszawa', '61-499', Polska, '9424176988';
-EXEC dodaj_klient_firma 'Facebook', '+48465593215', 'Słoneczna 77', 'Zakopane', '74-132', Polska, '7257255639';
-EXEC dodaj_klient_firma 'Twitter', '+48754291445', 'Dobrowolska 56', 'Wieliczka', '07-411', Polska, '2830914381';
-EXEC dodaj_klient_prywatny 'Michal Piątek', '+48685622685', 'Słoneczna 76', 'Podzamcze', '47-059', Polska, NULL;
-EXEC dodaj_klient_prywatny 'Tadeusz Stankiewicz', '+48711298617', 'Mickiewicza 91', 'Wieliczka', '75-709', Polska, NULL;
-EXEC dodaj_klient_prywatny 'Ryszard Dudek', '+48554742405', 'Lipowa 19', 'Krakow', '16-207', Polska, '525972';
-EXEC dodaj_klient_prywatny 'Mateusz Zajac', '+48003135134', 'Polna 38', 'Wieliczka', '88-978', Polska, '509349';
-EXEC dodaj_klient_prywatny 'Łukasz Wilk', '+48450081588', 'Zamkowa 21', 'Krakow', '45-930', Polska, NULL;
-EXEC dodaj_klient_prywatny 'Grażyna Wieczorek', '+48165056538', 'Szewska 120', 'Bydgoszcz', '83-869', Polska, NULL;
-EXEC dodaj_klient_prywatny 'Dariusz Klimek', '+48678296666', 'Rynek główny 58', 'Bydgoszcz', '94-973', Polska, '517008';
-EXEC dodaj_klient_prywatny 'Helena Przybysz', '+48958924193', 'Słoneczna 103', 'Jaworzna', '98-564', Polska, NULL;
-EXEC dodaj_klient_prywatny 'Rafał Michalak', '+48865428056', 'Mickiewicza 115', 'Gdańsk', '48-168', Polska, '142694';
+INSERT INTO Clients VALUES (1,'Activmed', '+48500869874', 'Czarnowiejska 50', 'Krakow', '99-548', 'Polska', NULL, '3025053089')
+INSERT INTO Clients VALUES (1,'Activity', '+48437787799', 'Polna 43', 'Zamosc', '56-304', 'Polska', NULL, '2194881016')
+INSERT INTO Clients VALUES (0,'Stanisław Czaja', '+48918839579', 'Zamkowa 15', 'Ujastek', '22-637', 'Polska', '101897', NULL)
+INSERT INTO Clients VALUES (0,'Jan Ratajczak', '+48293596665', 'Popiełuszki 82', 'Czestochowa', '86-183', 'Polska', '201954', NULL)
+INSERT INTO Clients VALUES (0,'Robert Koziol', '+48679560394', 'Dobrowolska 46', 'Piekary', '39-536', 'Polska', '811478', NULL)
+INSERT INTO Clients VALUES (0,'Irena Kurek', '+48341522409', 'Łąkowa 60', 'Wieliczka', '82-111', 'Polska', '898721', NULL)
+INSERT INTO Clients VALUES (0,'Zofia Tomczak', '+48944100267', 'Konopnickiej 116', 'Przemysl', '47-895', 'Polska', '268905', NULL)
+INSERT INTO Clients VALUES (1,'Vodafone', '+48704014455', 'Kopernika 116', 'Ujastek', '67-007', 'Polska', NULL, '0066100465')
+INSERT INTO Clients VALUES (0,'Jacek Bednarek', '+48444194254', 'Spółdzielców 14', 'Podzamcze', '01-333', 'Polska', '278030', NULL)
+INSERT INTO Clients VALUES (1,'Nokia', '+48299037305', 'Dobrowolska 67', 'Przemysl', '70-662', 'Polska', NULL, '2245763768')
+INSERT INTO Clients VALUES (1,'Samsung', '+48088956065', 'Reymana 71', 'Zamosc', '25-133', 'Polska', NULL, '8568735915')
+INSERT INTO Clients VALUES (1,'Microsoft', '+48227206989', 'Bobrowa 41', 'Czestochowa', '32-334', 'Polska', NULL, '9953533507')
+INSERT INTO Clients VALUES (1,'Audi', '+48899688730', 'Szkolna 23', 'Wieliczka', '66-182', 'Polska', NULL, '9298254498')
+INSERT INTO Clients VALUES (1,'Fiat', '+48822851629', 'Rynek główny 67', 'Niepolomice', '13-383', 'Polska', NULL, '0022442672')
+INSERT INTO Clients VALUES (0,'Ewa Olejniczak', '+48488626625', 'Krótka 14', 'Bydgoszcz', '69-163', 'Polska', '951047', NULL)
+INSERT INTO Clients VALUES (1,'LG', '+48702582502', 'Spółdzielców 107', 'Kołobrzeg', '87-894', 'Polska', NULL, '6147852730')
+INSERT INTO Clients VALUES (0,'Jolanta Mroz', '+48471871473', 'Reymana 51', 'Wieliczka', '35-077', 'Polska', '646349', NULL)
+INSERT INTO Clients VALUES (0,'Jan Kurek', '+48629353103', 'Polna 67', 'Zamosc', '67-747', 'Polska', '416775', NULL)
+INSERT INTO Clients VALUES (1,'Nike', '+48568078366', 'Słoneczna 42', 'Kołobrzeg', '11-521', 'Polska', NULL, '8343682942')
+INSERT INTO Clients VALUES (1,'Citroen', '+48835818144', 'Ogrodowa 15', 'Inowroclaw', '41-872', 'Polska', NULL, '8332019744')
+INSERT INTO Clients VALUES (1,'H&M', '+48552757036', 'Mickiewicza 4', 'Przemysl', '79-074', 'Polska', NULL, '8063039434')
+INSERT INTO Clients VALUES (1,'LuxMed', '+48992332097', 'Czarnowiejska 23', 'Jaworzna', '68-745', 'Polska', NULL, '7227740437')
+INSERT INTO Clients VALUES (0,'Józef Czaja', '+48523561340', 'Mickiewicza 119', 'Piekary', '90-907', 'Polska', '891437', NULL)
+INSERT INTO Clients VALUES (1,'Hp', '+48677012753', 'Czarnowiejska 41', 'Przemysl', '09-976', 'Polska', NULL, '5322072751')
+INSERT INTO Clients VALUES (1,'Apple', '+48492579758', 'Reymana 65', 'Bukowina Tatrzanska', '87-125', 'Polska', NULL, '9184819122')
+INSERT INTO Clients VALUES (0,'Marcin Stankiewicz', '+48820546236', 'Czarnobylska 67', 'Przemysl', '71-915', 'Polska', '873126', NULL)
+INSERT INTO Clients VALUES (0,'Marcin Michalak', '+48960302252', 'Leśna 9', 'Podzamcze', '95-714', 'Polska', '145619', NULL)
+INSERT INTO Clients VALUES (1,'Siemens', '+48579827828', 'Łąkowa 100', 'Szczecin', '13-227', 'Polska', NULL, '8553128586')
+INSERT INTO Clients VALUES (0,'Kazimierz Olejniczak', '+48881073773', 'Popiełuszki 44', 'Przemysl', '66-092', 'Polska', '343668', NULL)
+INSERT INTO Clients VALUES (1,'Orlen', '+48292733121', 'Bobrowa 52', 'Bukowina Tatrzanska', '16-265', 'Polska', NULL, '8889038974')
+INSERT INTO Clients VALUES (1,'Shell', '+48891595695', 'Łąkowa 81', 'Poznan', '67-901', 'Polska', NULL, '4054772305')
+INSERT INTO Clients VALUES (0,'Karolina Tomczyk', '+48497779202', 'Łąkowa 39', 'Czestochowa', '57-453', 'Polska', '815965', NULL)
+INSERT INTO Clients VALUES (1,'Empik', '+48110771224', 'Polna 96', 'Bukowina Tatrzanska', '85-008', 'Polska', NULL, '1748751205')
+INSERT INTO Clients VALUES (0,'Andrzej Kania', '+48896490556', 'Szewska 86', 'Podzamcze', '08-256', 'Polska', '885425', NULL)
+INSERT INTO Clients VALUES (0,'Magdalena Pająk', '+48757235643', 'Długa 63', 'Krakow', '26-313', 'Polska', '898247', NULL)
+INSERT INTO Clients VALUES (1,'Filmweb', '+48937344133', 'Brzozowa 96', 'Zakopane', '45-932', 'Polska', NULL, '9685666140')
+INSERT INTO Clients VALUES (1,'Gazeta', '+48582763698', 'Leśna 33', 'Zakopane', '06-490', 'Polska', NULL, '8678587234')
+INSERT INTO Clients VALUES (1,'TVN', '+48679198273', 'Słonecznikowa 114', 'Szczecin', '70-641', 'Polska', NULL, '8277178100')
+INSERT INTO Clients VALUES (1,'Facebook', '+48784253527', 'Słonecznikowa 62', 'Kielce', '45-441', 'Polska', NULL, '3783015669')
+INSERT INTO Clients VALUES (0,'Stanisław Sowa', '+48875710090', 'Mickiewicza 81', 'Szczecin', '51-904', 'Polska', '065285', NULL)
+INSERT INTO Clients VALUES (0,'Maciej Dziedzic', '+48224858005', 'Popiełuszki 105', 'Szczecin', '36-716', 'Polska', '970520', NULL)
+INSERT INTO Clients VALUES (0,'Irena Cieslak', '+48844275707', 'Kościuszki 92', 'Bukowina Tatrzanska', '43-373', 'Polska', '305005', NULL)
+INSERT INTO Clients VALUES (0,'Stanisław Kolodziej', '+48718150093', 'Zamkowa 28', 'Szczecin', '46-152', 'Polska', '783711', NULL)
+INSERT INTO Clients VALUES (1,'Twitter', '+48325081371', 'Kopernika 37', 'Jaworzna', '04-995', 'Polska', NULL, '3046175972')
+INSERT INTO Clients VALUES (1,'Google', '+48496925086', 'Słonecznikowa 75', 'Czestochowa', '53-466', 'Polska', NULL, '8827217984')
+INSERT INTO Clients VALUES (0,'Paweł Leśniak', '+48853853181', 'Dobrowolska 12', 'Poznan', '64-248', 'Polska', '639420', NULL)
+INSERT INTO Clients VALUES (0,'Marek Krawczyk', '+48799255433', 'Ogrodowa 27', 'Bukowina Tatrzanska', '76-698', 'Polska', '684921', NULL)
+INSERT INTO Clients VALUES (1,'Rzad RP', '+48146562451', 'Słowackiego 54', 'Przemysl', '42-392', 'Polska', NULL, '8005871682')
+INSERT INTO Clients VALUES (0,'Grażyna Łuczak', '+48136679656', 'Kwiatowa 13', 'Ujastek', '20-036', 'Polska', '809746', NULL)
+INSERT INTO Clients VALUES (1,'Paramedics', '+48641316335', 'Zamkowa 92', 'Podzamcze', '88-277', 'Polska', NULL, '7692558550')
+INSERT INTO Clients VALUES (1,'SPA-Beauty', '+48165717125', 'Długa 100', 'Poznan', '32-737', 'Polska', NULL, '1882058213')
+INSERT INTO Clients VALUES (0,'Dariusz Sowa', '+48511970555', 'Kościuszki 90', 'Warszawa', '65-404', 'Polska', '390946', NULL)
+INSERT INTO Clients VALUES (0,'Krystyna Stankiewicz', '+48002564049', 'Kopernika 113', 'Ujastek', '67-478', 'Polska', '729032', NULL)
+INSERT INTO Clients VALUES (1,'Onet.pl', '+48450976866', 'Szewska 8', 'Szczecin', '88-381', 'Polska', NULL, '2953183754')
+INSERT INTO Clients VALUES (0,'Anna Szewczyk', '+48519232880', 'Słowackiego 1', 'Warszawa', '59-546', 'Polska', '246262', NULL)
+INSERT INTO Clients VALUES (1,'Groupon', '+48423224493', 'Słoneczna 4', 'Ujastek', '87-906', 'Polska', NULL, '2362949651')
+INSERT INTO Clients VALUES (1,'Groupon', '+48581340187', 'Leśna 81', 'Niepolomice', '36-858', 'Polska', NULL, '0712455179')
+INSERT INTO Clients VALUES (1,'Groupon', '+48938797937', 'Długa 78', 'Kielce', '13-132', 'Polska', NULL, '8985207250')
+INSERT INTO Clients VALUES (1,'Groupon', '+48675969734', 'Słonecznikowa 116', 'Wieliczka', '63-214', 'Polska', NULL, '8459896913')
+INSERT INTO Clients VALUES (0,'Agnieszka Kazmierczak', '+48582041829', 'Słowackiego 5', 'Bukowina Tatrzanska', '89-338', 'Polska', '381048', NULL)
 
 
 --GENERATED PEOPLE:
 
-EXEC dodaj_osoba 'Natalia', 'Mazur', NULL;
-EXEC dodaj_osoba 'Helena', 'Matysiak', '763036';
-EXEC dodaj_osoba 'Aleksandra', 'Kopeć', NULL;
-EXEC dodaj_osoba 'Kazimierz', 'Wojcik', '015647';
-EXEC dodaj_osoba 'Teresa', 'Leśniak', '472812';
-EXEC dodaj_osoba 'Marianna', 'Szewczyk', NULL;
-EXEC dodaj_osoba 'Rafał', 'Kazmierczak', NULL;
-EXEC dodaj_osoba 'Natalia', 'Pietrzak', NULL;
-EXEC dodaj_osoba 'Zbigniew', 'Kaczmarczyk', NULL;
-EXEC dodaj_osoba 'Agnieszka', 'Mazur', '580626';
-EXEC dodaj_osoba 'Kamil', 'Walczak', NULL;
-EXEC dodaj_osoba 'Wojciech', 'Pawlik', NULL;
-EXEC dodaj_osoba 'Małgorzata', 'Tomczak', NULL;
-EXEC dodaj_osoba 'Marek', 'Kania', NULL;
-EXEC dodaj_osoba ' Maria', 'Dziedzic', '243107';
-EXEC dodaj_osoba 'Beata', 'Koziol', '985738';
-EXEC dodaj_osoba 'Michal', 'Kopeć', NULL;
-EXEC dodaj_osoba 'Natalia', 'Wilk', NULL;
-EXEC dodaj_osoba 'Iwona', 'Świątek', NULL;
-EXEC dodaj_osoba 'Elzbieta', 'Kozak', NULL;
-EXEC dodaj_osoba 'Tadeusz', 'Olejniczak', '854961';
-EXEC dodaj_osoba 'Jadwiga', 'Duda', NULL;
-EXEC dodaj_osoba 'Irena', 'Czech', NULL;
-EXEC dodaj_osoba 'Grażyna', 'Zięba', '106559';
-EXEC dodaj_osoba 'Barbara', 'Lis', NULL;
-EXEC dodaj_osoba 'Teresa', 'Czech', NULL;
-EXEC dodaj_osoba 'Aleksandra', 'Wieczorek', NULL;
-EXEC dodaj_osoba 'Marta', 'Zajac', '069533';
-EXEC dodaj_osoba 'Michal', 'Dziedzic', NULL;
-EXEC dodaj_osoba 'Kazimierz', 'Wrobel', NULL;
-EXEC dodaj_osoba 'Henryk', 'Czaja', NULL;
-EXEC dodaj_osoba 'Adam', 'Piątek', NULL;
-EXEC dodaj_osoba 'Elzbieta', 'Adamczyk', NULL;
-EXEC dodaj_osoba 'Jacek', 'Kania', NULL;
-EXEC dodaj_osoba ' Maria', 'Kruk', NULL;
-EXEC dodaj_osoba 'Jacek', 'Walczak', NULL;
-EXEC dodaj_osoba 'Rafał', 'Świątek', NULL;
-EXEC dodaj_osoba 'Elzbieta', 'Nowak', NULL;
-EXEC dodaj_osoba 'Karolina', 'Kot', '159108';
-EXEC dodaj_osoba 'Helena', 'Czaja', '893338';
-EXEC dodaj_osoba 'Monika', 'Kopeć', NULL;
-EXEC dodaj_osoba 'Mariusz', 'Dudek', NULL;
-EXEC dodaj_osoba 'Joanna', 'Kruk', NULL;
-EXEC dodaj_osoba 'Krzysztof', 'Kopeć', '416659';
-EXEC dodaj_osoba 'Karolina', 'Małek', NULL;
-EXEC dodaj_osoba 'Rafał', 'Duda', NULL;
-EXEC dodaj_osoba 'Marta', 'Tomczak', NULL;
-EXEC dodaj_osoba 'Kazimierz', 'Zajac', '696149';
-EXEC dodaj_osoba 'Maciej', 'Piątek', NULL;
-EXEC dodaj_osoba 'Anna', 'Wilk', '960637';
-EXEC dodaj_osoba ' Maria', 'Czaja', NULL;
-EXEC dodaj_osoba 'Michal', 'Kania', NULL;
-EXEC dodaj_osoba 'Grażyna', 'Koziol', '333416';
-EXEC dodaj_osoba 'Elzbieta', 'Świątek', NULL;
-EXEC dodaj_osoba 'Dariusz', 'Adamczyk', NULL;
-EXEC dodaj_osoba 'Barbara', 'Dudek', NULL;
-EXEC dodaj_osoba 'Krzysztof', 'Wlodarczyk', NULL;
-EXEC dodaj_osoba 'Natalia', 'Pietrzak', '204546';
-EXEC dodaj_osoba 'Danuta', 'Kopeć', NULL;
-EXEC dodaj_osoba 'Zbigniew', 'Tomczak', '829941';
-EXEC dodaj_osoba 'Danuta', 'Ratajczak', '930364';
-EXEC dodaj_osoba 'Wojciech', 'Przybysz', NULL;
-EXEC dodaj_osoba 'Małgorzata', 'Wrobel', '587407';
-EXEC dodaj_osoba 'Aleksandra', 'Cieslak', NULL;
-EXEC dodaj_osoba 'Łukasz', 'Piątek', NULL;
-EXEC dodaj_osoba 'Marta', 'Małek', NULL;
-EXEC dodaj_osoba 'Paweł', 'Bednarek', NULL;
-EXEC dodaj_osoba 'Helena', 'Blaszczyk', NULL;
-EXEC dodaj_osoba 'Aleksandra', 'Leśniak', '748160';
-EXEC dodaj_osoba 'Grażyna', 'Zięba', NULL;
-EXEC dodaj_osoba 'Ewa', 'Wojcik', '034916';
-EXEC dodaj_osoba 'Rafał', 'Pietrzak', NULL;
-EXEC dodaj_osoba 'Michal', 'Adamczyk', NULL;
-EXEC dodaj_osoba 'Monika', 'Zięba', NULL;
-EXEC dodaj_osoba 'Jolanta', 'Kazmierczak', NULL;
-EXEC dodaj_osoba 'Elzbieta', 'Stepien', '570293';
-EXEC dodaj_osoba 'Dariusz', 'Świątek', NULL;
-EXEC dodaj_osoba 'Rafał', 'Walczak', NULL;
-EXEC dodaj_osoba 'Monika', 'Łuczak', '365727';
-EXEC dodaj_osoba 'Ryszard', 'Michalak', '781160';
-EXEC dodaj_osoba 'Ewa', 'Stepien', NULL;
-EXEC dodaj_osoba 'Zofia', 'Świątek', '715258';
-EXEC dodaj_osoba 'Paweł', 'Pietrzak', NULL;
-EXEC dodaj_osoba 'Irena', 'Wieczorek', NULL;
-EXEC dodaj_osoba 'Maciej', 'Kaczmarczyk', NULL;
-EXEC dodaj_osoba 'Kamil', 'Dudek', NULL;
-EXEC dodaj_osoba 'Robert', 'Kaczmarek', '223715';
-EXEC dodaj_osoba 'Zofia', 'Kozak', '261671';
-EXEC dodaj_osoba 'Dorota', 'Szewczyk', NULL;
-EXEC dodaj_osoba 'Robert', 'Sowa', NULL;
-EXEC dodaj_osoba 'Mateusz', 'Czaja', NULL;
-EXEC dodaj_osoba 'Łukasz', 'Bak', NULL;
-EXEC dodaj_osoba 'Teresa', 'Zajac', NULL;
-EXEC dodaj_osoba 'Piotr', 'Kaczmarczyk', '020966';
-EXEC dodaj_osoba 'Ewa', 'Duda', '955948';
-EXEC dodaj_osoba 'Jolanta', 'Stepien', NULL;
-EXEC dodaj_osoba 'Irena', 'Kurek', NULL;
-EXEC dodaj_osoba 'Janina', 'Piątek', '853605';
-EXEC dodaj_osoba 'Krzysztof', 'Wojcik', NULL;
-EXEC dodaj_osoba 'Jakub', 'Kurek', NULL;
-EXEC dodaj_osoba 'Grzegorz', 'Nowak', NULL;
-EXEC dodaj_osoba 'Anna', 'Wilk', '285307';
-EXEC dodaj_osoba 'Anna', 'Kurek', NULL;
-EXEC dodaj_osoba 'Adam', 'Cieslak', '637396';
-EXEC dodaj_osoba 'Agnieszka', 'Mroz', NULL;
-EXEC dodaj_osoba 'Józef', 'Mucha', NULL;
-EXEC dodaj_osoba 'Małgorzata', 'Szewczyk', '073042';
-EXEC dodaj_osoba 'Grzegorz', 'Stankiewicz', NULL;
-EXEC dodaj_osoba 'Kazimierz', 'Kozak', NULL;
-EXEC dodaj_osoba 'Magdalena', 'Jarosz', NULL;
-EXEC dodaj_osoba 'Dorota', 'Bednarek', NULL;
-EXEC dodaj_osoba 'Helena', 'Tomczyk', NULL;
-EXEC dodaj_osoba 'Grzegorz', 'Żak', '879289';
-EXEC dodaj_osoba 'Jakub', 'Kolodziej', NULL;
-EXEC dodaj_osoba 'Maciej', 'Olejniczak', NULL;
-EXEC dodaj_osoba 'Józef', 'Stepien', NULL;
-EXEC dodaj_osoba 'Danuta', 'Piątek', NULL;
-EXEC dodaj_osoba 'Anna', 'Klimek', '711670';
-EXEC dodaj_osoba 'Agnieszka', 'Stasiak', NULL;
-EXEC dodaj_osoba 'Natalia', 'Żak', NULL;
-EXEC dodaj_osoba 'Józef', 'Kolodziej', NULL;
-EXEC dodaj_osoba 'Jadwiga', 'Przybysz', NULL;
-EXEC dodaj_osoba 'Halina', 'Kazmierczak', NULL;
-EXEC dodaj_osoba 'Henryk', 'Wozniak', NULL;
-EXEC dodaj_osoba 'Helena', 'Zięba', '581459';
-EXEC dodaj_osoba 'Małgorzata', 'Mucha', NULL;
-EXEC dodaj_osoba 'Dorota', 'Kozak', '477831';
-EXEC dodaj_osoba 'Piotr', 'Matysiak', NULL;
-EXEC dodaj_osoba 'Jadwiga', 'Kazmierczak', NULL;
-EXEC dodaj_osoba 'Łukasz', 'Sowa', '057330';
-EXEC dodaj_osoba 'Adam', 'Polak', NULL;
-EXEC dodaj_osoba 'Helena', 'Świątek', '601502';
-EXEC dodaj_osoba 'Krzysztof', 'Leśniak', NULL;
-EXEC dodaj_osoba 'Dorota', 'Matysiak', NULL;
-EXEC dodaj_osoba 'Jakub', 'Wlodarczyk', '510825';
-EXEC dodaj_osoba 'Wojciech', 'Marciniak', NULL;
-EXEC dodaj_osoba 'Grzegorz', 'Duda', NULL;
-EXEC dodaj_osoba 'Danuta', 'Sowa', '574368';
-EXEC dodaj_osoba 'Jadwiga', 'Kopeć', NULL;
-EXEC dodaj_osoba 'Stanisław', 'Tomczyk', NULL;
-EXEC dodaj_osoba 'Andrzej', 'Polak', NULL;
-EXEC dodaj_osoba 'Krzysztof', 'Bak', NULL;
-EXEC dodaj_osoba 'Kamil', 'Dudek', NULL;
-EXEC dodaj_osoba 'Michal', 'Bak', '459203';
-EXEC dodaj_osoba 'Iwona', 'Piątek', NULL;
-EXEC dodaj_osoba 'Robert', 'Polak', NULL;
-EXEC dodaj_osoba 'Dorota', 'Wozniak', '393982';
-EXEC dodaj_osoba 'Jacek', 'Pietrzak', NULL;
-EXEC dodaj_osoba 'Dariusz', 'Wlodarczyk', NULL;
-EXEC dodaj_osoba 'Krystyna', 'Kurek', NULL;
-EXEC dodaj_osoba 'Magdalena', 'Zięba', NULL;
-EXEC dodaj_osoba 'Irena', 'Dudek', NULL;
-EXEC dodaj_osoba 'Paweł', 'Wilk', NULL;
-EXEC dodaj_osoba 'Monika', 'Kruk', NULL;
-EXEC dodaj_osoba 'Małgorzata', 'Kazmierczak', NULL;
-EXEC dodaj_osoba 'Agnieszka', 'Kubiak', '400925';
-EXEC dodaj_osoba 'Grażyna', 'Dziedzic', NULL;
-EXEC dodaj_osoba 'Ryszard', 'Czaja', '108271';
-EXEC dodaj_osoba 'Danuta', 'Szewczyk', NULL;
-EXEC dodaj_osoba 'Józef', 'Wrobel', NULL;
-EXEC dodaj_osoba 'Małgorzata', 'Marciniak', NULL;
-EXEC dodaj_osoba 'Magdalena', 'Stasiak', '704947';
-EXEC dodaj_osoba 'Irena', 'Dziedzic', '990868';
-EXEC dodaj_osoba 'Monika', 'Duda', NULL;
-EXEC dodaj_osoba 'Jakub', 'Marciniak', '401387';
-EXEC dodaj_osoba 'Irena', 'Marciniak', '554020';
-EXEC dodaj_osoba 'Rafał', 'Małek', NULL;
-EXEC dodaj_osoba 'Dariusz', 'Pająk', NULL;
-EXEC dodaj_osoba 'Maciej', 'Piątek', NULL;
-EXEC dodaj_osoba 'Zofia', 'Klimek', '804253';
-EXEC dodaj_osoba 'Ryszard', 'Sowa', NULL;
-EXEC dodaj_osoba 'Michal', 'Michalak', NULL;
-EXEC dodaj_osoba 'Tadeusz', 'Stasiak', NULL;
-EXEC dodaj_osoba 'Joanna', 'Wrobel', NULL;
-EXEC dodaj_osoba 'Helena', 'Mazur', '718728';
-EXEC dodaj_osoba 'Piotr', 'Kaczmarek', '758482';
-EXEC dodaj_osoba 'Halina', 'Mucha', '658966';
-EXEC dodaj_osoba 'Rafał', 'Jarosz', NULL;
-EXEC dodaj_osoba 'Krystyna', 'Klimek', NULL;
-EXEC dodaj_osoba 'Krystyna', 'Szewczyk', NULL;
-EXEC dodaj_osoba 'Stanisław', 'Leśniak', NULL;
-EXEC dodaj_osoba 'Zbigniew', 'Baran', '189875';
-EXEC dodaj_osoba 'Jan', 'Koziol', '958140';
-EXEC dodaj_osoba 'Jolanta', 'Czech', NULL;
-EXEC dodaj_osoba 'Halina', 'Kolodziej', '988219';
-EXEC dodaj_osoba 'Wojciech', 'Czaja', NULL;
-EXEC dodaj_osoba 'Marcin', 'Kurek', NULL;
-EXEC dodaj_osoba 'Dorota', 'Bak', NULL;
-EXEC dodaj_osoba 'Krzysztof', 'Ratajczak', NULL;
-EXEC dodaj_osoba 'Aleksandra', 'Wlodarczyk', NULL;
-EXEC dodaj_osoba 'Andrzej', 'Stasiak', NULL;
-EXEC dodaj_osoba 'Dariusz', 'Wojcik', '187857';
-EXEC dodaj_osoba 'Magdalena', 'Wrobel', NULL;
-EXEC dodaj_osoba 'Barbara', 'Piątek', '594274';
-EXEC dodaj_osoba 'Jacek', 'Wrobel', '360024';
-EXEC dodaj_osoba 'Łukasz', 'Kot', '315427';
-EXEC dodaj_osoba 'Teresa', 'Dziedzic', NULL;
-EXEC dodaj_osoba 'Michal', 'Marciniak', NULL;
-EXEC dodaj_osoba 'Natalia', 'Bak', NULL;
-EXEC dodaj_osoba 'Jacek', 'Baran', '861705';
-EXEC dodaj_osoba 'Teresa', 'Wilk', '159048';
-EXEC dodaj_osoba 'Rafał', 'Wieczorek', NULL;
-EXEC dodaj_osoba 'Mariusz', 'Polak', '978271';
-EXEC dodaj_osoba 'Kazimierz', 'Kasprzyk', NULL;
-EXEC dodaj_osoba 'Joanna', 'Dziedzic', NULL;
-EXEC dodaj_osoba 'Andrzej', 'Lis', NULL;
-EXEC dodaj_osoba 'Jacek', 'Kaczmarek', NULL;
-EXEC dodaj_osoba 'Piotr', 'Duda', '282112';
-EXEC dodaj_osoba 'Adam', 'Kurek', NULL;
-EXEC dodaj_osoba 'Monika', 'Stepien', NULL;
-EXEC dodaj_osoba 'Anna', 'Jarosz', '552291';
-EXEC dodaj_osoba 'Magdalena', 'Duda', NULL;
-EXEC dodaj_osoba 'Natalia', 'Bednarek', NULL;
-EXEC dodaj_osoba 'Janina', 'Bednarek', '227791';
-EXEC dodaj_osoba 'Teresa', 'Walczak', NULL;
-EXEC dodaj_osoba 'Teresa', 'Czaja', NULL;
-EXEC dodaj_osoba 'Danuta', 'Łuczak', NULL;
-EXEC dodaj_osoba 'Stanisław', 'Bak', NULL;
-EXEC dodaj_osoba 'Natalia', 'Szewczyk', NULL;
-EXEC dodaj_osoba 'Barbara', 'Kurek', NULL;
-EXEC dodaj_osoba 'Tomasz', 'Nowak', '930762';
-EXEC dodaj_osoba 'Robert', 'Wilk', '216913';
-EXEC dodaj_osoba 'Krystyna', 'Wilk', NULL;
-EXEC dodaj_osoba 'Natalia', 'Polak', '124624';
-EXEC dodaj_osoba 'Teresa', 'Jarosz', NULL;
-EXEC dodaj_osoba 'Zbigniew', 'Wrobel', '722004';
-EXEC dodaj_osoba 'Tomasz', 'Małek', NULL;
-EXEC dodaj_osoba 'Marcin', 'Kaczmarek', NULL;
-EXEC dodaj_osoba 'Anna', 'Bednarek', '360577';
-EXEC dodaj_osoba 'Kazimierz', 'Michalak', NULL;
-EXEC dodaj_osoba 'Kazimierz', 'Dziedzic', NULL;
-EXEC dodaj_osoba 'Piotr', 'Szewczyk', NULL;
-EXEC dodaj_osoba 'Anna', 'Wojcik', NULL;
-EXEC dodaj_osoba 'Zbigniew', 'Czaja', '313528';
-EXEC dodaj_osoba 'Halina', 'Pietrzak', '658176';
-EXEC dodaj_osoba 'Magdalena', 'Bednarek', '737815';
-EXEC dodaj_osoba 'Krzysztof', 'Tomczak', '257042';
-EXEC dodaj_osoba 'Mariusz', 'Leśniak', NULL;
-EXEC dodaj_osoba 'Tadeusz', 'Pietrzak', NULL;
-EXEC dodaj_osoba 'Dorota', 'Piątek', NULL;
-EXEC dodaj_osoba 'Marta', 'Zajac', NULL;
-EXEC dodaj_osoba 'Mateusz', 'Sowa', NULL;
-EXEC dodaj_osoba 'Robert', 'Mazur', NULL;
-EXEC dodaj_osoba 'Józef', 'Stankiewicz', '909724';
-EXEC dodaj_osoba 'Józef', 'Matysiak', NULL;
-EXEC dodaj_osoba 'Henryk', 'Zajac', '107065';
-EXEC dodaj_osoba 'Krystyna', 'Mroz', NULL;
-EXEC dodaj_osoba 'Aleksandra', 'Czech', '064290';
-EXEC dodaj_osoba 'Karolina', 'Nowak', NULL;
-EXEC dodaj_osoba 'Jerzy', 'Adamczyk', NULL;
-EXEC dodaj_osoba 'Łukasz', 'Krawczyk', NULL;
-EXEC dodaj_osoba 'Irena', 'Jarosz', NULL;
-EXEC dodaj_osoba 'Kamil', 'Ratajczak', NULL;
-EXEC dodaj_osoba 'Tomasz', 'Kowalik', '322832';
-EXEC dodaj_osoba 'Grażyna', 'Dziedzic', '963578';
-EXEC dodaj_osoba 'Mariusz', 'Wojcik', NULL;
-EXEC dodaj_osoba 'Grażyna', 'Zajac', NULL;
-EXEC dodaj_osoba 'Józef', 'Kubiak', '548412';
-EXEC dodaj_osoba 'Marianna', 'Baran', NULL;
-EXEC dodaj_osoba 'Zofia', 'Wrobel', '874158';
-EXEC dodaj_osoba 'Halina', 'Pawlik', NULL;
-EXEC dodaj_osoba 'Jakub', 'Lis', NULL;
-EXEC dodaj_osoba 'Krystyna', 'Kazmierczak', NULL;
-EXEC dodaj_osoba 'Teresa', 'Pawlik', '440294';
-EXEC dodaj_osoba 'Grażyna', 'Wozniak', NULL;
-EXEC dodaj_osoba 'Marek', 'Dziedzic', '410069';
-EXEC dodaj_osoba 'Jerzy', 'Zięba', '633230';
-EXEC dodaj_osoba 'Piotr', 'Koziol', NULL;
-EXEC dodaj_osoba ' Maria', 'Walczak', NULL;
-EXEC dodaj_osoba 'Łukasz', 'Wojcik', NULL;
-EXEC dodaj_osoba 'Marta', 'Żak', NULL;
-EXEC dodaj_osoba 'Elzbieta', 'Wilk', NULL;
-EXEC dodaj_osoba ' Maria', 'Pawlik', NULL;
-EXEC dodaj_osoba 'Magdalena', 'Matysiak', NULL;
-EXEC dodaj_osoba 'Monika', 'Wlodarczyk', NULL;
-EXEC dodaj_osoba 'Marek', 'Łuczak', NULL;
-EXEC dodaj_osoba ' Maria', 'Pająk', '908769';
-EXEC dodaj_osoba 'Jadwiga', 'Mucha', NULL;
-EXEC dodaj_osoba 'Henryk', 'Matysiak', '351661';
-EXEC dodaj_osoba 'Ewa', 'Cieslak', NULL;
-EXEC dodaj_osoba 'Mariusz', 'Dziedzic', NULL;
-EXEC dodaj_osoba 'Karolina', 'Kaczmarczyk', NULL;
-EXEC dodaj_osoba 'Zofia', 'Olejniczak', NULL;
-EXEC dodaj_osoba 'Dorota', 'Pietrzak', '636370';
-EXEC dodaj_osoba 'Janina', 'Wojcik', NULL;
-EXEC dodaj_osoba 'Jakub', 'Kopeć', NULL;
-EXEC dodaj_osoba ' Maria', 'Kurek', '884470';
-EXEC dodaj_osoba 'Henryk', 'Wieczorek', NULL;
-EXEC dodaj_osoba 'Elzbieta', 'Tomczyk', '799892';
-EXEC dodaj_osoba 'Irena', 'Żak', NULL;
-EXEC dodaj_osoba 'Aleksandra', 'Tomczyk', NULL;
-EXEC dodaj_osoba 'Zofia', 'Bednarek', NULL;
-EXEC dodaj_osoba ' Maria', 'Olejniczak', '080016';
-EXEC dodaj_osoba 'Zofia', 'Dziedzic', NULL;
-EXEC dodaj_osoba 'Elzbieta', 'Czaja', '342213';
-EXEC dodaj_osoba 'Tomasz', 'Stankiewicz', NULL;
-EXEC dodaj_osoba 'Kazimierz', 'Żak', '770620';
-EXEC dodaj_osoba 'Elzbieta', 'Cieslak', '407930';
-EXEC dodaj_osoba 'Dariusz', 'Pająk', NULL;
-EXEC dodaj_osoba 'Katarzyna', 'Wieczorek', NULL;
-EXEC dodaj_osoba 'Marek', 'Dudek', '984719';
-EXEC dodaj_osoba 'Tadeusz', 'Łuczak', NULL;
-EXEC dodaj_osoba 'Krystyna', 'Kazmierczak', NULL;
-EXEC dodaj_osoba 'Katarzyna', 'Baran', '723405';
-EXEC dodaj_osoba 'Kamil', 'Wieczorek', '976373';
-EXEC dodaj_osoba 'Elzbieta', 'Pawlik', NULL;
-EXEC dodaj_osoba 'Stanisław', 'Michalak', '986736';
-EXEC dodaj_osoba 'Robert', 'Leśniak', '750005';
-EXEC dodaj_osoba 'Ryszard', 'Dudek', '141194';
-EXEC dodaj_osoba 'Piotr', 'Małek', '504576';
-EXEC dodaj_osoba 'Agnieszka', 'Kubiak', NULL;
-EXEC dodaj_osoba 'Kamil', 'Stankiewicz', NULL;
-EXEC dodaj_osoba 'Jolanta', 'Klimek', '443581';
-EXEC dodaj_osoba 'Jakub', 'Wlodarczyk', '238439';
-EXEC dodaj_osoba 'Beata', 'Wlodarczyk', NULL;
-EXEC dodaj_osoba 'Krzysztof', 'Bednarek', '103421';
-EXEC dodaj_osoba 'Marek', 'Łuczak', '839947';
-EXEC dodaj_osoba 'Marianna', 'Adamczyk', '301864';
-EXEC dodaj_osoba 'Tomasz', 'Wieczorek', '679614';
-EXEC dodaj_osoba 'Marianna', 'Wlodarczyk', NULL;
-EXEC dodaj_osoba 'Kamil', 'Mroz', NULL;
-EXEC dodaj_osoba 'Michal', 'Wieczorek', NULL;
-EXEC dodaj_osoba 'Helena', 'Pawlik', NULL;
-EXEC dodaj_osoba 'Marek', 'Pietrzak', NULL;
-EXEC dodaj_osoba 'Rafał', 'Kozak', '091375';
-EXEC dodaj_osoba 'Wojciech', 'Cieslak', NULL;
-EXEC dodaj_osoba 'Małgorzata', 'Kot', NULL;
-EXEC dodaj_osoba 'Jerzy', 'Pawlik', '517723';
-EXEC dodaj_osoba 'Tomasz', 'Tomczyk', NULL;
-EXEC dodaj_osoba 'Paweł', 'Szewczyk', '661466';
-EXEC dodaj_osoba 'Anna', 'Kruk', NULL;
-EXEC dodaj_osoba 'Beata', 'Stankiewicz', '703882';
-EXEC dodaj_osoba 'Irena', 'Kozak', '910613';
-EXEC dodaj_osoba 'Katarzyna', 'Baran', '067051';
-EXEC dodaj_osoba 'Piotr', 'Krawczyk', NULL;
-EXEC dodaj_osoba 'Adam', 'Lis', NULL;
-EXEC dodaj_osoba 'Jakub', 'Zajac', NULL;
-EXEC dodaj_osoba 'Marek', 'Kubiak', NULL;
-EXEC dodaj_osoba 'Barbara', 'Stankiewicz', '003781';
-EXEC dodaj_osoba 'Dorota', 'Tomczyk', NULL;
-EXEC dodaj_osoba 'Michal', 'Kania', NULL;
-EXEC dodaj_osoba 'Iwona', 'Marciniak', NULL;
-EXEC dodaj_osoba 'Józef', 'Matysiak', NULL;
-EXEC dodaj_osoba 'Dariusz', 'Ratajczak', NULL;
-EXEC dodaj_osoba 'Kazimierz', 'Stankiewicz', NULL;
-EXEC dodaj_osoba 'Jacek', 'Czech', '061728';
-EXEC dodaj_osoba 'Mateusz', 'Kruk', '746550';
-EXEC dodaj_osoba 'Magdalena', 'Pająk', NULL;
-EXEC dodaj_osoba 'Dariusz', 'Pawlik', NULL;
-EXEC dodaj_osoba 'Jolanta', 'Kopeć', NULL;
-EXEC dodaj_osoba 'Magdalena', 'Kowalik', '867109';
-EXEC dodaj_osoba 'Grzegorz', 'Stepien', NULL;
-EXEC dodaj_osoba 'Piotr', 'Polak', '591687';
-EXEC dodaj_osoba 'Beata', 'Przybysz', NULL;
-EXEC dodaj_osoba 'Zbigniew', 'Wozniak', NULL;
-EXEC dodaj_osoba 'Natalia', 'Mucha', '716638';
-EXEC dodaj_osoba 'Michal', 'Świątek', NULL;
-EXEC dodaj_osoba 'Tomasz', 'Kozak', '077811';
-EXEC dodaj_osoba 'Iwona', 'Stepien', NULL;
-EXEC dodaj_osoba 'Maciej', 'Bednarek', NULL;
-EXEC dodaj_osoba 'Stanisław', 'Wilk', NULL;
-EXEC dodaj_osoba 'Anna', 'Wozniak', NULL;
-EXEC dodaj_osoba 'Tadeusz', 'Mazur', '604156';
-EXEC dodaj_osoba 'Karolina', 'Olejniczak', NULL;
-EXEC dodaj_osoba 'Józef', 'Kazmierczak', NULL;
-EXEC dodaj_osoba 'Kamil', 'Urban', NULL;
-EXEC dodaj_osoba 'Danuta', 'Leśniak', NULL;
-EXEC dodaj_osoba 'Magdalena', 'Marciniak', NULL;
-EXEC dodaj_osoba 'Natalia', 'Małek', NULL;
-EXEC dodaj_osoba 'Krzysztof', 'Kania', NULL;
-EXEC dodaj_osoba 'Jakub', 'Stasiak', '779446';
-EXEC dodaj_osoba 'Elzbieta', 'Pietrzak', '103153';
-EXEC dodaj_osoba 'Józef', 'Jarosz', '340467';
-EXEC dodaj_osoba 'Krystyna', 'Bednarek', '262950';
-EXEC dodaj_osoba 'Rafał', 'Nowak', '738568';
-EXEC dodaj_osoba 'Wojciech', 'Dziedzic', NULL;
-EXEC dodaj_osoba 'Stanisław', 'Kaczmarczyk', NULL;
-EXEC dodaj_osoba 'Beata', 'Bak', NULL;
-EXEC dodaj_osoba 'Magdalena', 'Stasiak', '542158';
-EXEC dodaj_osoba 'Piotr', 'Kasprzyk', NULL;
-EXEC dodaj_osoba 'Mariusz', 'Stankiewicz', NULL;
-EXEC dodaj_osoba 'Karolina', 'Urban', NULL;
-EXEC dodaj_osoba 'Beata', 'Blaszczyk', NULL;
-EXEC dodaj_osoba 'Iwona', 'Mucha', NULL;
-EXEC dodaj_osoba 'Ryszard', 'Piątek', NULL;
-EXEC dodaj_osoba 'Małgorzata', 'Baran', NULL;
-EXEC dodaj_osoba 'Iwona', 'Kaczmarek', NULL;
-EXEC dodaj_osoba 'Michal', 'Wlodarczyk', NULL;
-EXEC dodaj_osoba 'Andrzej', 'Wojcik', NULL;
-EXEC dodaj_osoba 'Krystyna', 'Sowa', NULL;
-EXEC dodaj_osoba 'Jan', 'Łuczak', '469616';
-EXEC dodaj_osoba 'Joanna', 'Zajac', '391208';
-EXEC dodaj_osoba 'Beata', 'Jarosz', NULL;
-EXEC dodaj_osoba 'Natalia', 'Wrobel', '965099';
-EXEC dodaj_osoba 'Jadwiga', 'Matysiak', NULL;
-EXEC dodaj_osoba 'Joanna', 'Kozak', NULL;
-EXEC dodaj_osoba 'Henryk', 'Pająk', NULL;
-EXEC dodaj_osoba 'Tadeusz', 'Koziol', NULL;
-EXEC dodaj_osoba 'Jan', 'Adamczyk', NULL;
-EXEC dodaj_osoba 'Grzegorz', 'Wlodarczyk', '489219';
-EXEC dodaj_osoba 'Irena', 'Walczak', '303312';
-EXEC dodaj_osoba 'Tadeusz', 'Lis', '896929';
-EXEC dodaj_osoba 'Beata', 'Dudek', NULL;
-EXEC dodaj_osoba 'Krzysztof', 'Kasprzyk', '051727';
-EXEC dodaj_osoba 'Grzegorz', 'Bednarek', NULL;
-EXEC dodaj_osoba 'Stanisław', 'Marciniak', NULL;
-EXEC dodaj_osoba 'Beata', 'Dudek', NULL;
-EXEC dodaj_osoba 'Helena', 'Wozniak', NULL;
-EXEC dodaj_osoba 'Magdalena', 'Urban', '659420';
-EXEC dodaj_osoba 'Teresa', 'Matysiak', '627179';
-EXEC dodaj_osoba 'Karolina', 'Adamczyk', NULL;
-EXEC dodaj_osoba 'Anna', 'Stasiak', '774049';
-EXEC dodaj_osoba 'Helena', 'Bak', NULL;
-EXEC dodaj_osoba 'Kamil', 'Leśniak', NULL;
-EXEC dodaj_osoba 'Paweł', 'Kowalik', NULL;
-EXEC dodaj_osoba 'Paweł', 'Blaszczyk', NULL;
-EXEC dodaj_osoba 'Agnieszka', 'Kazmierczak', NULL;
-EXEC dodaj_osoba 'Jolanta', 'Kot', NULL;
-EXEC dodaj_osoba 'Natalia', 'Stepien', NULL;
-EXEC dodaj_osoba 'Jerzy', 'Wieczorek', NULL;
-EXEC dodaj_osoba 'Grzegorz', 'Ratajczak', NULL;
-EXEC dodaj_osoba 'Łukasz', 'Kazmierczak', NULL;
-EXEC dodaj_osoba 'Karolina', 'Koziol', NULL;
-EXEC dodaj_osoba 'Kamil', 'Koziol', NULL;
-EXEC dodaj_osoba 'Łukasz', 'Sowa', NULL;
-EXEC dodaj_osoba 'Krzysztof', 'Świątek', NULL;
-EXEC dodaj_osoba 'Zofia', 'Stepien', '474891';
-EXEC dodaj_osoba 'Karolina', 'Kaczmarczyk', NULL;
-EXEC dodaj_osoba 'Michal', 'Żak', '997119';
-EXEC dodaj_osoba 'Tadeusz', 'Ratajczak', NULL;
-EXEC dodaj_osoba 'Iwona', 'Wozniak', NULL;
-EXEC dodaj_osoba 'Beata', 'Duda', NULL;
-EXEC dodaj_osoba 'Jan', 'Leśniak', NULL;
-EXEC dodaj_osoba 'Krzysztof', 'Kaczmarek', NULL;
-EXEC dodaj_osoba 'Maciej', 'Wilk', '399122';
-EXEC dodaj_osoba 'Janina', 'Czech', NULL;
-EXEC dodaj_osoba 'Marta', 'Kasprzyk', NULL;
-EXEC dodaj_osoba 'Łukasz', 'Duda', '620516';
-EXEC dodaj_osoba 'Łukasz', 'Stankiewicz', '831517';
-EXEC dodaj_osoba 'Maciej', 'Wlodarczyk', NULL;
-EXEC dodaj_osoba 'Jolanta', 'Kaczmarczyk', NULL;
-EXEC dodaj_osoba 'Dorota', 'Wieczorek', '792401';
-EXEC dodaj_osoba 'Robert', 'Wieczorek', '727047';
-EXEC dodaj_osoba 'Halina', 'Kruk', '727565';
-EXEC dodaj_osoba 'Andrzej', 'Michalak', '815876';
-EXEC dodaj_osoba 'Kamil', 'Czech', NULL;
-EXEC dodaj_osoba 'Grażyna', 'Cieslak', NULL;
-EXEC dodaj_osoba 'Jan', 'Walczak', NULL;
-EXEC dodaj_osoba 'Łukasz', 'Stepien', '469765';
-EXEC dodaj_osoba 'Marek', 'Kruk', NULL;
-EXEC dodaj_osoba ' Maria', 'Nowak', NULL;
-EXEC dodaj_osoba 'Marta', 'Tomczyk', NULL;
-EXEC dodaj_osoba 'Agnieszka', 'Kania', NULL;
-EXEC dodaj_osoba 'Jacek', 'Koziol', '173303';
-EXEC dodaj_osoba 'Józef', 'Dudek', NULL;
-EXEC dodaj_osoba 'Janina', 'Matysiak', '762757';
-EXEC dodaj_osoba 'Halina', 'Kruk', '235533';
-EXEC dodaj_osoba 'Iwona', 'Wlodarczyk', '815827';
-EXEC dodaj_osoba 'Małgorzata', 'Czaja', '787548';
-EXEC dodaj_osoba 'Łukasz', 'Kolodziej', '634488';
-EXEC dodaj_osoba 'Natalia', 'Wrobel', NULL;
-EXEC dodaj_osoba 'Jadwiga', 'Kruk', '674913';
-EXEC dodaj_osoba 'Katarzyna', 'Bednarek', '172414';
-EXEC dodaj_osoba 'Kazimierz', 'Czech', NULL;
-EXEC dodaj_osoba 'Zbigniew', 'Stasiak', '823520';
-EXEC dodaj_osoba 'Henryk', 'Czaja', NULL;
-EXEC dodaj_osoba 'Monika', 'Mucha', '451216';
-EXEC dodaj_osoba 'Helena', 'Stasiak', NULL;
-EXEC dodaj_osoba 'Jakub', 'Łuczak', NULL;
-EXEC dodaj_osoba 'Małgorzata', 'Urban', NULL;
-EXEC dodaj_osoba 'Adam', 'Sowa', '424124';
-EXEC dodaj_osoba 'Janina', 'Olejniczak', '003687';
-EXEC dodaj_osoba 'Zbigniew', 'Pająk', '752710';
-EXEC dodaj_osoba 'Robert', 'Klimek', NULL;
-EXEC dodaj_osoba 'Łukasz', 'Pawlik', '815891';
-EXEC dodaj_osoba 'Dorota', 'Wozniak', NULL;
-EXEC dodaj_osoba 'Iwona', 'Ratajczak', '876758';
-EXEC dodaj_osoba 'Krystyna', 'Szewczyk', NULL;
-EXEC dodaj_osoba 'Małgorzata', 'Blaszczyk', '007971';
-EXEC dodaj_osoba 'Iwona', 'Olejniczak', '116053';
-EXEC dodaj_osoba 'Marta', 'Kot', '528993';
-EXEC dodaj_osoba 'Karolina', 'Mroz', NULL;
-EXEC dodaj_osoba 'Rafał', 'Cieslak', '198931';
-EXEC dodaj_osoba 'Elzbieta', 'Sowa', '626126';
-EXEC dodaj_osoba 'Jan', 'Blaszczyk', NULL;
-EXEC dodaj_osoba 'Marta', 'Walczak', NULL;
-EXEC dodaj_osoba 'Kamil', 'Zajac', NULL;
-EXEC dodaj_osoba 'Grzegorz', 'Mazur', NULL;
-EXEC dodaj_osoba 'Andrzej', 'Dziedzic', '124401';
-EXEC dodaj_osoba ' Maria', 'Wilk', '281853';
-EXEC dodaj_osoba 'Agnieszka', 'Piątek', '187383';
-EXEC dodaj_osoba 'Andrzej', 'Wojcik', NULL;
-EXEC dodaj_osoba 'Jan', 'Wlodarczyk', NULL;
-EXEC dodaj_osoba 'Dorota', 'Pająk', '460653';
-EXEC dodaj_osoba 'Dorota', 'Kazmierczak', '557487';
-EXEC dodaj_osoba 'Tadeusz', 'Duda', NULL;
-EXEC dodaj_osoba 'Robert', 'Świątek', NULL;
-EXEC dodaj_osoba 'Henryk', 'Marciniak', '026087';
-EXEC dodaj_osoba 'Adam', 'Polak', NULL;
-EXEC dodaj_osoba 'Teresa', 'Michalak', '254066';
-EXEC dodaj_osoba 'Grażyna', 'Kot', '105920';
-EXEC dodaj_osoba 'Robert', 'Kopeć', '909296';
-EXEC dodaj_osoba 'Anna', 'Mucha', NULL;
-EXEC dodaj_osoba 'Kazimierz', 'Matysiak', NULL;
-EXEC dodaj_osoba 'Grzegorz', 'Jarosz', '322595';
-EXEC dodaj_osoba 'Natalia', 'Czech', NULL;
-EXEC dodaj_osoba 'Jan', 'Czaja', NULL;
-EXEC dodaj_osoba 'Paweł', 'Wojcik', '975329';
-EXEC dodaj_osoba 'Rafał', 'Adamczyk', NULL;
-EXEC dodaj_osoba 'Józef', 'Bednarek', NULL;
-EXEC dodaj_osoba 'Dariusz', 'Stepien', NULL;
-EXEC dodaj_osoba 'Tomasz', 'Urban', NULL;
-EXEC dodaj_osoba 'Robert', 'Bak', '411968';
-EXEC dodaj_osoba 'Monika', 'Stepien', NULL;
-EXEC dodaj_osoba 'Magdalena', 'Stasiak', NULL;
-EXEC dodaj_osoba 'Jacek', 'Pawlik', '569007';
-EXEC dodaj_osoba 'Dorota', 'Dziedzic', NULL;
-EXEC dodaj_osoba 'Wojciech', 'Kaczmarczyk', '900891';
-EXEC dodaj_osoba 'Krystyna', 'Kozak', NULL;
-EXEC dodaj_osoba 'Łukasz', 'Mucha', NULL;
-EXEC dodaj_osoba 'Robert', 'Urban', NULL;
-EXEC dodaj_osoba 'Małgorzata', 'Adamczyk', NULL;
-EXEC dodaj_osoba 'Rafał', 'Pawlik', NULL;
-EXEC dodaj_osoba 'Wojciech', 'Tomczak', NULL;
-EXEC dodaj_osoba 'Rafał', 'Matysiak', NULL;
-EXEC dodaj_osoba 'Marek', 'Wlodarczyk', NULL;
-EXEC dodaj_osoba 'Rafał', 'Mroz', '763110';
-EXEC dodaj_osoba 'Grzegorz', 'Świątek', NULL;
-EXEC dodaj_osoba 'Jadwiga', 'Kozak', '932256';
-EXEC dodaj_osoba 'Tadeusz', 'Bak', NULL;
-EXEC dodaj_osoba 'Jacek', 'Pawlik', '390193';
-EXEC dodaj_osoba 'Marcin', 'Cieslak', '045848';
-EXEC dodaj_osoba 'Teresa', 'Piątek', NULL;
-EXEC dodaj_osoba 'Józef', 'Koziol', '786054';
-EXEC dodaj_osoba 'Jadwiga', 'Kowalik', '380345';
-EXEC dodaj_osoba 'Henryk', 'Duda', NULL;
-EXEC dodaj_osoba 'Mariusz', 'Pietrzak', '462462';
-EXEC dodaj_osoba 'Irena', 'Pietrzak', NULL;
-EXEC dodaj_osoba 'Józef', 'Żak', NULL;
-EXEC dodaj_osoba 'Natalia', 'Mroz', '404474';
-EXEC dodaj_osoba 'Andrzej', 'Kot', NULL;
-EXEC dodaj_osoba 'Grażyna', 'Zięba', NULL;
-EXEC dodaj_osoba 'Andrzej', 'Piątek', '442724';
-EXEC dodaj_osoba 'Grzegorz', 'Matysiak', NULL;
-EXEC dodaj_osoba 'Teresa', 'Krawczyk', NULL;
-EXEC dodaj_osoba 'Krzysztof', 'Cieslak', '673009';
-EXEC dodaj_osoba 'Natalia', 'Krawczyk', NULL;
-EXEC dodaj_osoba 'Andrzej', 'Kolodziej', '086356';
-EXEC dodaj_osoba 'Grażyna', 'Tomczak', '155023';
-EXEC dodaj_osoba 'Janina', 'Dudek', '114980';
-EXEC dodaj_osoba 'Janina', 'Wozniak', '285599';
-EXEC dodaj_osoba 'Paweł', 'Koziol', NULL;
-EXEC dodaj_osoba 'Jadwiga', 'Nowak', '253879';
-EXEC dodaj_osoba 'Jan', 'Michalak', NULL;
-EXEC dodaj_osoba 'Henryk', 'Jarosz', NULL;
-EXEC dodaj_osoba 'Elzbieta', 'Matysiak', NULL;
-EXEC dodaj_osoba 'Dorota', 'Sowa', NULL;
-EXEC dodaj_osoba 'Iwona', 'Mucha', NULL;
-EXEC dodaj_osoba 'Ewa', 'Kowalik', NULL;
-EXEC dodaj_osoba 'Beata', 'Tomczak', '584353';
-EXEC dodaj_osoba 'Iwona', 'Kubiak', NULL;
-EXEC dodaj_osoba 'Mariusz', 'Bednarek', NULL;
-EXEC dodaj_osoba ' Maria', 'Adamczyk', NULL;
-EXEC dodaj_osoba 'Mariusz', 'Pietrzak', NULL;
-EXEC dodaj_osoba 'Łukasz', 'Mazur', NULL;
-EXEC dodaj_osoba 'Grzegorz', 'Pietrzak', NULL;
-EXEC dodaj_osoba 'Aleksandra', 'Olejniczak', '695974';
-EXEC dodaj_osoba ' Maria', 'Zięba', NULL;
-EXEC dodaj_osoba 'Krzysztof', 'Matysiak', NULL;
-EXEC dodaj_osoba 'Andrzej', 'Baran', '724994';
-EXEC dodaj_osoba 'Zbigniew', 'Krawczyk', '029796';
-EXEC dodaj_osoba 'Elzbieta', 'Polak', '750620';
-EXEC dodaj_osoba 'Anna', 'Wilk', NULL;
-EXEC dodaj_osoba 'Kazimierz', 'Baran', '905453';
-EXEC dodaj_osoba 'Joanna', 'Tomczak', NULL;
-EXEC dodaj_osoba 'Agnieszka', 'Żak', NULL;
-EXEC dodaj_osoba 'Janina', 'Żak', NULL;
-EXEC dodaj_osoba 'Piotr', 'Piątek', '473935';
-EXEC dodaj_osoba 'Piotr', 'Tomczyk', '165301';
-EXEC dodaj_osoba 'Henryk', 'Czaja', NULL;
-EXEC dodaj_osoba 'Mateusz', 'Zięba', '980084';
-EXEC dodaj_osoba 'Aleksandra', 'Kubiak', NULL;
-EXEC dodaj_osoba 'Grażyna', 'Świątek', NULL;
-EXEC dodaj_osoba 'Andrzej', 'Łuczak', NULL;
-EXEC dodaj_osoba 'Paweł', 'Piątek', NULL;
-EXEC dodaj_osoba 'Beata', 'Adamczyk', NULL;
-EXEC dodaj_osoba 'Tadeusz', 'Dudek', NULL;
-EXEC dodaj_osoba 'Krystyna', 'Stankiewicz', NULL;
-EXEC dodaj_osoba 'Tomasz', 'Stankiewicz', NULL;
-EXEC dodaj_osoba 'Karolina', 'Nowak', NULL;
-EXEC dodaj_osoba 'Henryk', 'Tomczak', '404029';
-EXEC dodaj_osoba 'Beata', 'Dziedzic', NULL;
-EXEC dodaj_osoba 'Jan', 'Pawlik', '641108';
-EXEC dodaj_osoba 'Aleksandra', 'Urban', NULL;
-EXEC dodaj_osoba 'Stanisław', 'Kazmierczak', NULL;
-EXEC dodaj_osoba 'Agnieszka', 'Czaja', NULL;
-EXEC dodaj_osoba 'Tomasz', 'Blaszczyk', NULL;
-EXEC dodaj_osoba 'Krzysztof', 'Bak', '095695';
-EXEC dodaj_osoba 'Ewa', 'Kaczmarczyk', NULL;
-EXEC dodaj_osoba 'Monika', 'Jarosz', NULL;
-EXEC dodaj_osoba 'Mariusz', 'Krawczyk', '264659';
-EXEC dodaj_osoba 'Krzysztof', 'Szewczyk', NULL;
-EXEC dodaj_osoba 'Jerzy', 'Kazmierczak', NULL;
-EXEC dodaj_osoba 'Marta', 'Czaja', NULL;
-EXEC dodaj_osoba 'Dariusz', 'Piątek', NULL;
-EXEC dodaj_osoba 'Katarzyna', 'Jarosz', NULL;
-EXEC dodaj_osoba 'Marta', 'Kowalik', NULL;
-EXEC dodaj_osoba 'Anna', 'Pająk', NULL;
-EXEC dodaj_osoba 'Natalia', 'Kruk', '991712';
-EXEC dodaj_osoba 'Karolina', 'Świątek', NULL;
-EXEC dodaj_osoba 'Henryk', 'Wlodarczyk', '302484';
-EXEC dodaj_osoba 'Paweł', 'Wrobel', '731088';
-EXEC dodaj_osoba 'Krzysztof', 'Blaszczyk', NULL;
-EXEC dodaj_osoba 'Zofia', 'Kazmierczak', NULL;
-EXEC dodaj_osoba 'Danuta', 'Kasprzyk', NULL;
-EXEC dodaj_osoba 'Andrzej', 'Małek', '242426';
-EXEC dodaj_osoba 'Beata', 'Matysiak', NULL;
-EXEC dodaj_osoba 'Krystyna', 'Krawczyk', '393151';
-EXEC dodaj_osoba 'Dariusz', 'Żak', NULL;
-EXEC dodaj_osoba 'Rafał', 'Wieczorek', '239334';
-EXEC dodaj_osoba 'Jakub', 'Tomczak', NULL;
-EXEC dodaj_osoba 'Stanisław', 'Małek', NULL;
-EXEC dodaj_osoba 'Dariusz', 'Kot', NULL;
-EXEC dodaj_osoba 'Andrzej', 'Świątek', '998315';
-EXEC dodaj_osoba 'Helena', 'Wozniak', NULL;
-EXEC dodaj_osoba 'Jadwiga', 'Stasiak', NULL;
-EXEC dodaj_osoba 'Natalia', 'Walczak', '601846';
-EXEC dodaj_osoba 'Aleksandra', 'Matysiak', NULL;
-EXEC dodaj_osoba 'Teresa', 'Żak', NULL;
-EXEC dodaj_osoba 'Andrzej', 'Tomczyk', NULL;
-EXEC dodaj_osoba 'Mariusz', 'Stepien', '093448';
-EXEC dodaj_osoba 'Krzysztof', 'Wojcik', NULL;
-EXEC dodaj_osoba 'Iwona', 'Polak', NULL;
-EXEC dodaj_osoba 'Jolanta', 'Stepien', NULL;
-EXEC dodaj_osoba 'Marek', 'Blaszczyk', '791834';
-EXEC dodaj_osoba 'Karolina', 'Szewczyk', '538300';
-EXEC dodaj_osoba 'Natalia', 'Świątek', NULL;
-EXEC dodaj_osoba 'Zofia', 'Stasiak', NULL;
-EXEC dodaj_osoba 'Mariusz', 'Kopeć', NULL;
-EXEC dodaj_osoba 'Jolanta', 'Mazur', NULL;
-EXEC dodaj_osoba 'Barbara', 'Bednarek', NULL;
-EXEC dodaj_osoba 'Józef', 'Kopeć', NULL;
-EXEC dodaj_osoba 'Helena', 'Wilk', '774957';
-EXEC dodaj_osoba 'Kazimierz', 'Klimek', NULL;
-EXEC dodaj_osoba 'Rafał', 'Urban', NULL;
-EXEC dodaj_osoba 'Mariusz', 'Kot', NULL;
-EXEC dodaj_osoba ' Maria', 'Kolodziej', '465667';
-EXEC dodaj_osoba 'Wojciech', 'Czaja', NULL;
-EXEC dodaj_osoba 'Michal', 'Marciniak', '943523';
-EXEC dodaj_osoba 'Krystyna', 'Adamczyk', NULL;
-EXEC dodaj_osoba 'Iwona', 'Blaszczyk', NULL;
-EXEC dodaj_osoba 'Katarzyna', 'Kot', NULL;
-EXEC dodaj_osoba ' Maria', 'Mucha', NULL;
-EXEC dodaj_osoba 'Irena', 'Polak', '794546';
-EXEC dodaj_osoba 'Robert', 'Adamczyk', '527256';
-EXEC dodaj_osoba 'Mateusz', 'Olejniczak', NULL;
-EXEC dodaj_osoba 'Marcin', 'Kopeć', '304623';
-EXEC dodaj_osoba 'Magdalena', 'Baran', '534332';
-EXEC dodaj_osoba 'Marek', 'Łuczak', '879580';
-EXEC dodaj_osoba 'Helena', 'Kolodziej', '460225';
-EXEC dodaj_osoba 'Michal', 'Urban', NULL;
-EXEC dodaj_osoba 'Katarzyna', 'Kurek', '661040';
-EXEC dodaj_osoba 'Iwona', 'Leśniak', NULL;
-EXEC dodaj_osoba 'Wojciech', 'Dudek', NULL;
-EXEC dodaj_osoba 'Ewa', 'Mucha', NULL;
-EXEC dodaj_osoba 'Karolina', 'Żak', NULL;
-EXEC dodaj_osoba ' Maria', 'Sowa', NULL;
-EXEC dodaj_osoba 'Magdalena', 'Sowa', NULL;
-EXEC dodaj_osoba 'Jolanta', 'Dziedzic', NULL;
-EXEC dodaj_osoba 'Krystyna', 'Klimek', '248029';
-EXEC dodaj_osoba 'Marcin', 'Polak', '725870';
-EXEC dodaj_osoba 'Kamil', 'Bednarek', NULL;
-EXEC dodaj_osoba 'Tomasz', 'Pająk', NULL;
-EXEC dodaj_osoba 'Ewa', 'Kot', NULL;
-EXEC dodaj_osoba 'Andrzej', 'Tomczak', '252475';
-EXEC dodaj_osoba 'Andrzej', 'Dudek', '490663';
-EXEC dodaj_osoba 'Teresa', 'Łuczak', NULL;
-EXEC dodaj_osoba 'Marek', 'Klimek', NULL;
-EXEC dodaj_osoba 'Zofia', 'Wieczorek', '433886';
-EXEC dodaj_osoba 'Grzegorz', 'Kaczmarczyk', '085289';
-EXEC dodaj_osoba 'Barbara', 'Tomczak', NULL;
-EXEC dodaj_osoba 'Rafał', 'Nowak', '824513';
-EXEC dodaj_osoba 'Katarzyna', 'Zajac', '579945';
-EXEC dodaj_osoba 'Łukasz', 'Kania', NULL;
-EXEC dodaj_osoba 'Tadeusz', 'Bednarek', NULL;
-EXEC dodaj_osoba 'Michal', 'Baran', NULL;
-EXEC dodaj_osoba 'Iwona', 'Olejniczak', NULL;
-EXEC dodaj_osoba 'Marta', 'Kruk', NULL;
-EXEC dodaj_osoba 'Łukasz', 'Krawczyk', NULL;
-EXEC dodaj_osoba 'Anna', 'Stasiak', NULL;
-EXEC dodaj_osoba 'Łukasz', 'Czech', NULL;
-EXEC dodaj_osoba 'Irena', 'Przybysz', NULL;
-EXEC dodaj_osoba 'Jacek', 'Walczak', NULL;
-EXEC dodaj_osoba 'Dariusz', 'Przybysz', '926300';
-EXEC dodaj_osoba 'Maciej', 'Zajac', NULL;
-EXEC dodaj_osoba 'Jerzy', 'Kurek', NULL;
-EXEC dodaj_osoba 'Zofia', 'Kaczmarczyk', NULL;
-EXEC dodaj_osoba 'Marek', 'Pietrzak', NULL;
-EXEC dodaj_osoba 'Krzysztof', 'Małek', NULL;
-EXEC dodaj_osoba 'Kazimierz', 'Walczak', NULL;
-
-
---CONFERENCE WITH ADDONS:
-
-EXEC dodaj_konferencje 'Targi gier', 'null', '2016-06-06', '2016-06-08', '249';
-
---CONFERENCE WITH ADDONS:
-
-EXEC dodaj_konferencje 'Rozwój miasta', 'null', '2016-06-22', '2016-06-23', '251';
-
---CONFERENCE WITH ADDONS:
-
-EXEC dodaj_konferencje 'Rozwiń kreatywność!', 'null', '2016-07-02', '2016-07-04', '198';
-
---CONFERENCE WITH ADDONS:
-
-EXEC dodaj_konferencje 'Targi językowe', 'null', '2016-07-09', '2016-07-09', '255';
-
---CONFERENCE WITH ADDONS:
-
-EXEC dodaj_konferencje 'Targi językowe', 'null', '2016-07-25', '2016-07-28', '195';
-
---CONFERENCE WITH ADDONS:
-
-EXEC dodaj_konferencje 'Targi pracy', 'null', '2016-08-13', '2016-08-16', '235';
-
---CONFERENCE WITH ADDONS:
-
-EXEC dodaj_konferencje 'Religie świata', 'null', '2016-09-02', '2016-09-04', '252';
-
---CONFERENCE WITH ADDONS:
-
-EXEC dodaj_konferencje 'Religie świata', 'null', '2016-09-19', '2016-09-22', '194';
-
---CONFERENCE WITH ADDONS:
-
-EXEC dodaj_konferencje 'Technologia a zdrowie', 'null', '2016-10-04', '2016-10-07', '223';
-
---CONFERENCE WITH ADDONS:
-
-EXEC dodaj_konferencje 'Infrastruktura miasta', 'null', '2016-10-11', '2016-10-13', '136';
-
---CONFERENCE WITH ADDONS:
-
-EXEC dodaj_konferencje 'Nieznani naukowcy', 'null', '2016-10-29', '2016-11-01', '257';
-
---CONFERENCE WITH ADDONS:
-
-EXEC dodaj_konferencje 'Targi gier', 'null', '2016-11-15', '2016-11-15', '165';
-
---CONFERENCE WITH ADDONS:
-
-EXEC dodaj_konferencje 'Samoobrona', 'null', '2016-11-27', '2016-11-30', '230';
-
---CONFERENCE WITH ADDONS:
-
-EXEC dodaj_konferencje 'Technologia a zdrowie', 'null', '2016-12-13', '2016-12-15', '149';
-
---CONFERENCE WITH ADDONS:
-
-EXEC dodaj_konferencje 'Targi gier', 'null', '2016-12-31', '2016-12-31', '230';
-
---CONFERENCE WITH ADDONS:
-
-EXEC dodaj_konferencje 'Praca za granicą', 'null', '2017-01-11', '2017-01-14', '205';
-
---CONFERENCE WITH ADDONS:
-
-EXEC dodaj_konferencje 'Targi ślubne', 'null', '2017-01-22', '2017-01-25', '298';
-
---CONFERENCE WITH ADDONS:
-
-EXEC dodaj_konferencje 'Sztuki walki', 'null', '2017-02-10', '2017-02-11', '286';
-
---CONFERENCE WITH ADDONS:
-
-EXEC dodaj_konferencje 'Rozwój miasta', 'null', '2017-02-22', '2017-02-25', '222';
-
---CONFERENCE WITH ADDONS:
-
-EXEC dodaj_konferencje 'Targi gier', 'null', '2017-03-12', '2017-03-14', '227';
-
---CONFERENCE WITH ADDONS:
-
-EXEC dodaj_konferencje 'Rozwój miasta', 'null', '2017-03-24', '2017-03-27', '190';
-
---CONFERENCE WITH ADDONS:
-
-EXEC dodaj_konferencje 'Targi ślubne', 'null', '2017-04-08', '2017-04-11', '264';
-
---CONFERENCE WITH ADDONS:
-
-EXEC dodaj_konferencje 'Infrastruktura miasta', 'null', '2017-04-22', '2017-04-23', '286';
-
---CONFERENCE WITH ADDONS:
-
-EXEC dodaj_konferencje 'Praca za granicą', 'null', '2017-05-02', '2017-05-05', '265';
-
---CONFERENCE WITH ADDONS:
-
-EXEC dodaj_konferencje 'Praca za granicą', 'null', '2017-05-22', '2017-05-24', '113';
-
---CONFERENCE WITH ADDONS:
-
-EXEC dodaj_konferencje 'Targi językowe', 'null', '2017-06-08', '2017-06-11', '155';
-
---CONFERENCE WITH ADDONS:
-
-EXEC dodaj_konferencje 'Żywienie w sporcie', 'null', '2017-06-24', '2017-06-25', '275';
-
---CONFERENCE WITH ADDONS:
-
-EXEC dodaj_konferencje 'Sztuki walki', 'null', '2017-07-11', '2017-07-14', '230';
-
---CONFERENCE WITH ADDONS:
-
-EXEC dodaj_konferencje 'Wielcy naukowcy', 'null', '2017-07-22', '2017-07-25', '232';
-
---CONFERENCE WITH ADDONS:
-
-EXEC dodaj_konferencje 'Rozwiń kreatywność!', 'null', '2017-07-29', '2017-07-30', '237';
-
---CONFERENCE WITH ADDONS:
-
-EXEC dodaj_konferencje 'Praca za granicą', 'null', '2017-08-05', '2017-08-07', '255';
-
---CONFERENCE WITH ADDONS:
-
-EXEC dodaj_konferencje 'EXPO', 'null', '2017-08-14', '2017-08-15', '111';
-
---CONFERENCE WITH ADDONS:
-
-EXEC dodaj_konferencje 'Ogólnopolska burza mózgów', 'null', '2017-08-25', '2017-08-26', '113';
-
---CONFERENCE WITH ADDONS:
-
-EXEC dodaj_konferencje 'Akademickie targi pracy', 'null', '2017-09-09', '2017-09-11', '283';
-
---CONFERENCE WITH ADDONS:
-
-EXEC dodaj_konferencje 'Infrastruktura miasta', 'null', '2017-09-24', '2017-09-25', '236';
-
---CONFERENCE WITH ADDONS:
-
-EXEC dodaj_konferencje 'Wielcy naukowcy', 'null', '2017-10-09', '2017-10-11', '195';
+INSERT INTO People VALUES ('Marek', 'Urban', NULL)
+INSERT INTO People VALUES ('Tadeusz', 'Klimek', NULL)
+INSERT INTO People VALUES ('Zbigniew', 'Kurek', NULL)
+INSERT INTO People VALUES ('Teresa', 'Wozniak', NULL)
+INSERT INTO People VALUES ('Aleksandra', 'Marciniak', NULL)
+INSERT INTO People VALUES ('Tadeusz', 'Kozak', NULL)
+INSERT INTO People VALUES ('Magdalena', 'Szewczyk', NULL)
+INSERT INTO People VALUES ('Jakub', 'Bednarek', NULL)
+INSERT INTO People VALUES ('Natalia', 'Sowa', NULL)
+INSERT INTO People VALUES ('Beata', 'Walczak', NULL)
+INSERT INTO People VALUES ('Katarzyna', 'Czaja', NULL)
+INSERT INTO People VALUES ('Natalia', 'Polak', NULL)
+INSERT INTO People VALUES ('Łukasz', 'Stepien', NULL)
+INSERT INTO People VALUES ('Aleksandra', 'Kubiak', NULL)
+INSERT INTO People VALUES ('Jadwiga', 'Klimek', NULL)
+INSERT INTO People VALUES ('Maciej', 'Wieczorek', NULL)
+INSERT INTO People VALUES ('Anna', 'Łuczak', NULL)
+INSERT INTO People VALUES ('Tomasz', 'Polak', NULL)
+INSERT INTO People VALUES ('Krzysztof', 'Stankiewicz', NULL)
+INSERT INTO People VALUES ('Janina', 'Stankiewicz', NULL)
+INSERT INTO People VALUES ('Adam', 'Zięba', NULL)
+INSERT INTO People VALUES ('Marianna', 'Przybysz', NULL)
+INSERT INTO People VALUES ('Andrzej', 'Kopeć', NULL)
+INSERT INTO People VALUES ('Marianna', 'Koziol', NULL)
+INSERT INTO People VALUES ('Beata', 'Sowa', NULL)
+INSERT INTO People VALUES ('Halina', 'Olejniczak', NULL)
+INSERT INTO People VALUES ('Monika', 'Olejniczak', NULL)
+INSERT INTO People VALUES ('Kamil', 'Baran', NULL)
+INSERT INTO People VALUES ('Robert', 'Duda', NULL)
+INSERT INTO People VALUES ('Danuta', 'Wojcik', NULL)
+INSERT INTO People VALUES ('Monika', 'Bak', NULL)
+INSERT INTO People VALUES ('Grzegorz', 'Wojcik', NULL)
+INSERT INTO People VALUES ('Katarzyna', 'Tomczak', NULL)
+INSERT INTO People VALUES ('Mariusz', 'Ratajczak', NULL)
+INSERT INTO People VALUES ('Tadeusz', 'Nowak', NULL)
+INSERT INTO People VALUES ('Aleksandra', 'Kopeć', NULL)
+INSERT INTO People VALUES ('Jan', 'Bednarek', NULL)
+INSERT INTO People VALUES ('Irena', 'Baran', NULL)
+INSERT INTO People VALUES ('Ewa', 'Adamczyk', NULL)
+INSERT INTO People VALUES (' Maria', 'Cieslak', NULL)
+INSERT INTO People VALUES ('Krzysztof', 'Polak', NULL)
+INSERT INTO People VALUES ('Janina', 'Mucha', NULL)
+INSERT INTO People VALUES ('Natalia', 'Marciniak', NULL)
+INSERT INTO People VALUES ('Jan', 'Baran', NULL)
+INSERT INTO People VALUES ('Aleksandra', 'Olejniczak', NULL)
+INSERT INTO People VALUES ('Jolanta', 'Mazur', NULL)
+INSERT INTO People VALUES ('Józef', 'Ratajczak', NULL)
+INSERT INTO People VALUES ('Kazimierz', 'Duda', NULL)
+INSERT INTO People VALUES ('Tomasz', 'Stasiak', NULL)
+INSERT INTO People VALUES ('Józef', 'Bak', NULL)
+INSERT INTO People VALUES ('Zbigniew', 'Klimek', NULL)
+INSERT INTO People VALUES ('Jadwiga', 'Kaczmarczyk', NULL)
+INSERT INTO People VALUES ('Irena', 'Bednarek', NULL)
+INSERT INTO People VALUES ('Zbigniew', 'Marciniak', NULL)
+INSERT INTO People VALUES ('Paweł', 'Kot', NULL)
+INSERT INTO People VALUES ('Zofia', 'Krawczyk', NULL)
+INSERT INTO People VALUES ('Janina', 'Adamczyk', NULL)
+INSERT INTO People VALUES ('Krystyna', 'Stankiewicz', NULL)
+INSERT INTO People VALUES ('Halina', 'Zięba', NULL)
+INSERT INTO People VALUES ('Mariusz', 'Sowa', NULL)
+INSERT INTO People VALUES ('Michal', 'Klimek', NULL)
+INSERT INTO People VALUES ('Dorota', 'Koziol', NULL)
+INSERT INTO People VALUES ('Mateusz', 'Kania', NULL)
+INSERT INTO People VALUES ('Iwona', 'Blaszczyk', NULL)
+INSERT INTO People VALUES ('Joanna', 'Cieslak', NULL)
+INSERT INTO People VALUES ('Andrzej', 'Stankiewicz', NULL)
+INSERT INTO People VALUES ('Iwona', 'Kozak', NULL)
+INSERT INTO People VALUES ('Barbara', 'Wilk', NULL)
+INSERT INTO People VALUES ('Kazimierz', 'Wozniak', NULL)
+INSERT INTO People VALUES ('Krzysztof', 'Bak', NULL)
+INSERT INTO People VALUES ('Kamil', 'Kania', NULL)
+INSERT INTO People VALUES ('Halina', 'Żak', NULL)
+INSERT INTO People VALUES ('Jerzy', 'Jarosz', NULL)
+INSERT INTO People VALUES ('Agnieszka', 'Tomczyk', NULL)
+INSERT INTO People VALUES ('Maciej', 'Kania', NULL)
+INSERT INTO People VALUES ('Iwona', 'Duda', NULL)
+INSERT INTO People VALUES ('Zbigniew', 'Jarosz', NULL)
+INSERT INTO People VALUES ('Wojciech', 'Kowalik', NULL)
+INSERT INTO People VALUES ('Krzysztof', 'Tomczyk', NULL)
+INSERT INTO People VALUES ('Mariusz', 'Kowalik', NULL)
+INSERT INTO People VALUES ('Monika', 'Kurek', NULL)
+INSERT INTO People VALUES ('Marek', 'Łuczak', NULL)
+INSERT INTO People VALUES ('Teresa', 'Klimek', NULL)
+INSERT INTO People VALUES ('Józef', 'Koziol', NULL)
+INSERT INTO People VALUES ('Katarzyna', 'Kania', NULL)
+INSERT INTO People VALUES ('Maciej', 'Pawlik', NULL)
+INSERT INTO People VALUES ('Helena', 'Polak', NULL)
+INSERT INTO People VALUES ('Jolanta', 'Kaczmarek', NULL)
+INSERT INTO People VALUES ('Anna', 'Szewczyk', NULL)
+INSERT INTO People VALUES ('Agnieszka', 'Kubiak', NULL)
+INSERT INTO People VALUES ('Dariusz', 'Stasiak', NULL)
+INSERT INTO People VALUES ('Katarzyna', 'Kubiak', NULL)
+INSERT INTO People VALUES ('Beata', 'Mucha', NULL)
+INSERT INTO People VALUES ('Robert', 'Bednarek', NULL)
+INSERT INTO People VALUES ('Jacek', 'Zajac', NULL)
+INSERT INTO People VALUES ('Jadwiga', 'Świątek', NULL)
+INSERT INTO People VALUES ('Krzysztof', 'Wojcik', NULL)
+INSERT INTO People VALUES ('Ryszard', 'Kurek', NULL)
+INSERT INTO People VALUES ('Mariusz', 'Wozniak', NULL)
+INSERT INTO People VALUES ('Marianna', 'Kopeć', NULL)
+INSERT INTO People VALUES ('Marcin', 'Małek', NULL)
+INSERT INTO People VALUES ('Jan', 'Cieslak', NULL)
+INSERT INTO People VALUES ('Katarzyna', 'Koziol', NULL)
+INSERT INTO People VALUES ('Jan', 'Stankiewicz', NULL)
+INSERT INTO People VALUES ('Michal', 'Polak', NULL)
+INSERT INTO People VALUES ('Jakub', 'Stasiak', NULL)
+INSERT INTO People VALUES ('Monika', 'Pawlik', NULL)
+INSERT INTO People VALUES ('Małgorzata', 'Pająk', NULL)
+INSERT INTO People VALUES ('Jerzy', 'Wilk', NULL)
+INSERT INTO People VALUES ('Kamil', 'Koziol', NULL)
+INSERT INTO People VALUES ('Kamil', 'Kaczmarek', NULL)
+INSERT INTO People VALUES ('Iwona', 'Łuczak', NULL)
+INSERT INTO People VALUES ('Joanna', 'Michalak', NULL)
+INSERT INTO People VALUES ('Natalia', 'Polak', NULL)
+INSERT INTO People VALUES ('Ryszard', 'Pająk', NULL)
+INSERT INTO People VALUES ('Kamil', 'Mroz', NULL)
+INSERT INTO People VALUES ('Andrzej', 'Łuczak', NULL)
+INSERT INTO People VALUES ('Stanisław', 'Kozak', NULL)
+INSERT INTO People VALUES ('Henryk', 'Kasprzyk', NULL)
+INSERT INTO People VALUES ('Maciej', 'Stasiak', NULL)
+INSERT INTO People VALUES ('Jacek', 'Urban', NULL)
+INSERT INTO People VALUES ('Monika', 'Pająk', NULL)
+INSERT INTO People VALUES ('Adam', 'Nowak', NULL)
+INSERT INTO People VALUES ('Jan', 'Dziedzic', NULL)
+INSERT INTO People VALUES ('Andrzej', 'Zajac', NULL)
+INSERT INTO People VALUES ('Natalia', 'Pietrzak', NULL)
+INSERT INTO People VALUES ('Marek', 'Urban', NULL)
+INSERT INTO People VALUES ('Anna', 'Wojcik', NULL)
+INSERT INTO People VALUES ('Elzbieta', 'Tomczyk', NULL)
+INSERT INTO People VALUES ('Monika', 'Kania', NULL)
+INSERT INTO People VALUES ('Stanisław', 'Pawlik', NULL)
+INSERT INTO People VALUES ('Karolina', 'Dziedzic', NULL)
+INSERT INTO People VALUES ('Kamil', 'Matysiak', NULL)
+INSERT INTO People VALUES ('Tomasz', 'Olejniczak', NULL)
+INSERT INTO People VALUES ('Maciej', 'Baran', NULL)
+INSERT INTO People VALUES ('Zbigniew', 'Krawczyk', NULL)
+INSERT INTO People VALUES ('Iwona', 'Kurek', NULL)
+INSERT INTO People VALUES ('Ryszard', 'Kolodziej', NULL)
+INSERT INTO People VALUES ('Teresa', 'Wojcik', NULL)
+INSERT INTO People VALUES ('Mariusz', 'Szewczyk', NULL)
+INSERT INTO People VALUES ('Katarzyna', 'Bednarek', NULL)
+INSERT INTO People VALUES ('Jerzy', 'Mucha', NULL)
+INSERT INTO People VALUES ('Karolina', 'Michalak', NULL)
+INSERT INTO People VALUES ('Małgorzata', 'Kozak', NULL)
+INSERT INTO People VALUES ('Henryk', 'Koziol', NULL)
+INSERT INTO People VALUES ('Paweł', 'Zajac', NULL)
+INSERT INTO People VALUES ('Dorota', 'Tomczak', NULL)
+INSERT INTO People VALUES ('Robert', 'Dziedzic', NULL)
+INSERT INTO People VALUES ('Dorota', 'Walczak', NULL)
+INSERT INTO People VALUES ('Robert', 'Walczak', NULL)
+INSERT INTO People VALUES ('Dariusz', 'Duda', NULL)
+INSERT INTO People VALUES ('Jacek', 'Mucha', NULL)
+INSERT INTO People VALUES ('Zofia', 'Bednarek', NULL)
+INSERT INTO People VALUES ('Kamil', 'Dudek', NULL)
+INSERT INTO People VALUES ('Michal', 'Krawczyk', NULL)
+INSERT INTO People VALUES ('Marek', 'Kasprzyk', NULL)
+INSERT INTO People VALUES ('Piotr', 'Kurek', NULL)
+INSERT INTO People VALUES ('Marcin', 'Wieczorek', NULL)
+INSERT INTO People VALUES ('Łukasz', 'Lis', NULL)
+INSERT INTO People VALUES ('Andrzej', 'Kolodziej', NULL)
+INSERT INTO People VALUES ('Dorota', 'Małek', NULL)
+INSERT INTO People VALUES ('Łukasz', 'Przybysz', NULL)
+INSERT INTO People VALUES ('Jacek', 'Bednarek', NULL)
+INSERT INTO People VALUES ('Karolina', 'Stepien', NULL)
+INSERT INTO People VALUES ('Kazimierz', 'Nowak', NULL)
+INSERT INTO People VALUES ('Rafał', 'Michalak', NULL)
+INSERT INTO People VALUES ('Karolina', 'Kubiak', NULL)
+INSERT INTO People VALUES ('Joanna', 'Dudek', NULL)
+INSERT INTO People VALUES ('Danuta', 'Lis', NULL)
+INSERT INTO People VALUES ('Henryk', 'Kaczmarek', NULL)
+INSERT INTO People VALUES ('Kazimierz', 'Kaczmarek', NULL)
+INSERT INTO People VALUES ('Jacek', 'Polak', NULL)
+INSERT INTO People VALUES ('Mariusz', 'Polak', NULL)
+INSERT INTO People VALUES ('Anna', 'Tomczak', NULL)
+INSERT INTO People VALUES ('Andrzej', 'Marciniak', NULL)
+INSERT INTO People VALUES ('Tadeusz', 'Kozak', NULL)
+INSERT INTO People VALUES ('Agnieszka', 'Mazur', NULL)
+INSERT INTO People VALUES ('Joanna', 'Kania', NULL)
+INSERT INTO People VALUES ('Elzbieta', 'Wilk', NULL)
+INSERT INTO People VALUES ('Piotr', 'Olejniczak', NULL)
+INSERT INTO People VALUES ('Ewa', 'Stepien', NULL)
+INSERT INTO People VALUES ('Kazimierz', 'Pająk', NULL)
+INSERT INTO People VALUES ('Joanna', 'Krawczyk', NULL)
+INSERT INTO People VALUES ('Krzysztof', 'Kaczmarek', NULL)
+INSERT INTO People VALUES ('Mariusz', 'Wieczorek', NULL)
+INSERT INTO People VALUES ('Łukasz', 'Ratajczak', NULL)
+INSERT INTO People VALUES ('Dorota', 'Duda', NULL)
+INSERT INTO People VALUES ('Grażyna', 'Nowak', NULL)
+INSERT INTO People VALUES ('Ryszard', 'Dziedzic', NULL)
+INSERT INTO People VALUES ('Tomasz', 'Łuczak', NULL)
+INSERT INTO People VALUES ('Ewa', 'Kania', NULL)
+INSERT INTO People VALUES ('Beata', 'Kasprzyk', NULL)
+INSERT INTO People VALUES ('Ryszard', 'Walczak', NULL)
+INSERT INTO People VALUES ('Aleksandra', 'Dudek', NULL)
+INSERT INTO People VALUES ('Adam', 'Duda', NULL)
+INSERT INTO People VALUES ('Jerzy', 'Tomczak', NULL)
+INSERT INTO People VALUES ('Aleksandra', 'Sowa', NULL)
+INSERT INTO People VALUES ('Irena', 'Ratajczak', NULL)
+INSERT INTO People VALUES ('Kamil', 'Duda', NULL)
+INSERT INTO People VALUES ('Krystyna', 'Kowalik', NULL)
+INSERT INTO People VALUES ('Katarzyna', 'Kaczmarczyk', NULL)
+INSERT INTO People VALUES ('Elzbieta', 'Stasiak', NULL)
+INSERT INTO People VALUES ('Natalia', 'Piątek', NULL)
+INSERT INTO People VALUES ('Monika', 'Blaszczyk', NULL)
+INSERT INTO People VALUES ('Robert', 'Klimek', NULL)
+INSERT INTO People VALUES ('Halina', 'Cieslak', NULL)
+INSERT INTO People VALUES ('Tomasz', 'Pawlik', NULL)
+INSERT INTO People VALUES ('Kazimierz', 'Kozak', NULL)
+INSERT INTO People VALUES ('Dorota', 'Urban', NULL)
+INSERT INTO People VALUES ('Grażyna', 'Kolodziej', NULL)
+INSERT INTO People VALUES ('Ewa', 'Leśniak', NULL)
+INSERT INTO People VALUES (' Maria', 'Zajac', NULL)
+INSERT INTO People VALUES ('Grażyna', 'Klimek', NULL)
+INSERT INTO People VALUES ('Monika', 'Lis', NULL)
+INSERT INTO People VALUES ('Adam', 'Kania', NULL)
+INSERT INTO People VALUES ('Jadwiga', 'Mazur', NULL)
+INSERT INTO People VALUES ('Helena', 'Kaczmarek', NULL)
+INSERT INTO People VALUES ('Ryszard', 'Polak', NULL)
+INSERT INTO People VALUES ('Jadwiga', 'Olejniczak', NULL)
+INSERT INTO People VALUES ('Wojciech', 'Świątek', NULL)
+INSERT INTO People VALUES ('Łukasz', 'Adamczyk', NULL)
+INSERT INTO People VALUES ('Józef', 'Kot', NULL)
+INSERT INTO People VALUES ('Michal', 'Kaczmarczyk', NULL)
+INSERT INTO People VALUES ('Wojciech', 'Jarosz', NULL)
+INSERT INTO People VALUES ('Agnieszka', 'Wojcik', NULL)
+INSERT INTO People VALUES ('Zofia', 'Urban', NULL)
+INSERT INTO People VALUES ('Barbara', 'Kazmierczak', NULL)
+INSERT INTO People VALUES ('Ryszard', 'Blaszczyk', NULL)
+INSERT INTO People VALUES ('Marta', 'Kolodziej', NULL)
+INSERT INTO People VALUES ('Stanisław', 'Matysiak', NULL)
+INSERT INTO People VALUES ('Zofia', 'Walczak', NULL)
+INSERT INTO People VALUES ('Małgorzata', 'Koziol', NULL)
+INSERT INTO People VALUES ('Robert', 'Adamczyk', NULL)
+INSERT INTO People VALUES ('Marianna', 'Zajac', NULL)
+INSERT INTO People VALUES ('Monika', 'Leśniak', NULL)
+INSERT INTO People VALUES ('Iwona', 'Piątek', NULL)
+INSERT INTO People VALUES ('Ewa', 'Koziol', NULL)
+INSERT INTO People VALUES ('Elzbieta', 'Wojcik', NULL)
+INSERT INTO People VALUES ('Danuta', 'Dziedzic', NULL)
+INSERT INTO People VALUES ('Iwona', 'Adamczyk', NULL)
+INSERT INTO People VALUES ('Kamil', 'Kowalik', NULL)
+INSERT INTO People VALUES ('Marianna', 'Urban', NULL)
+INSERT INTO People VALUES ('Jadwiga', 'Kasprzyk', NULL)
+INSERT INTO People VALUES ('Łukasz', 'Stasiak', NULL)
+INSERT INTO People VALUES ('Grażyna', 'Krawczyk', NULL)
+INSERT INTO People VALUES (' Maria', 'Piątek', NULL)
+INSERT INTO People VALUES ('Tomasz', 'Czech', NULL)
+INSERT INTO People VALUES ('Adam', 'Cieslak', NULL)
+INSERT INTO People VALUES ('Elzbieta', 'Sowa', NULL)
+INSERT INTO People VALUES ('Łukasz', 'Sowa', NULL)
+INSERT INTO People VALUES ('Karolina', 'Wrobel', NULL)
+INSERT INTO People VALUES ('Rafał', 'Wojcik', NULL)
+INSERT INTO People VALUES ('Katarzyna', 'Mroz', NULL)
+INSERT INTO People VALUES ('Tomasz', 'Szewczyk', NULL)
+INSERT INTO People VALUES ('Jadwiga', 'Stankiewicz', NULL)
+INSERT INTO People VALUES ('Mateusz', 'Bak', NULL)
+INSERT INTO People VALUES ('Krystyna', 'Piątek', NULL)
+INSERT INTO People VALUES ('Małgorzata', 'Kurek', NULL)
+INSERT INTO People VALUES ('Marcin', 'Pająk', NULL)
+INSERT INTO People VALUES ('Grzegorz', 'Pająk', NULL)
+INSERT INTO People VALUES ('Maciej', 'Adamczyk', NULL)
+INSERT INTO People VALUES ('Elzbieta', 'Mucha', NULL)
+INSERT INTO People VALUES ('Natalia', 'Łuczak', NULL)
+INSERT INTO People VALUES ('Marta', 'Kot', NULL)
+INSERT INTO People VALUES ('Tadeusz', 'Matysiak', NULL)
+INSERT INTO People VALUES ('Halina', 'Mucha', NULL)
+INSERT INTO People VALUES ('Józef', 'Adamczyk', NULL)
+INSERT INTO People VALUES ('Jan', 'Matysiak', NULL)
+INSERT INTO People VALUES ('Paweł', 'Klimek', NULL)
+INSERT INTO People VALUES ('Ryszard', 'Bednarek', NULL)
+INSERT INTO People VALUES ('Jakub', 'Żak', NULL)
+INSERT INTO People VALUES ('Łukasz', 'Kubiak', NULL)
+INSERT INTO People VALUES ('Monika', 'Pietrzak', NULL)
+INSERT INTO People VALUES ('Ewa', 'Tomczyk', NULL)
+INSERT INTO People VALUES ('Rafał', 'Tomczyk', NULL)
+INSERT INTO People VALUES ('Iwona', 'Mucha', NULL)
+INSERT INTO People VALUES ('Józef', 'Wlodarczyk', NULL)
+INSERT INTO People VALUES ('Robert', 'Kopeć', NULL)
+INSERT INTO People VALUES ('Anna', 'Blaszczyk', NULL)
+INSERT INTO People VALUES ('Jadwiga', 'Małek', NULL)
+INSERT INTO People VALUES ('Andrzej', 'Kurek', NULL)
+INSERT INTO People VALUES ('Mateusz', 'Dziedzic', NULL)
+INSERT INTO People VALUES ('Tadeusz', 'Leśniak', NULL)
+INSERT INTO People VALUES ('Małgorzata', 'Urban', NULL)
+INSERT INTO People VALUES ('Jan', 'Matysiak', NULL)
+INSERT INTO People VALUES ('Iwona', 'Ratajczak', NULL)
+INSERT INTO People VALUES ('Józef', 'Czech', NULL)
+INSERT INTO People VALUES ('Adam', 'Matysiak', NULL)
+INSERT INTO People VALUES ('Jacek', 'Pietrzak', NULL)
+INSERT INTO People VALUES ('Dariusz', 'Tomczyk', NULL)
+INSERT INTO People VALUES ('Halina', 'Kubiak', NULL)
+INSERT INTO People VALUES ('Piotr', 'Stankiewicz', NULL)
+INSERT INTO People VALUES ('Grażyna', 'Tomczyk', NULL)
+INSERT INTO People VALUES ('Zofia', 'Matysiak', NULL)
+INSERT INTO People VALUES ('Marek', 'Wieczorek', NULL)
+INSERT INTO People VALUES ('Henryk', 'Tomczyk', NULL)
+INSERT INTO People VALUES ('Rafał', 'Kowalik', NULL)
+INSERT INTO People VALUES ('Marcin', 'Piątek', NULL)
+INSERT INTO People VALUES ('Aleksandra', 'Nowak', NULL)
+INSERT INTO People VALUES ('Wojciech', 'Stepien', NULL)
+INSERT INTO People VALUES ('Józef', 'Dudek', NULL)
+INSERT INTO People VALUES ('Barbara', 'Kaczmarek', NULL)
+INSERT INTO People VALUES ('Michal', 'Świątek', NULL)
+INSERT INTO People VALUES ('Janina', 'Koziol', NULL)
+INSERT INTO People VALUES ('Halina', 'Kowalik', NULL)
+INSERT INTO People VALUES ('Józef', 'Krawczyk', NULL)
+INSERT INTO People VALUES ('Marta', 'Czaja', NULL)
+INSERT INTO People VALUES ('Jadwiga', 'Kania', NULL)
+INSERT INTO People VALUES ('Karolina', 'Kubiak', NULL)
+INSERT INTO People VALUES ('Marcin', 'Stankiewicz', NULL)
+INSERT INTO People VALUES ('Paweł', 'Kruk', NULL)
+INSERT INTO People VALUES ('Danuta', 'Baran', NULL)
+INSERT INTO People VALUES ('Wojciech', 'Kaczmarek', NULL)
+INSERT INTO People VALUES ('Beata', 'Wieczorek', NULL)
+INSERT INTO People VALUES ('Natalia', 'Kolodziej', NULL)
+INSERT INTO People VALUES ('Marek', 'Przybysz', NULL)
+INSERT INTO People VALUES ('Joanna', 'Bak', NULL)
+INSERT INTO People VALUES ('Piotr', 'Bak', NULL)
+INSERT INTO People VALUES ('Anna', 'Blaszczyk', NULL)
+INSERT INTO People VALUES ('Zbigniew', 'Pająk', NULL)
+INSERT INTO People VALUES ('Krystyna', 'Stasiak', NULL)
+INSERT INTO People VALUES ('Katarzyna', 'Wieczorek', NULL)
+INSERT INTO People VALUES ('Maciej', 'Wozniak', NULL)
+INSERT INTO People VALUES ('Irena', 'Duda', NULL)
+INSERT INTO People VALUES ('Zbigniew', 'Nowak', NULL)
+INSERT INTO People VALUES ('Krzysztof', 'Kot', NULL)
+INSERT INTO People VALUES ('Andrzej', 'Mazur', NULL)
+INSERT INTO People VALUES ('Mariusz', 'Marciniak', NULL)
+INSERT INTO People VALUES ('Krystyna', 'Nowak', NULL)
+INSERT INTO People VALUES ('Aleksandra', 'Kowalik', NULL)
+INSERT INTO People VALUES ('Natalia', 'Kozak', NULL)
+INSERT INTO People VALUES ('Monika', 'Żak', NULL)
+INSERT INTO People VALUES ('Mariusz', 'Koziol', NULL)
+INSERT INTO People VALUES ('Stanisław', 'Pietrzak', NULL)
+INSERT INTO People VALUES ('Magdalena', 'Pająk', NULL)
+INSERT INTO People VALUES ('Andrzej', 'Wrobel', NULL)
+INSERT INTO People VALUES ('Barbara', 'Bednarek', NULL)
+INSERT INTO People VALUES ('Halina', 'Marciniak', NULL)
+INSERT INTO People VALUES ('Iwona', 'Olejniczak', NULL)
+INSERT INTO People VALUES ('Katarzyna', 'Kot', NULL)
+INSERT INTO People VALUES ('Jerzy', 'Kozak', NULL)
+INSERT INTO People VALUES ('Dorota', 'Bednarek', NULL)
+INSERT INTO People VALUES ('Kamil', 'Kowalik', NULL)
+INSERT INTO People VALUES ('Aleksandra', 'Blaszczyk', NULL)
+INSERT INTO People VALUES ('Marcin', 'Kasprzyk', NULL)
+INSERT INTO People VALUES ('Kazimierz', 'Szewczyk', NULL)
+INSERT INTO People VALUES ('Halina', 'Pawlik', NULL)
+INSERT INTO People VALUES ('Tadeusz', 'Wieczorek', NULL)
+INSERT INTO People VALUES ('Jolanta', 'Nowak', NULL)
+INSERT INTO People VALUES ('Krzysztof', 'Blaszczyk', NULL)
+INSERT INTO People VALUES ('Stanisław', 'Bak', NULL)
+INSERT INTO People VALUES ('Halina', 'Kruk', NULL)
+INSERT INTO People VALUES ('Krystyna', 'Urban', NULL)
+INSERT INTO People VALUES ('Krzysztof', 'Przybysz', NULL)
+INSERT INTO People VALUES ('Kamil', 'Mroz', NULL)
+INSERT INTO People VALUES ('Beata', 'Klimek', NULL)
+INSERT INTO People VALUES ('Dorota', 'Nowak', NULL)
+INSERT INTO People VALUES ('Paweł', 'Nowak', NULL)
+INSERT INTO People VALUES ('Ryszard', 'Przybysz', NULL)
+INSERT INTO People VALUES ('Krzysztof', 'Tomczyk', NULL)
+INSERT INTO People VALUES ('Mariusz', 'Stepien', NULL)
+INSERT INTO People VALUES ('Elzbieta', 'Mucha', NULL)
+INSERT INTO People VALUES ('Irena', 'Mroz', NULL)
+INSERT INTO People VALUES ('Tadeusz', 'Walczak', NULL)
+INSERT INTO People VALUES ('Małgorzata', 'Tomczyk', NULL)
+INSERT INTO People VALUES ('Mariusz', 'Pietrzak', NULL)
+INSERT INTO People VALUES ('Henryk', 'Kot', NULL)
+INSERT INTO People VALUES ('Zbigniew', 'Tomczyk', NULL)
+INSERT INTO People VALUES ('Mateusz', 'Cieslak', NULL)
+INSERT INTO People VALUES ('Jadwiga', 'Nowak', NULL)
+INSERT INTO People VALUES ('Janina', 'Kaczmarczyk', NULL)
+INSERT INTO People VALUES ('Iwona', 'Wozniak', NULL)
+INSERT INTO People VALUES ('Dorota', 'Zajac', NULL)
+INSERT INTO People VALUES ('Łukasz', 'Michalak', NULL)
+INSERT INTO People VALUES ('Grzegorz', 'Ratajczak', NULL)
+INSERT INTO People VALUES ('Adam', 'Kot', NULL)
+INSERT INTO People VALUES ('Beata', 'Zajac', NULL)
+INSERT INTO People VALUES ('Dariusz', 'Pawlik', NULL)
+INSERT INTO People VALUES ('Mateusz', 'Tomczyk', NULL)
+INSERT INTO People VALUES ('Robert', 'Nowak', NULL)
+INSERT INTO People VALUES ('Grażyna', 'Lis', NULL)
+INSERT INTO People VALUES ('Wojciech', 'Klimek', NULL)
+INSERT INTO People VALUES ('Marta', 'Mazur', NULL)
+INSERT INTO People VALUES ('Dariusz', 'Sowa', NULL)
+INSERT INTO People VALUES (' Maria', 'Jarosz', NULL)
+INSERT INTO People VALUES ('Michal', 'Wojcik', NULL)
+INSERT INTO People VALUES ('Janina', 'Kowalik', NULL)
+INSERT INTO People VALUES ('Kazimierz', 'Michalak', NULL)
+INSERT INTO People VALUES ('Michal', 'Wozniak', NULL)
+INSERT INTO People VALUES ('Helena', 'Mroz', NULL)
+INSERT INTO People VALUES ('Jakub', 'Leśniak', NULL)
+INSERT INTO People VALUES ('Paweł', 'Kowalik', NULL)
+INSERT INTO People VALUES ('Wojciech', 'Adamczyk', NULL)
+INSERT INTO People VALUES ('Jan', 'Tomczak', NULL)
+INSERT INTO People VALUES ('Henryk', 'Olejniczak', NULL)
+INSERT INTO People VALUES ('Beata', 'Kowalik', NULL)
+INSERT INTO People VALUES ('Tomasz', 'Żak', NULL)
+INSERT INTO People VALUES ('Łukasz', 'Wilk', NULL)
+INSERT INTO People VALUES ('Jakub', 'Polak', NULL)
+INSERT INTO People VALUES ('Iwona', 'Stepien', NULL)
+INSERT INTO People VALUES ('Kamil', 'Mroz', NULL)
+INSERT INTO People VALUES ('Robert', 'Pietrzak', NULL)
+INSERT INTO People VALUES ('Mateusz', 'Czech', NULL)
+INSERT INTO People VALUES ('Kazimierz', 'Matysiak', NULL)
+INSERT INTO People VALUES ('Tadeusz', 'Kaczmarczyk', NULL)
+INSERT INTO People VALUES ('Ewa', 'Dudek', NULL)
+INSERT INTO People VALUES ('Elzbieta', 'Wrobel', NULL)
+INSERT INTO People VALUES ('Aleksandra', 'Żak', NULL)
+INSERT INTO People VALUES ('Tomasz', 'Kania', NULL)
+INSERT INTO People VALUES ('Grzegorz', 'Zięba', NULL)
+INSERT INTO People VALUES ('Marta', 'Kozak', NULL)
+INSERT INTO People VALUES ('Natalia', 'Czaja', NULL)
+INSERT INTO People VALUES ('Tomasz', 'Pawlik', NULL)
+INSERT INTO People VALUES ('Rafał', 'Stankiewicz', NULL)
+INSERT INTO People VALUES ('Karolina', 'Matysiak', NULL)
+INSERT INTO People VALUES ('Halina', 'Cieslak', NULL)
+INSERT INTO People VALUES ('Jerzy', 'Zajac', NULL)
+INSERT INTO People VALUES ('Marek', 'Mucha', NULL)
+INSERT INTO People VALUES ('Helena', 'Kurek', NULL)
+INSERT INTO People VALUES ('Henryk', 'Nowak', NULL)
+INSERT INTO People VALUES ('Marianna', 'Czaja', NULL)
+INSERT INTO People VALUES ('Aleksandra', 'Małek', NULL)
+INSERT INTO People VALUES ('Wojciech', 'Pietrzak', NULL)
+INSERT INTO People VALUES ('Kazimierz', 'Kurek', NULL)
+INSERT INTO People VALUES ('Grażyna', 'Mazur', NULL)
+INSERT INTO People VALUES ('Kazimierz', 'Lis', NULL)
+INSERT INTO People VALUES ('Zbigniew', 'Kot', NULL)
+INSERT INTO People VALUES ('Katarzyna', 'Mazur', NULL)
+INSERT INTO People VALUES ('Elzbieta', 'Wilk', NULL)
+INSERT INTO People VALUES ('Marcin', 'Wlodarczyk', NULL)
+INSERT INTO People VALUES ('Beata', 'Kozak', NULL)
+INSERT INTO People VALUES ('Aleksandra', 'Stankiewicz', NULL)
+INSERT INTO People VALUES ('Zbigniew', 'Żak', NULL)
+INSERT INTO People VALUES ('Jadwiga', 'Matysiak', NULL)
+INSERT INTO People VALUES ('Wojciech', 'Mroz', NULL)
+INSERT INTO People VALUES ('Magdalena', 'Żak', NULL)
+INSERT INTO People VALUES ('Beata', 'Cieslak', NULL)
+INSERT INTO People VALUES ('Mariusz', 'Kolodziej', NULL)
+INSERT INTO People VALUES ('Monika', 'Pietrzak', NULL)
+INSERT INTO People VALUES ('Kamil', 'Walczak', NULL)
+INSERT INTO People VALUES ('Zbigniew', 'Stasiak', NULL)
+INSERT INTO People VALUES ('Łukasz', 'Michalak', NULL)
+INSERT INTO People VALUES ('Aleksandra', 'Kowalik', NULL)
+INSERT INTO People VALUES ('Aleksandra', 'Lis', NULL)
+INSERT INTO People VALUES (' Maria', 'Zięba', NULL)
+INSERT INTO People VALUES ('Dorota', 'Duda', NULL)
+INSERT INTO People VALUES ('Józef', 'Łuczak', NULL)
+INSERT INTO People VALUES ('Jadwiga', 'Polak', NULL)
+INSERT INTO People VALUES ('Henryk', 'Marciniak', NULL)
+INSERT INTO People VALUES ('Katarzyna', 'Piątek', NULL)
+INSERT INTO People VALUES ('Magdalena', 'Zajac', NULL)
+INSERT INTO People VALUES ('Irena', 'Małek', NULL)
+INSERT INTO People VALUES ('Rafał', 'Stankiewicz', NULL)
+INSERT INTO People VALUES ('Krzysztof', 'Dziedzic', NULL)
+INSERT INTO People VALUES ('Wojciech', 'Tomczyk', NULL)
+INSERT INTO People VALUES ('Tomasz', 'Kot', NULL)
+INSERT INTO People VALUES ('Piotr', 'Adamczyk', NULL)
+INSERT INTO People VALUES ('Zofia', 'Stankiewicz', NULL)
+INSERT INTO People VALUES ('Marcin', 'Blaszczyk', NULL)
+INSERT INTO People VALUES ('Marta', 'Kolodziej', NULL)
+INSERT INTO People VALUES ('Mateusz', 'Koziol', NULL)
+INSERT INTO People VALUES ('Halina', 'Kowalik', NULL)
+INSERT INTO People VALUES ('Marek', 'Duda', NULL)
+INSERT INTO People VALUES ('Henryk', 'Ratajczak', NULL)
+INSERT INTO People VALUES ('Aleksandra', 'Kasprzyk', NULL)
+INSERT INTO People VALUES ('Marianna', 'Kopeć', NULL)
+INSERT INTO People VALUES ('Katarzyna', 'Małek', NULL)
+INSERT INTO People VALUES ('Jolanta', 'Matysiak', NULL)
+INSERT INTO People VALUES ('Robert', 'Piątek', NULL)
+INSERT INTO People VALUES ('Henryk', 'Nowak', NULL)
+INSERT INTO People VALUES ('Teresa', 'Stasiak', NULL)
+INSERT INTO People VALUES ('Dariusz', 'Żak', NULL)
+INSERT INTO People VALUES (' Maria', 'Kot', NULL)
+INSERT INTO People VALUES ('Beata', 'Koziol', NULL)
+INSERT INTO People VALUES ('Mariusz', 'Wrobel', NULL)
+INSERT INTO People VALUES ('Barbara', 'Stasiak', NULL)
+INSERT INTO People VALUES ('Wojciech', 'Stepien', NULL)
+INSERT INTO People VALUES ('Stanisław', 'Mazur', NULL)
+INSERT INTO People VALUES ('Iwona', 'Stasiak', NULL)
+INSERT INTO People VALUES ('Danuta', 'Czech', NULL)
+INSERT INTO People VALUES ('Zbigniew', 'Łuczak', NULL)
+INSERT INTO People VALUES ('Grażyna', 'Duda', NULL)
+INSERT INTO People VALUES ('Jacek', 'Dudek', NULL)
+INSERT INTO People VALUES ('Rafał', 'Zięba', NULL)
+INSERT INTO People VALUES ('Krzysztof', 'Polak', NULL)
+INSERT INTO People VALUES ('Ewa', 'Pająk', NULL)
+INSERT INTO People VALUES ('Robert', 'Zięba', NULL)
+INSERT INTO People VALUES ('Iwona', 'Cieslak', NULL)
+INSERT INTO People VALUES ('Adam', 'Mroz', NULL)
+INSERT INTO People VALUES ('Jacek', 'Kasprzyk', NULL)
+INSERT INTO People VALUES ('Danuta', 'Ratajczak', NULL)
+INSERT INTO People VALUES ('Irena', 'Olejniczak', NULL)
+INSERT INTO People VALUES ('Beata', 'Wozniak', NULL)
+INSERT INTO People VALUES ('Paweł', 'Kolodziej', NULL)
+INSERT INTO People VALUES ('Natalia', 'Zajac', NULL)
+INSERT INTO People VALUES ('Zbigniew', 'Krawczyk', NULL)
+INSERT INTO People VALUES ('Małgorzata', 'Żak', NULL)
+INSERT INTO People VALUES ('Tomasz', 'Bak', NULL)
+INSERT INTO People VALUES ('Mateusz', 'Cieslak', NULL)
+INSERT INTO People VALUES ('Karolina', 'Stankiewicz', NULL)
+
+
+--GENERATED STUDENTS:
+
+INSERT INTO People VALUES ('Paweł', 'Piątek', '493795')
+INSERT INTO People VALUES ('Robert', 'Tomczyk', '528030')
+INSERT INTO People VALUES ('Stanisław', 'Tomczak', '020195')
+INSERT INTO People VALUES ('Grażyna', 'Walczak', '656123')
+INSERT INTO People VALUES ('Kamil', 'Michalak', '464416')
+INSERT INTO People VALUES ('Rafał', 'Wrobel', '893375')
+INSERT INTO People VALUES ('Beata', 'Walczak', '353375')
+INSERT INTO People VALUES ('Anna', 'Stepien', '758305')
+INSERT INTO People VALUES ('Halina', 'Żak', '296279')
+INSERT INTO People VALUES ('Adam', 'Adamczyk', '558575')
+INSERT INTO People VALUES ('Jakub', 'Kaczmarczyk', '899668')
+INSERT INTO People VALUES ('Tadeusz', 'Łuczak', '380535')
+INSERT INTO People VALUES ('Grzegorz', 'Baran', '908595')
+INSERT INTO People VALUES ('Ryszard', 'Kopeć', '467088')
+INSERT INTO People VALUES ('Mateusz', 'Wojcik', '188057')
+INSERT INTO People VALUES ('Kazimierz', 'Pietrzak', '735717')
+INSERT INTO People VALUES ('Andrzej', 'Świątek', '984165')
+INSERT INTO People VALUES ('Marcin', 'Łuczak', '620845')
+INSERT INTO People VALUES ('Tomasz', 'Nowak', '436254')
+INSERT INTO People VALUES ('Adam', 'Kowalik', '525911')
+INSERT INTO People VALUES ('Grażyna', 'Duda', '831852')
+INSERT INTO People VALUES ('Elzbieta', 'Walczak', '846369')
+INSERT INTO People VALUES ('Teresa', 'Kurek', '137074')
+INSERT INTO People VALUES ('Jolanta', 'Michalak', '332707')
+INSERT INTO People VALUES ('Grzegorz', 'Wrobel', '375833')
+INSERT INTO People VALUES ('Magdalena', 'Michalak', '335782')
+INSERT INTO People VALUES ('Mateusz', 'Mucha', '164530')
+INSERT INTO People VALUES ('Agnieszka', 'Duda', '950587')
+INSERT INTO People VALUES ('Zbigniew', 'Pawlik', '830011')
+INSERT INTO People VALUES ('Dariusz', 'Koziol', '478079')
+INSERT INTO People VALUES ('Monika', 'Pietrzak', '282962')
+INSERT INTO People VALUES ('Janina', 'Leśniak', '349383')
+INSERT INTO People VALUES ('Marianna', 'Olejniczak', '150636')
+INSERT INTO People VALUES ('Joanna', 'Pietrzak', '107217')
+INSERT INTO People VALUES ('Mateusz', 'Przybysz', '461070')
+INSERT INTO People VALUES ('Monika', 'Kolodziej', '424924')
+INSERT INTO People VALUES ('Józef', 'Kruk', '621900')
+INSERT INTO People VALUES ('Jolanta', 'Kot', '322500')
+INSERT INTO People VALUES ('Rafał', 'Urban', '364725')
+INSERT INTO People VALUES ('Henryk', 'Bak', '263278')
+INSERT INTO People VALUES ('Dariusz', 'Urban', '714711')
+INSERT INTO People VALUES ('Joanna', 'Matysiak', '463054')
+INSERT INTO People VALUES ('Stanisław', 'Leśniak', '544427')
+INSERT INTO People VALUES ('Grażyna', 'Wilk', '902094')
+INSERT INTO People VALUES ('Henryk', 'Kubiak', '646131')
+INSERT INTO People VALUES ('Michal', 'Dziedzic', '016644')
+INSERT INTO People VALUES ('Krystyna', 'Świątek', '956099')
+INSERT INTO People VALUES ('Ewa', 'Urban', '388421')
+INSERT INTO People VALUES ('Łukasz', 'Kaczmarek', '835372')
+INSERT INTO People VALUES ('Jerzy', 'Kubiak', '090797')
+INSERT INTO People VALUES ('Piotr', 'Nowak', '028678')
+INSERT INTO People VALUES ('Natalia', 'Duda', '921611')
+INSERT INTO People VALUES ('Adam', 'Koziol', '781301')
+INSERT INTO People VALUES ('Danuta', 'Cieslak', '062672')
+INSERT INTO People VALUES ('Beata', 'Baran', '414450')
+INSERT INTO People VALUES ('Teresa', 'Stasiak', '142104')
+INSERT INTO People VALUES ('Monika', 'Piątek', '204751')
+INSERT INTO People VALUES ('Stanisław', 'Blaszczyk', '392993')
+INSERT INTO People VALUES ('Elzbieta', 'Kozak', '724846')
+INSERT INTO People VALUES ('Stanisław', 'Matysiak', '765903')
+INSERT INTO People VALUES ('Grzegorz', 'Szewczyk', '864182')
+INSERT INTO People VALUES ('Stanisław', 'Tomczyk', '499258')
+INSERT INTO People VALUES ('Ryszard', 'Wieczorek', '577086')
+INSERT INTO People VALUES ('Jakub', 'Polak', '572177')
+INSERT INTO People VALUES ('Tadeusz', 'Kopeć', '080764')
+INSERT INTO People VALUES ('Jakub', 'Stankiewicz', '324914')
+INSERT INTO People VALUES ('Magdalena', 'Wilk', '997079')
+INSERT INTO People VALUES ('Jacek', 'Pawlik', '931038')
+INSERT INTO People VALUES ('Stanisław', 'Małek', '648580')
+INSERT INTO People VALUES ('Irena', 'Wrobel', '682718')
+INSERT INTO People VALUES ('Anna', 'Małek', '152050')
+INSERT INTO People VALUES ('Halina', 'Adamczyk', '746075')
+INSERT INTO People VALUES ('Zbigniew', 'Kolodziej', '195161')
+INSERT INTO People VALUES ('Monika', 'Stasiak', '017868')
+INSERT INTO People VALUES ('Mateusz', 'Dudek', '095055')
+INSERT INTO People VALUES ('Teresa', 'Kubiak', '990993')
+INSERT INTO People VALUES ('Halina', 'Polak', '195178')
+INSERT INTO People VALUES ('Barbara', 'Urban', '303336')
+INSERT INTO People VALUES ('Krzysztof', 'Sowa', '094222')
+INSERT INTO People VALUES (' Maria', 'Koziol', '208526')
+INSERT INTO People VALUES ('Jacek', 'Kopeć', '488325')
+INSERT INTO People VALUES ('Andrzej', 'Przybysz', '924645')
+INSERT INTO People VALUES ('Janina', 'Kot', '747002')
+INSERT INTO People VALUES ('Mariusz', 'Kolodziej', '494062')
+INSERT INTO People VALUES ('Marta', 'Sowa', '853148')
+INSERT INTO People VALUES ('Michal', 'Tomczak', '433532')
+INSERT INTO People VALUES ('Helena', 'Czaja', '219114')
+INSERT INTO People VALUES ('Magdalena', 'Stasiak', '947882')
+INSERT INTO People VALUES ('Beata', 'Koziol', '074286')
+INSERT INTO People VALUES ('Łukasz', 'Kaczmarczyk', '670736')
+INSERT INTO People VALUES ('Jan', 'Kolodziej', '450298')
+INSERT INTO People VALUES ('Maciej', 'Duda', '612379')
+INSERT INTO People VALUES ('Irena', 'Olejniczak', '869338')
+INSERT INTO People VALUES ('Józef', 'Zajac', '935287')
+INSERT INTO People VALUES ('Rafał', 'Walczak', '316555')
+INSERT INTO People VALUES ('Irena', 'Dziedzic', '762357')
+INSERT INTO People VALUES ('Teresa', 'Krawczyk', '562820')
+INSERT INTO People VALUES ('Joanna', 'Mucha', '655139')
+INSERT INTO People VALUES ('Jadwiga', 'Urban', '464340')
+INSERT INTO People VALUES ('Stanisław', 'Cieslak', '533479')
+INSERT INTO People VALUES ('Łukasz', 'Leśniak', '329454')
+INSERT INTO People VALUES ('Marcin', 'Kazmierczak', '534211')
+INSERT INTO People VALUES ('Aleksandra', 'Klimek', '724823')
+INSERT INTO People VALUES ('Krzysztof', 'Jarosz', '903367')
+INSERT INTO People VALUES ('Barbara', 'Zajac', '885153')
+INSERT INTO People VALUES ('Ewa', 'Bednarek', '466182')
+INSERT INTO People VALUES ('Marcin', 'Mroz', '924830')
+INSERT INTO People VALUES ('Jolanta', 'Mazur', '753795')
+INSERT INTO People VALUES ('Marcin', 'Kruk', '757774')
+INSERT INTO People VALUES ('Grzegorz', 'Wrobel', '718272')
+INSERT INTO People VALUES ('Tadeusz', 'Łuczak', '228046')
+INSERT INTO People VALUES ('Elzbieta', 'Stankiewicz', '965651')
+INSERT INTO People VALUES ('Jacek', 'Polak', '041959')
+INSERT INTO People VALUES ('Irena', 'Kurek', '066014')
+INSERT INTO People VALUES ('Karolina', 'Wojcik', '925410')
+INSERT INTO People VALUES ('Barbara', 'Baran', '613585')
+INSERT INTO People VALUES ('Ryszard', 'Olejniczak', '841343')
+INSERT INTO People VALUES ('Mateusz', 'Świątek', '632355')
+INSERT INTO People VALUES ('Paweł', 'Matysiak', '983116')
+INSERT INTO People VALUES ('Marta', 'Żak', '255875')
+INSERT INTO People VALUES ('Małgorzata', 'Stepien', '887025')
+INSERT INTO People VALUES ('Anna', 'Krawczyk', '597043')
+INSERT INTO People VALUES ('Krystyna', 'Kolodziej', '614734')
+INSERT INTO People VALUES ('Magdalena', 'Kolodziej', '167167')
+INSERT INTO People VALUES ('Aleksandra', 'Mazur', '135065')
+INSERT INTO People VALUES ('Helena', 'Walczak', '393478')
+INSERT INTO People VALUES ('Jakub', 'Kania', '041233')
+INSERT INTO People VALUES ('Dorota', 'Klimek', '524791')
+INSERT INTO People VALUES ('Paweł', 'Kowalik', '808522')
+INSERT INTO People VALUES ('Michal', 'Stasiak', '494313')
+INSERT INTO People VALUES ('Jerzy', 'Kot', '618646')
+INSERT INTO People VALUES ('Andrzej', 'Lis', '207455')
+INSERT INTO People VALUES ('Marcin', 'Kot', '148586')
+INSERT INTO People VALUES ('Kazimierz', 'Michalak', '037665')
+INSERT INTO People VALUES ('Marek', 'Polak', '299952')
+INSERT INTO People VALUES ('Dorota', 'Baran', '290158')
+INSERT INTO People VALUES ('Zbigniew', 'Bak', '189697')
+INSERT INTO People VALUES ('Dariusz', 'Wieczorek', '964214')
+INSERT INTO People VALUES ('Jakub', 'Blaszczyk', '127991')
+INSERT INTO People VALUES ('Zofia', 'Jarosz', '555278')
+INSERT INTO People VALUES ('Jacek', 'Wrobel', '866219')
+INSERT INTO People VALUES ('Irena', 'Pietrzak', '201112')
+INSERT INTO People VALUES ('Beata', 'Mucha', '400053')
+INSERT INTO People VALUES ('Henryk', 'Kania', '046740')
+INSERT INTO People VALUES ('Maciej', 'Kaczmarczyk', '497814')
+INSERT INTO People VALUES ('Agnieszka', 'Bednarek', '312344')
+INSERT INTO People VALUES ('Grzegorz', 'Przybysz', '204402')
+INSERT INTO People VALUES ('Irena', 'Wieczorek', '993617')
+INSERT INTO People VALUES ('Janina', 'Kruk', '965014')
+INSERT INTO People VALUES ('Ewa', 'Sowa', '089215')
+INSERT INTO People VALUES ('Marcin', 'Kopeć', '660812')
+INSERT INTO People VALUES ('Grzegorz', 'Świątek', '003751')
+INSERT INTO People VALUES ('Mariusz', 'Tomczak', '902934')
+INSERT INTO People VALUES ('Grzegorz', 'Kopeć', '400821')
+INSERT INTO People VALUES ('Henryk', 'Baran', '810047')
+INSERT INTO People VALUES ('Tadeusz', 'Polak', '857870')
+INSERT INTO People VALUES ('Rafał', 'Świątek', '790905')
+INSERT INTO People VALUES ('Jolanta', 'Wojcik', '479517')
+INSERT INTO People VALUES ('Andrzej', 'Bednarek', '786362')
+INSERT INTO People VALUES ('Maciej', 'Duda', '135685')
+INSERT INTO People VALUES ('Rafał', 'Baran', '737889')
+INSERT INTO People VALUES ('Tadeusz', 'Koziol', '277366')
+INSERT INTO People VALUES ('Wojciech', 'Marciniak', '736521')
+INSERT INTO People VALUES ('Adam', 'Wlodarczyk', '810509')
+INSERT INTO People VALUES ('Krzysztof', 'Marciniak', '529748')
+INSERT INTO People VALUES ('Zbigniew', 'Stasiak', '165590')
+INSERT INTO People VALUES ('Aleksandra', 'Koziol', '249327')
+INSERT INTO People VALUES ('Jan', 'Wrobel', '339427')
+INSERT INTO People VALUES ('Mariusz', 'Przybysz', '149407')
+INSERT INTO People VALUES ('Jacek', 'Szewczyk', '152653')
+INSERT INTO People VALUES ('Maciej', 'Ratajczak', '659515')
+INSERT INTO People VALUES ('Adam', 'Wlodarczyk', '419755')
+INSERT INTO People VALUES ('Janina', 'Kopeć', '786035')
+INSERT INTO People VALUES ('Grzegorz', 'Michalak', '077024')
+INSERT INTO People VALUES ('Kazimierz', 'Łuczak', '978611')
+INSERT INTO People VALUES ('Piotr', 'Kozak', '946869')
+INSERT INTO People VALUES ('Grzegorz', 'Kaczmarek', '828849')
+INSERT INTO People VALUES ('Anna', 'Marciniak', '869696')
+INSERT INTO People VALUES ('Jacek', 'Koziol', '485361')
+INSERT INTO People VALUES ('Tadeusz', 'Czech', '142062')
+INSERT INTO People VALUES ('Mariusz', 'Wieczorek', '273059')
+INSERT INTO People VALUES ('Tomasz', 'Ratajczak', '025058')
+INSERT INTO People VALUES ('Tomasz', 'Leśniak', '566054')
+INSERT INTO People VALUES ('Paweł', 'Dudek', '203311')
+INSERT INTO People VALUES ('Zbigniew', 'Łuczak', '373531')
+INSERT INTO People VALUES ('Marek', 'Czech', '804050')
+INSERT INTO People VALUES ('Halina', 'Mroz', '038999')
+INSERT INTO People VALUES ('Helena', 'Stasiak', '984642')
+INSERT INTO People VALUES ('Jacek', 'Kolodziej', '960630')
+INSERT INTO People VALUES ('Krystyna', 'Kaczmarczyk', '497542')
+INSERT INTO People VALUES ('Józef', 'Stasiak', '199402')
+INSERT INTO People VALUES ('Marek', 'Pająk', '067869')
+INSERT INTO People VALUES ('Karolina', 'Kolodziej', '653109')
+INSERT INTO People VALUES ('Ewa', 'Jarosz', '478961')
+INSERT INTO People VALUES ('Marianna', 'Zajac', '325122')
+INSERT INTO People VALUES ('Magdalena', 'Dziedzic', '314940')
+INSERT INTO People VALUES ('Maciej', 'Dziedzic', '586294')
+INSERT INTO People VALUES ('Jadwiga', 'Wozniak', '281366')
+INSERT INTO People VALUES (' Maria', 'Duda', '474078')
+INSERT INTO People VALUES ('Anna', 'Walczak', '144079')
+
+
+--CONFERENCE 1:
+
+INSERT INTO Conferences VALUES ('EXPO', 'Konferencja dyskusyjna', '2016-06-06', '2016-06-07', 0)
+
+INSERT INTO ConfDays VALUES (1, 272, '2016-06-06')
+INSERT INTO Prices VALUES (1, 15, 0.3, 0.5, 240)
+INSERT INTO Prices VALUES (1, 10, 0.24, 0.44, 240)
+INSERT INTO Prices VALUES (1, 5, 0.18, 0.38, 240)
+
+INSERT INTO ConfDays VALUES (1, 282, '2016-06-07')
+INSERT INTO Prices VALUES (2, 15, 0.3, 0.5, 70)
+INSERT INTO Prices VALUES (2, 10, 0.26, 0.46, 70)
+INSERT INTO Prices VALUES (2, 5, 0.22, 0.42, 70)
+
+
+--CONFERENCE 2:
+
+INSERT INTO Conferences VALUES ('Targi ślubne', 'Spełnij marzenia', '2016-06-23', '2016-06-24', 0)
+
+INSERT INTO ConfDays VALUES (2, 206, '2016-06-23')
+INSERT INTO Prices VALUES (3, 15, 0.3, 0.5, 70)
+INSERT INTO Prices VALUES (3, 10, 0.26, 0.46, 70)
+INSERT INTO Prices VALUES (3, 5, 0.22, 0.42, 70)
+
+INSERT INTO ConfDays VALUES (2, 206, '2016-06-24')
+INSERT INTO Prices VALUES (4, 15, 0.3, 0.5, 180)
+INSERT INTO Prices VALUES (4, 10, 0.26, 0.46, 180)
+INSERT INTO Prices VALUES (4, 5, 0.22, 0.42, 180)
+
+
+--CONFERENCE 3:
+
+INSERT INTO Conferences VALUES ('Religie świata', 'Tytuł konferencji już jest wymowny', '2016-07-08', '2016-07-10', 0)
+
+INSERT INTO ConfDays VALUES (3, 206, '2016-07-08')
+INSERT INTO Prices VALUES (5, 15, 0.3, 0.5, 255)
+INSERT INTO Prices VALUES (5, 10, 0.28, 0.48, 255)
+INSERT INTO Prices VALUES (5, 5, 0.26, 0.46, 255)
+
+INSERT INTO ConfDays VALUES (3, 216, '2016-07-09')
+INSERT INTO Prices VALUES (6, 15, 0.3, 0.5, 215)
+INSERT INTO Prices VALUES (6, 10, 0.28, 0.48, 215)
+INSERT INTO Prices VALUES (6, 5, 0.26, 0.46, 215)
+
+INSERT INTO ConfDays VALUES (3, 206, '2016-07-10')
+INSERT INTO Prices VALUES (7, 15, 0.3, 0.5, 175)
+INSERT INTO Prices VALUES (7, 10, 0.26, 0.46, 175)
+INSERT INTO Prices VALUES (7, 5, 0.22, 0.42, 175)
+
+
+--CONFERENCE 4:
+
+INSERT INTO Conferences VALUES ('Nieznani naukowcy', NULL, '2016-07-26', '2016-07-27', 0)
+
+INSERT INTO ConfDays VALUES (4, 217, '2016-07-26')
+INSERT INTO Prices VALUES (8, 15, 0.3, 0.5, 295)
+INSERT INTO Prices VALUES (8, 10, 0.22, 0.42, 295)
+INSERT INTO Prices VALUES (8, 5, 0.14, 0.34, 295)
+
+INSERT INTO ConfDays VALUES (4, 207, '2016-07-27')
+INSERT INTO Prices VALUES (9, 15, 0.3, 0.5, 280)
+INSERT INTO Prices VALUES (9, 10, 0.22, 0.42, 280)
+INSERT INTO Prices VALUES (9, 5, 0.14, 0.34, 280)
+
+
+--CONFERENCE 5:
+
+INSERT INTO Conferences VALUES ('Wielcy naukowcy', 'Bardzo prosty opis', '2016-08-04', '2016-08-06', 0)
+
+INSERT INTO ConfDays VALUES (5, 227, '2016-08-04')
+INSERT INTO Prices VALUES (10, 15, 0.3, 0.5, 180)
+INSERT INTO Prices VALUES (10, 10, 0.22, 0.42, 180)
+INSERT INTO Prices VALUES (10, 5, 0.14, 0.34, 180)
+
+INSERT INTO ConfDays VALUES (5, 227, '2016-08-05')
+INSERT INTO Prices VALUES (11, 15, 0.3, 0.5, 110)
+INSERT INTO Prices VALUES (11, 10, 0.28, 0.48, 110)
+INSERT INTO Prices VALUES (11, 5, 0.26, 0.46, 110)
+
+INSERT INTO ConfDays VALUES (5, 227, '2016-08-06')
+INSERT INTO Prices VALUES (12, 15, 0.3, 0.5, 260)
+INSERT INTO Prices VALUES (12, 10, 0.28, 0.48, 260)
+INSERT INTO Prices VALUES (12, 5, 0.26, 0.46, 260)
+
+
+--CONFERENCE 6:
+
+INSERT INTO Conferences VALUES ('Infrastruktura miasta', 'Konferencja dla ambitnych', '2016-08-12', '2016-08-14', 0)
+
+INSERT INTO ConfDays VALUES (6, 248, '2016-08-12')
+INSERT INTO Prices VALUES (13, 15, 0.3, 0.5, 90)
+INSERT INTO Prices VALUES (13, 10, 0.26, 0.46, 90)
+INSERT INTO Prices VALUES (13, 5, 0.22, 0.42, 90)
+
+INSERT INTO ConfDays VALUES (6, 248, '2016-08-13')
+INSERT INTO Prices VALUES (14, 15, 0.3, 0.5, 220)
+INSERT INTO Prices VALUES (14, 10, 0.22, 0.42, 220)
+INSERT INTO Prices VALUES (14, 5, 0.14, 0.34, 220)
+
+INSERT INTO ConfDays VALUES (6, 248, '2016-08-14')
+INSERT INTO Prices VALUES (15, 15, 0.3, 0.5, 115)
+INSERT INTO Prices VALUES (15, 10, 0.28, 0.48, 115)
+INSERT INTO Prices VALUES (15, 5, 0.26, 0.46, 115)
+
+
+--CONFERENCE 7:
+
+INSERT INTO Conferences VALUES ('Targi językowe', NULL, '2016-09-01', '2016-09-04', 0)
+
+INSERT INTO ConfDays VALUES (7, 193, '2016-09-01')
+INSERT INTO Prices VALUES (16, 15, 0.3, 0.5, 50)
+INSERT INTO Prices VALUES (16, 10, 0.26, 0.46, 50)
+INSERT INTO Prices VALUES (16, 5, 0.22, 0.42, 50)
+
+INSERT INTO ConfDays VALUES (7, 193, '2016-09-02')
+INSERT INTO Prices VALUES (17, 15, 0.3, 0.5, 100)
+INSERT INTO Prices VALUES (17, 10, 0.26, 0.46, 100)
+INSERT INTO Prices VALUES (17, 5, 0.22, 0.42, 100)
+
+INSERT INTO ConfDays VALUES (7, 193, '2016-09-03')
+INSERT INTO Prices VALUES (18, 15, 0.3, 0.5, 220)
+INSERT INTO Prices VALUES (18, 10, 0.26, 0.46, 220)
+INSERT INTO Prices VALUES (18, 5, 0.22, 0.42, 220)
+
+INSERT INTO ConfDays VALUES (7, 193, '2016-09-04')
+INSERT INTO Prices VALUES (19, 15, 0.3, 0.5, 200)
+INSERT INTO Prices VALUES (19, 10, 0.28, 0.48, 200)
+INSERT INTO Prices VALUES (19, 5, 0.26, 0.46, 200)
+
+
+--CONFERENCE 8:
+
+INSERT INTO Conferences VALUES ('Nieznani naukowcy', 'Dla każdego!', '2016-09-19', '2016-09-21', 0)
+
+INSERT INTO ConfDays VALUES (8, 120, '2016-09-19')
+INSERT INTO Prices VALUES (20, 15, 0.3, 0.5, 155)
+INSERT INTO Prices VALUES (20, 10, 0.28, 0.48, 155)
+INSERT INTO Prices VALUES (20, 5, 0.26, 0.46, 155)
+
+INSERT INTO ConfDays VALUES (8, 110, '2016-09-20')
+INSERT INTO Prices VALUES (21, 15, 0.3, 0.5, 245)
+INSERT INTO Prices VALUES (21, 10, 0.22, 0.42, 245)
+INSERT INTO Prices VALUES (21, 5, 0.14, 0.34, 245)
+
+INSERT INTO ConfDays VALUES (8, 120, '2016-09-21')
+INSERT INTO Prices VALUES (22, 15, 0.3, 0.5, 70)
+INSERT INTO Prices VALUES (22, 10, 0.26, 0.46, 70)
+INSERT INTO Prices VALUES (22, 5, 0.22, 0.42, 70)
+
+
+--CONFERENCE 9:
+
+INSERT INTO Conferences VALUES ('Rozwój osobisty', 'Prosty opis', '2016-10-08', '2016-10-09', 0)
+
+INSERT INTO ConfDays VALUES (9, 230, '2016-10-08')
+INSERT INTO Prices VALUES (23, 15, 0.3, 0.5, 235)
+INSERT INTO Prices VALUES (23, 10, 0.28, 0.48, 235)
+INSERT INTO Prices VALUES (23, 5, 0.26, 0.46, 235)
+
+INSERT INTO ConfDays VALUES (9, 240, '2016-10-09')
+INSERT INTO Prices VALUES (24, 15, 0.3, 0.5, 65)
+INSERT INTO Prices VALUES (24, 10, 0.22, 0.42, 65)
+INSERT INTO Prices VALUES (24, 5, 0.14, 0.34, 65)
+
+
+--CONFERENCE 10:
+
+INSERT INTO Conferences VALUES ('Bezpieczeństwo w życiu', NULL, '2016-10-22', '2016-10-22', 0)
+
+INSERT INTO ConfDays VALUES (10, 250, '2016-10-22')
+INSERT INTO Prices VALUES (25, 15, 0.3, 0.5, 100)
+INSERT INTO Prices VALUES (25, 10, 0.22, 0.42, 100)
+INSERT INTO Prices VALUES (25, 5, 0.14, 0.34, 100)
+
+
+--CONFERENCE 11:
+
+INSERT INTO Conferences VALUES ('Bezpieczeństwo w życiu', 'Dla każdego!', '2016-10-29', '2016-11-01', 0)
+
+INSERT INTO ConfDays VALUES (11, 184, '2016-10-29')
+INSERT INTO Prices VALUES (26, 15, 0.3, 0.5, 165)
+INSERT INTO Prices VALUES (26, 10, 0.22, 0.42, 165)
+INSERT INTO Prices VALUES (26, 5, 0.14, 0.34, 165)
+
+INSERT INTO ConfDays VALUES (11, 184, '2016-10-30')
+INSERT INTO Prices VALUES (27, 15, 0.3, 0.5, 275)
+INSERT INTO Prices VALUES (27, 10, 0.22, 0.42, 275)
+INSERT INTO Prices VALUES (27, 5, 0.14, 0.34, 275)
+
+INSERT INTO ConfDays VALUES (11, 184, '2016-10-31')
+INSERT INTO Prices VALUES (28, 15, 0.3, 0.5, 105)
+INSERT INTO Prices VALUES (28, 10, 0.28, 0.48, 105)
+INSERT INTO Prices VALUES (28, 5, 0.26, 0.46, 105)
+
+INSERT INTO ConfDays VALUES (11, 184, '2016-11-01')
+INSERT INTO Prices VALUES (29, 15, 0.3, 0.5, 175)
+INSERT INTO Prices VALUES (29, 10, 0.22, 0.42, 175)
+INSERT INTO Prices VALUES (29, 5, 0.14, 0.34, 175)
+
+
+--CONFERENCE 12:
+
+INSERT INTO Conferences VALUES ('Rozwój miasta', NULL, '2016-11-12', '2016-11-12', 0)
+
+INSERT INTO ConfDays VALUES (12, 215, '2016-11-12')
+INSERT INTO Prices VALUES (30, 15, 0.3, 0.5, 90)
+INSERT INTO Prices VALUES (30, 10, 0.22, 0.42, 90)
+INSERT INTO Prices VALUES (30, 5, 0.14, 0.34, 90)
+
+
+--CONFERENCE 13:
+
+INSERT INTO Conferences VALUES ('Rozwój osobisty', 'Konferencja dla ambitnych', '2016-11-19', '2016-11-22', 0)
+
+INSERT INTO ConfDays VALUES (13, 169, '2016-11-19')
+INSERT INTO Prices VALUES (31, 15, 0.3, 0.5, 50)
+INSERT INTO Prices VALUES (31, 10, 0.28, 0.48, 50)
+INSERT INTO Prices VALUES (31, 5, 0.26, 0.46, 50)
+
+INSERT INTO ConfDays VALUES (13, 169, '2016-11-20')
+INSERT INTO Prices VALUES (32, 15, 0.3, 0.5, 200)
+INSERT INTO Prices VALUES (32, 10, 0.26, 0.46, 200)
+INSERT INTO Prices VALUES (32, 5, 0.22, 0.42, 200)
+
+INSERT INTO ConfDays VALUES (13, 159, '2016-11-21')
+INSERT INTO Prices VALUES (33, 15, 0.3, 0.5, 295)
+INSERT INTO Prices VALUES (33, 10, 0.24, 0.44, 295)
+INSERT INTO Prices VALUES (33, 5, 0.18, 0.38, 295)
+
+INSERT INTO ConfDays VALUES (13, 169, '2016-11-22')
+INSERT INTO Prices VALUES (34, 15, 0.3, 0.5, 260)
+INSERT INTO Prices VALUES (34, 10, 0.22, 0.42, 260)
+INSERT INTO Prices VALUES (34, 5, 0.14, 0.34, 260)
+
+
+--CONFERENCE 14:
+
+INSERT INTO Conferences VALUES ('Nowe technologie', NULL, '2016-11-28', '2016-11-28', 0)
+
+INSERT INTO ConfDays VALUES (14, 219, '2016-11-28')
+INSERT INTO Prices VALUES (35, 15, 0.3, 0.5, 255)
+INSERT INTO Prices VALUES (35, 10, 0.24, 0.44, 255)
+INSERT INTO Prices VALUES (35, 5, 0.18, 0.38, 255)
+
+
+--CONFERENCE 15:
+
+INSERT INTO Conferences VALUES ('Targi ślubne', NULL, '2016-12-18', '2016-12-20', 0)
+
+INSERT INTO ConfDays VALUES (15, 285, '2016-12-18')
+INSERT INTO Prices VALUES (36, 15, 0.3, 0.5, 70)
+INSERT INTO Prices VALUES (36, 10, 0.24, 0.44, 70)
+INSERT INTO Prices VALUES (36, 5, 0.18, 0.38, 70)
+
+INSERT INTO ConfDays VALUES (15, 275, '2016-12-19')
+INSERT INTO Prices VALUES (37, 15, 0.3, 0.5, 50)
+INSERT INTO Prices VALUES (37, 10, 0.24, 0.44, 50)
+INSERT INTO Prices VALUES (37, 5, 0.18, 0.38, 50)
+
+INSERT INTO ConfDays VALUES (15, 285, '2016-12-20')
+INSERT INTO Prices VALUES (38, 15, 0.3, 0.5, 180)
+INSERT INTO Prices VALUES (38, 10, 0.26, 0.46, 180)
+INSERT INTO Prices VALUES (38, 5, 0.22, 0.42, 180)
+
+
+--CONFERENCE 16:
+
+INSERT INTO Conferences VALUES ('Religie świata', NULL, '2017-01-07', '2017-01-07', 0)
+
+INSERT INTO ConfDays VALUES (16, 111, '2017-01-07')
+INSERT INTO Prices VALUES (39, 15, 0.3, 0.5, 165)
+INSERT INTO Prices VALUES (39, 10, 0.22, 0.42, 165)
+INSERT INTO Prices VALUES (39, 5, 0.14, 0.34, 165)
+
+
+--CONFERENCE 17:
+
+INSERT INTO Conferences VALUES ('Praca za granicą', NULL, '2017-01-18', '2017-01-20', 0)
+
+INSERT INTO ConfDays VALUES (17, 151, '2017-01-18')
+INSERT INTO Prices VALUES (40, 15, 0.3, 0.5, 270)
+INSERT INTO Prices VALUES (40, 10, 0.26, 0.46, 270)
+INSERT INTO Prices VALUES (40, 5, 0.22, 0.42, 270)
+
+INSERT INTO ConfDays VALUES (17, 151, '2017-01-19')
+INSERT INTO Prices VALUES (41, 15, 0.3, 0.5, 65)
+INSERT INTO Prices VALUES (41, 10, 0.24, 0.44, 65)
+INSERT INTO Prices VALUES (41, 5, 0.18, 0.38, 65)
+
+INSERT INTO ConfDays VALUES (17, 161, '2017-01-20')
+INSERT INTO Prices VALUES (42, 15, 0.3, 0.5, 265)
+INSERT INTO Prices VALUES (42, 10, 0.26, 0.46, 265)
+INSERT INTO Prices VALUES (42, 5, 0.22, 0.42, 265)
+
+
+--CONFERENCE 18:
+
+INSERT INTO Conferences VALUES ('Rozwiń kreatywność!', NULL, '2017-01-31', '2017-01-31', 0)
+
+INSERT INTO ConfDays VALUES (18, 132, '2017-01-31')
+INSERT INTO Prices VALUES (43, 15, 0.3, 0.5, 280)
+INSERT INTO Prices VALUES (43, 10, 0.26, 0.46, 280)
+INSERT INTO Prices VALUES (43, 5, 0.22, 0.42, 280)
+
+
+--CONFERENCE 19:
+
+INSERT INTO Conferences VALUES ('Rozwój osobisty', NULL, '2017-02-19', '2017-02-22', 0)
+
+INSERT INTO ConfDays VALUES (19, 287, '2017-02-19')
+INSERT INTO Prices VALUES (44, 15, 0.3, 0.5, 255)
+INSERT INTO Prices VALUES (44, 10, 0.26, 0.46, 255)
+INSERT INTO Prices VALUES (44, 5, 0.22, 0.42, 255)
+
+INSERT INTO ConfDays VALUES (19, 297, '2017-02-20')
+INSERT INTO Prices VALUES (45, 15, 0.3, 0.5, 205)
+INSERT INTO Prices VALUES (45, 10, 0.22, 0.42, 205)
+INSERT INTO Prices VALUES (45, 5, 0.14, 0.34, 205)
+
+INSERT INTO ConfDays VALUES (19, 287, '2017-02-21')
+INSERT INTO Prices VALUES (46, 15, 0.3, 0.5, 120)
+INSERT INTO Prices VALUES (46, 10, 0.24, 0.44, 120)
+INSERT INTO Prices VALUES (46, 5, 0.18, 0.38, 120)
+
+INSERT INTO ConfDays VALUES (19, 287, '2017-02-22')
+INSERT INTO Prices VALUES (47, 15, 0.3, 0.5, 295)
+INSERT INTO Prices VALUES (47, 10, 0.24, 0.44, 295)
+INSERT INTO Prices VALUES (47, 5, 0.18, 0.38, 295)
+
+
+--CONFERENCE 20:
+
+INSERT INTO Conferences VALUES ('Rozwój miasta', NULL, '2017-03-04', '2017-03-07', 0)
+
+INSERT INTO ConfDays VALUES (20, 149, '2017-03-04')
+INSERT INTO Prices VALUES (48, 15, 0.3, 0.5, 185)
+INSERT INTO Prices VALUES (48, 10, 0.28, 0.48, 185)
+INSERT INTO Prices VALUES (48, 5, 0.26, 0.46, 185)
+
+INSERT INTO ConfDays VALUES (20, 139, '2017-03-05')
+INSERT INTO Prices VALUES (49, 15, 0.3, 0.5, 215)
+INSERT INTO Prices VALUES (49, 10, 0.28, 0.48, 215)
+INSERT INTO Prices VALUES (49, 5, 0.26, 0.46, 215)
+
+INSERT INTO ConfDays VALUES (20, 159, '2017-03-06')
+INSERT INTO Prices VALUES (50, 15, 0.3, 0.5, 80)
+INSERT INTO Prices VALUES (50, 10, 0.26, 0.46, 80)
+INSERT INTO Prices VALUES (50, 5, 0.22, 0.42, 80)
+
+INSERT INTO ConfDays VALUES (20, 149, '2017-03-07')
+INSERT INTO Prices VALUES (51, 15, 0.3, 0.5, 50)
+INSERT INTO Prices VALUES (51, 10, 0.22, 0.42, 50)
+INSERT INTO Prices VALUES (51, 5, 0.14, 0.34, 50)
+
+
+--CONFERENCE 21:
+
+INSERT INTO Conferences VALUES ('Targi ślubne', 'Spełnij marzenia', '2017-03-18', '2017-03-18', 0)
+
+INSERT INTO ConfDays VALUES (21, 146, '2017-03-18')
+INSERT INTO Prices VALUES (52, 15, 0.3, 0.5, 85)
+INSERT INTO Prices VALUES (52, 10, 0.28, 0.48, 85)
+INSERT INTO Prices VALUES (52, 5, 0.26, 0.46, 85)
+
+
+--CONFERENCE 22:
+
+INSERT INTO Conferences VALUES ('Rozwiń kreatywność!', NULL, '2017-04-06', '2017-04-06', 0)
+
+INSERT INTO ConfDays VALUES (22, 248, '2017-04-06')
+INSERT INTO Prices VALUES (53, 15, 0.3, 0.5, 240)
+INSERT INTO Prices VALUES (53, 10, 0.26, 0.46, 240)
+INSERT INTO Prices VALUES (53, 5, 0.22, 0.42, 240)
+
+
+--CONFERENCE 23:
+
+INSERT INTO Conferences VALUES ('Nowe technologie', 'Spełnij marzenia', '2017-04-25', '2017-04-27', 0)
+
+INSERT INTO ConfDays VALUES (23, 210, '2017-04-25')
+INSERT INTO Prices VALUES (54, 15, 0.3, 0.5, 175)
+INSERT INTO Prices VALUES (54, 10, 0.24, 0.44, 175)
+INSERT INTO Prices VALUES (54, 5, 0.18, 0.38, 175)
+
+INSERT INTO ConfDays VALUES (23, 210, '2017-04-26')
+INSERT INTO Prices VALUES (55, 15, 0.3, 0.5, 270)
+INSERT INTO Prices VALUES (55, 10, 0.22, 0.42, 270)
+INSERT INTO Prices VALUES (55, 5, 0.14, 0.34, 270)
+
+INSERT INTO ConfDays VALUES (23, 210, '2017-04-27')
+INSERT INTO Prices VALUES (56, 15, 0.3, 0.5, 185)
+INSERT INTO Prices VALUES (56, 10, 0.28, 0.48, 185)
+INSERT INTO Prices VALUES (56, 5, 0.26, 0.46, 185)
+
+
+--CONFERENCE 24:
+
+INSERT INTO Conferences VALUES ('Rozwój miasta', 'Tytuł konferencji już jest wymowny', '2017-05-04', '2017-05-06', 0)
+
+INSERT INTO ConfDays VALUES (24, 119, '2017-05-04')
+INSERT INTO Prices VALUES (57, 15, 0.3, 0.5, 255)
+INSERT INTO Prices VALUES (57, 10, 0.24, 0.44, 255)
+INSERT INTO Prices VALUES (57, 5, 0.18, 0.38, 255)
+
+INSERT INTO ConfDays VALUES (24, 119, '2017-05-05')
+INSERT INTO Prices VALUES (58, 15, 0.3, 0.5, 205)
+INSERT INTO Prices VALUES (58, 10, 0.22, 0.42, 205)
+INSERT INTO Prices VALUES (58, 5, 0.14, 0.34, 205)
+
+INSERT INTO ConfDays VALUES (24, 119, '2017-05-06')
+INSERT INTO Prices VALUES (59, 15, 0.3, 0.5, 100)
+INSERT INTO Prices VALUES (59, 10, 0.24, 0.44, 100)
+INSERT INTO Prices VALUES (59, 5, 0.18, 0.38, 100)
+
+
+--CONFERENCE 25:
+
+INSERT INTO Conferences VALUES ('Technologia a zdrowie', 'Bardzo prosty opis', '2017-05-16', '2017-05-16', 0)
+
+INSERT INTO ConfDays VALUES (25, 196, '2017-05-16')
+INSERT INTO Prices VALUES (60, 15, 0.3, 0.5, 215)
+INSERT INTO Prices VALUES (60, 10, 0.24, 0.44, 215)
+INSERT INTO Prices VALUES (60, 5, 0.18, 0.38, 215)
+
+
+--CONFERENCE 26:
+
+INSERT INTO Conferences VALUES ('Żywienie w sporcie', 'Bardzo prosty opis', '2017-05-24', '2017-05-24', 0)
+
+INSERT INTO ConfDays VALUES (26, 196, '2017-05-24')
+INSERT INTO Prices VALUES (61, 15, 0.3, 0.5, 70)
+INSERT INTO Prices VALUES (61, 10, 0.24, 0.44, 70)
+INSERT INTO Prices VALUES (61, 5, 0.18, 0.38, 70)
+
+
+--CONFERENCE 27:
+
+INSERT INTO Conferences VALUES ('Żywienie w sporcie', NULL, '2017-06-03', '2017-06-04', 0)
+
+INSERT INTO ConfDays VALUES (27, 187, '2017-06-03')
+INSERT INTO Prices VALUES (62, 15, 0.3, 0.5, 210)
+INSERT INTO Prices VALUES (62, 10, 0.22, 0.42, 210)
+INSERT INTO Prices VALUES (62, 5, 0.14, 0.34, 210)
+
+INSERT INTO ConfDays VALUES (27, 187, '2017-06-04')
+INSERT INTO Prices VALUES (63, 15, 0.3, 0.5, 195)
+INSERT INTO Prices VALUES (63, 10, 0.22, 0.42, 195)
+INSERT INTO Prices VALUES (63, 5, 0.14, 0.34, 195)
+
+
+--CONFERENCE 28:
+
+INSERT INTO Conferences VALUES ('Targi ślubne', 'Konferencja dyskusyjna', '2017-06-14', '2017-06-14', 0)
+
+INSERT INTO ConfDays VALUES (28, 247, '2017-06-14')
+INSERT INTO Prices VALUES (64, 15, 0.3, 0.5, 60)
+INSERT INTO Prices VALUES (64, 10, 0.22, 0.42, 60)
+INSERT INTO Prices VALUES (64, 5, 0.14, 0.34, 60)
+
+
+--CONFERENCE 29:
+
+INSERT INTO Conferences VALUES ('Bezpieczeństwo w życiu', 'Może masz lepszy pomysł?', '2017-07-01', '2017-07-02', 0)
+
+INSERT INTO ConfDays VALUES (29, 115, '2017-07-01')
+INSERT INTO Prices VALUES (65, 15, 0.3, 0.5, 60)
+INSERT INTO Prices VALUES (65, 10, 0.28, 0.48, 60)
+INSERT INTO Prices VALUES (65, 5, 0.26, 0.46, 60)
+
+INSERT INTO ConfDays VALUES (29, 115, '2017-07-02')
+INSERT INTO Prices VALUES (66, 15, 0.3, 0.5, 110)
+INSERT INTO Prices VALUES (66, 10, 0.22, 0.42, 110)
+INSERT INTO Prices VALUES (66, 5, 0.14, 0.34, 110)
+
+
+--CONFERENCE 30:
+
+INSERT INTO Conferences VALUES ('Żywienie w sporcie', NULL, '2017-07-18', '2017-07-21', 0)
+
+INSERT INTO ConfDays VALUES (30, 192, '2017-07-18')
+INSERT INTO Prices VALUES (67, 15, 0.3, 0.5, 205)
+INSERT INTO Prices VALUES (67, 10, 0.26, 0.46, 205)
+INSERT INTO Prices VALUES (67, 5, 0.22, 0.42, 205)
+
+INSERT INTO ConfDays VALUES (30, 192, '2017-07-19')
+INSERT INTO Prices VALUES (68, 15, 0.3, 0.5, 160)
+INSERT INTO Prices VALUES (68, 10, 0.24, 0.44, 160)
+INSERT INTO Prices VALUES (68, 5, 0.18, 0.38, 160)
+
+INSERT INTO ConfDays VALUES (30, 192, '2017-07-20')
+INSERT INTO Prices VALUES (69, 15, 0.3, 0.5, 165)
+INSERT INTO Prices VALUES (69, 10, 0.26, 0.46, 165)
+INSERT INTO Prices VALUES (69, 5, 0.22, 0.42, 165)
+
+INSERT INTO ConfDays VALUES (30, 192, '2017-07-21')
+INSERT INTO Prices VALUES (70, 15, 0.3, 0.5, 160)
+INSERT INTO Prices VALUES (70, 10, 0.26, 0.46, 160)
+INSERT INTO Prices VALUES (70, 5, 0.22, 0.42, 160)
+
+
+--CONFERENCE 31:
+
+INSERT INTO Conferences VALUES ('Rozwiń kreatywność!', NULL, '2017-07-31', '2017-08-03', 0)
+
+INSERT INTO ConfDays VALUES (31, 276, '2017-07-31')
+INSERT INTO Prices VALUES (71, 15, 0.3, 0.5, 50)
+INSERT INTO Prices VALUES (71, 10, 0.26, 0.46, 50)
+INSERT INTO Prices VALUES (71, 5, 0.22, 0.42, 50)
+
+INSERT INTO ConfDays VALUES (31, 286, '2017-08-01')
+INSERT INTO Prices VALUES (72, 15, 0.3, 0.5, 145)
+INSERT INTO Prices VALUES (72, 10, 0.28, 0.48, 145)
+INSERT INTO Prices VALUES (72, 5, 0.26, 0.46, 145)
+
+INSERT INTO ConfDays VALUES (31, 286, '2017-08-02')
+INSERT INTO Prices VALUES (73, 15, 0.3, 0.5, 230)
+INSERT INTO Prices VALUES (73, 10, 0.22, 0.42, 230)
+INSERT INTO Prices VALUES (73, 5, 0.14, 0.34, 230)
+
+INSERT INTO ConfDays VALUES (31, 286, '2017-08-03')
+INSERT INTO Prices VALUES (74, 15, 0.3, 0.5, 265)
+INSERT INTO Prices VALUES (74, 10, 0.22, 0.42, 265)
+INSERT INTO Prices VALUES (74, 5, 0.14, 0.34, 265)
+
+
+--CONFERENCE 32:
+
+INSERT INTO Conferences VALUES ('Wielcy naukowcy', 'Bardzo prosty opis', '2017-08-10', '2017-08-11', 0)
+
+INSERT INTO ConfDays VALUES (32, 182, '2017-08-10')
+INSERT INTO Prices VALUES (75, 15, 0.3, 0.5, 110)
+INSERT INTO Prices VALUES (75, 10, 0.26, 0.46, 110)
+INSERT INTO Prices VALUES (75, 5, 0.22, 0.42, 110)
+
+INSERT INTO ConfDays VALUES (32, 172, '2017-08-11')
+INSERT INTO Prices VALUES (76, 15, 0.3, 0.5, 225)
+INSERT INTO Prices VALUES (76, 10, 0.24, 0.44, 225)
+INSERT INTO Prices VALUES (76, 5, 0.18, 0.38, 225)
+
+
+--CONFERENCE 33:
+
+INSERT INTO Conferences VALUES ('Samoobrona', 'Konferencja dla ambitnych', '2017-08-25', '2017-08-26', 0)
+
+INSERT INTO ConfDays VALUES (33, 228, '2017-08-25')
+INSERT INTO Prices VALUES (77, 15, 0.3, 0.5, 85)
+INSERT INTO Prices VALUES (77, 10, 0.28, 0.48, 85)
+INSERT INTO Prices VALUES (77, 5, 0.26, 0.46, 85)
+
+INSERT INTO ConfDays VALUES (33, 228, '2017-08-26')
+INSERT INTO Prices VALUES (78, 15, 0.3, 0.5, 125)
+INSERT INTO Prices VALUES (78, 10, 0.22, 0.42, 125)
+INSERT INTO Prices VALUES (78, 5, 0.14, 0.34, 125)
+
+
+--CONFERENCE 34:
+
+INSERT INTO Conferences VALUES ('Sztuki walki', NULL, '2017-09-03', '2017-09-06', 0)
+
+INSERT INTO ConfDays VALUES (34, 240, '2017-09-03')
+INSERT INTO Prices VALUES (79, 15, 0.3, 0.5, 295)
+INSERT INTO Prices VALUES (79, 10, 0.28, 0.48, 295)
+INSERT INTO Prices VALUES (79, 5, 0.26, 0.46, 295)
+
+INSERT INTO ConfDays VALUES (34, 220, '2017-09-04')
+INSERT INTO Prices VALUES (80, 15, 0.3, 0.5, 125)
+INSERT INTO Prices VALUES (80, 10, 0.26, 0.46, 125)
+INSERT INTO Prices VALUES (80, 5, 0.22, 0.42, 125)
+
+INSERT INTO ConfDays VALUES (34, 220, '2017-09-05')
+INSERT INTO Prices VALUES (81, 15, 0.3, 0.5, 80)
+INSERT INTO Prices VALUES (81, 10, 0.26, 0.46, 80)
+INSERT INTO Prices VALUES (81, 5, 0.22, 0.42, 80)
+
+INSERT INTO ConfDays VALUES (34, 230, '2017-09-06')
+INSERT INTO Prices VALUES (82, 15, 0.3, 0.5, 150)
+INSERT INTO Prices VALUES (82, 10, 0.24, 0.44, 150)
+INSERT INTO Prices VALUES (82, 5, 0.18, 0.38, 150)
+
+
+--CONFERENCE 35:
+
+INSERT INTO Conferences VALUES ('Praca za granicą', 'Tylko dla doświadczonych', '2017-09-11', '2017-09-13', 0)
+
+INSERT INTO ConfDays VALUES (35, 279, '2017-09-11')
+INSERT INTO Prices VALUES (83, 15, 0.3, 0.5, 120)
+INSERT INTO Prices VALUES (83, 10, 0.26, 0.46, 120)
+INSERT INTO Prices VALUES (83, 5, 0.22, 0.42, 120)
+
+INSERT INTO ConfDays VALUES (35, 269, '2017-09-12')
+INSERT INTO Prices VALUES (84, 15, 0.3, 0.5, 55)
+INSERT INTO Prices VALUES (84, 10, 0.24, 0.44, 55)
+INSERT INTO Prices VALUES (84, 5, 0.18, 0.38, 55)
+
+INSERT INTO ConfDays VALUES (35, 279, '2017-09-13')
+INSERT INTO Prices VALUES (85, 15, 0.3, 0.5, 70)
+INSERT INTO Prices VALUES (85, 10, 0.24, 0.44, 70)
+INSERT INTO Prices VALUES (85, 5, 0.18, 0.38, 70)
+
+
+--CONFERENCE 36:
+
+INSERT INTO Conferences VALUES ('Bezpieczeństwo w życiu', NULL, '2017-09-29', '2017-10-01', 0)
+
+INSERT INTO ConfDays VALUES (36, 257, '2017-09-29')
+INSERT INTO Prices VALUES (86, 15, 0.3, 0.5, 275)
+INSERT INTO Prices VALUES (86, 10, 0.24, 0.44, 275)
+INSERT INTO Prices VALUES (86, 5, 0.18, 0.38, 275)
+
+INSERT INTO ConfDays VALUES (36, 257, '2017-09-30')
+INSERT INTO Prices VALUES (87, 15, 0.3, 0.5, 290)
+INSERT INTO Prices VALUES (87, 10, 0.26, 0.46, 290)
+INSERT INTO Prices VALUES (87, 5, 0.22, 0.42, 290)
+
+INSERT INTO ConfDays VALUES (36, 257, '2017-10-01')
+INSERT INTO Prices VALUES (88, 15, 0.3, 0.5, 65)
+INSERT INTO Prices VALUES (88, 10, 0.24, 0.44, 65)
+INSERT INTO Prices VALUES (88, 5, 0.18, 0.38, 65)
+
+
+--CONFERENCE 37:
+
+INSERT INTO Conferences VALUES ('Technologia a zdrowie', 'Tytuł konferencji już jest wymowny', '2017-10-07', '2017-10-09', 0)
+
+INSERT INTO ConfDays VALUES (37, 189, '2017-10-07')
+INSERT INTO Prices VALUES (89, 15, 0.3, 0.5, 150)
+INSERT INTO Prices VALUES (89, 10, 0.26, 0.46, 150)
+INSERT INTO Prices VALUES (89, 5, 0.22, 0.42, 150)
+
+INSERT INTO ConfDays VALUES (37, 199, '2017-10-08')
+INSERT INTO Prices VALUES (90, 15, 0.3, 0.5, 265)
+INSERT INTO Prices VALUES (90, 10, 0.28, 0.48, 265)
+INSERT INTO Prices VALUES (90, 5, 0.26, 0.46, 265)
+
+INSERT INTO ConfDays VALUES (37, 209, '2017-10-09')
+INSERT INTO Prices VALUES (91, 15, 0.3, 0.5, 60)
+INSERT INTO Prices VALUES (91, 10, 0.24, 0.44, 60)
+INSERT INTO Prices VALUES (91, 5, 0.18, 0.38, 60)
+
+
+--CONFERENCE 38:
+
+INSERT INTO Conferences VALUES ('Rozwój miasta', 'Prosty opis', '2017-10-24', '2017-10-25', 0)
+
+INSERT INTO ConfDays VALUES (38, 126, '2017-10-24')
+INSERT INTO Prices VALUES (92, 15, 0.3, 0.5, 220)
+INSERT INTO Prices VALUES (92, 10, 0.24, 0.44, 220)
+INSERT INTO Prices VALUES (92, 5, 0.18, 0.38, 220)
+
+INSERT INTO ConfDays VALUES (38, 126, '2017-10-25')
+INSERT INTO Prices VALUES (93, 15, 0.3, 0.5, 135)
+INSERT INTO Prices VALUES (93, 10, 0.22, 0.42, 135)
+INSERT INTO Prices VALUES (93, 5, 0.14, 0.34, 135)
+
+
+--CONFERENCE 39:
+
+INSERT INTO Conferences VALUES ('Sztuki walki', NULL, '2017-11-04', '2017-11-07', 0)
+
+INSERT INTO ConfDays VALUES (39, 201, '2017-11-04')
+INSERT INTO Prices VALUES (94, 15, 0.3, 0.5, 185)
+INSERT INTO Prices VALUES (94, 10, 0.28, 0.48, 185)
+INSERT INTO Prices VALUES (94, 5, 0.26, 0.46, 185)
+
+INSERT INTO ConfDays VALUES (39, 201, '2017-11-05')
+INSERT INTO Prices VALUES (95, 15, 0.3, 0.5, 60)
+INSERT INTO Prices VALUES (95, 10, 0.24, 0.44, 60)
+INSERT INTO Prices VALUES (95, 5, 0.18, 0.38, 60)
+
+INSERT INTO ConfDays VALUES (39, 201, '2017-11-06')
+INSERT INTO Prices VALUES (96, 15, 0.3, 0.5, 160)
+INSERT INTO Prices VALUES (96, 10, 0.24, 0.44, 160)
+INSERT INTO Prices VALUES (96, 5, 0.18, 0.38, 160)
+
+INSERT INTO ConfDays VALUES (39, 201, '2017-11-07')
+INSERT INTO Prices VALUES (97, 15, 0.3, 0.5, 50)
+INSERT INTO Prices VALUES (97, 10, 0.24, 0.44, 50)
+INSERT INTO Prices VALUES (97, 5, 0.18, 0.38, 50)
+
+
+--CONFERENCE 40:
+
+INSERT INTO Conferences VALUES ('Bezpieczeństwo w życiu', 'Gorąco zapraszamy!', '2017-11-21', '2017-11-23', 0)
+
+INSERT INTO ConfDays VALUES (40, 163, '2017-11-21')
+INSERT INTO Prices VALUES (98, 15, 0.3, 0.5, 225)
+INSERT INTO Prices VALUES (98, 10, 0.28, 0.48, 225)
+INSERT INTO Prices VALUES (98, 5, 0.26, 0.46, 225)
+
+INSERT INTO ConfDays VALUES (40, 163, '2017-11-22')
+INSERT INTO Prices VALUES (99, 15, 0.3, 0.5, 200)
+INSERT INTO Prices VALUES (99, 10, 0.26, 0.46, 200)
+INSERT INTO Prices VALUES (99, 5, 0.22, 0.42, 200)
+
+INSERT INTO ConfDays VALUES (40, 163, '2017-11-23')
+INSERT INTO Prices VALUES (100, 15, 0.3, 0.5, 205)
+INSERT INTO Prices VALUES (100, 10, 0.22, 0.42, 205)
+INSERT INTO Prices VALUES (100, 5, 0.14, 0.34, 205)
+
+
+--CONFERENCE 41:
+
+INSERT INTO Conferences VALUES ('Bezpieczeństwo w życiu', NULL, '2017-11-30', '2017-11-30', 0)
+
+INSERT INTO ConfDays VALUES (41, 145, '2017-11-30')
+INSERT INTO Prices VALUES (101, 15, 0.3, 0.5, 235)
+INSERT INTO Prices VALUES (101, 10, 0.26, 0.46, 235)
+INSERT INTO Prices VALUES (101, 5, 0.22, 0.42, 235)
+
+
+--CONFERENCE 42:
+
+INSERT INTO Conferences VALUES ('Targi językowe', 'Bardzo prosty opis', '2017-12-20', '2017-12-23', 0)
+
+INSERT INTO ConfDays VALUES (42, 174, '2017-12-20')
+INSERT INTO Prices VALUES (102, 15, 0.3, 0.5, 240)
+INSERT INTO Prices VALUES (102, 10, 0.24, 0.44, 240)
+INSERT INTO Prices VALUES (102, 5, 0.18, 0.38, 240)
+
+INSERT INTO ConfDays VALUES (42, 174, '2017-12-21')
+INSERT INTO Prices VALUES (103, 15, 0.3, 0.5, 245)
+INSERT INTO Prices VALUES (103, 10, 0.24, 0.44, 245)
+INSERT INTO Prices VALUES (103, 5, 0.18, 0.38, 245)
+
+INSERT INTO ConfDays VALUES (42, 174, '2017-12-22')
+INSERT INTO Prices VALUES (104, 15, 0.3, 0.5, 280)
+INSERT INTO Prices VALUES (104, 10, 0.26, 0.46, 280)
+INSERT INTO Prices VALUES (104, 5, 0.22, 0.42, 280)
+
+INSERT INTO ConfDays VALUES (42, 174, '2017-12-23')
+INSERT INTO Prices VALUES (105, 15, 0.3, 0.5, 125)
+INSERT INTO Prices VALUES (105, 10, 0.26, 0.46, 125)
+INSERT INTO Prices VALUES (105, 5, 0.22, 0.42, 125)
+
+
+--CONFERENCE 43:
+
+INSERT INTO Conferences VALUES ('Targi pracy', NULL, '2018-01-03', '2018-01-06', 0)
+
+INSERT INTO ConfDays VALUES (43, 110, '2018-01-03')
+INSERT INTO Prices VALUES (106, 15, 0.3, 0.5, 155)
+INSERT INTO Prices VALUES (106, 10, 0.28, 0.48, 155)
+INSERT INTO Prices VALUES (106, 5, 0.26, 0.46, 155)
+
+INSERT INTO ConfDays VALUES (43, 100, '2018-01-04')
+INSERT INTO Prices VALUES (107, 15, 0.3, 0.5, 50)
+INSERT INTO Prices VALUES (107, 10, 0.24, 0.44, 50)
+INSERT INTO Prices VALUES (107, 5, 0.18, 0.38, 50)
+
+INSERT INTO ConfDays VALUES (43, 100, '2018-01-05')
+INSERT INTO Prices VALUES (108, 15, 0.3, 0.5, 185)
+INSERT INTO Prices VALUES (108, 10, 0.28, 0.48, 185)
+INSERT INTO Prices VALUES (108, 5, 0.26, 0.46, 185)
+
+INSERT INTO ConfDays VALUES (43, 90, '2018-01-06')
+INSERT INTO Prices VALUES (109, 15, 0.3, 0.5, 285)
+INSERT INTO Prices VALUES (109, 10, 0.22, 0.42, 285)
+INSERT INTO Prices VALUES (109, 5, 0.14, 0.34, 285)
+
+
+--CONFERENCE 44:
+
+INSERT INTO Conferences VALUES ('Akademickie targi pracy', 'Konferencja dla ambitnych', '2018-01-22', '2018-01-22', 0)
+
+INSERT INTO ConfDays VALUES (44, 235, '2018-01-22')
+INSERT INTO Prices VALUES (110, 15, 0.3, 0.5, 55)
+INSERT INTO Prices VALUES (110, 10, 0.22, 0.42, 55)
+INSERT INTO Prices VALUES (110, 5, 0.14, 0.34, 55)
+
+
+--CONFERENCE 45:
+
+INSERT INTO Conferences VALUES ('Nieznani naukowcy', NULL, '2018-02-06', '2018-02-06', 0)
+
+INSERT INTO ConfDays VALUES (45, 128, '2018-02-06')
+INSERT INTO Prices VALUES (111, 15, 0.3, 0.5, 200)
+INSERT INTO Prices VALUES (111, 10, 0.22, 0.42, 200)
+INSERT INTO Prices VALUES (111, 5, 0.14, 0.34, 200)
+
+
+--CONFERENCE 46:
+
+INSERT INTO Conferences VALUES ('Nieznani naukowcy', 'Konferencja rozwijająca', '2018-02-25', '2018-02-26', 0)
+
+INSERT INTO ConfDays VALUES (46, 223, '2018-02-25')
+INSERT INTO Prices VALUES (112, 15, 0.3, 0.5, 220)
+INSERT INTO Prices VALUES (112, 10, 0.22, 0.42, 220)
+INSERT INTO Prices VALUES (112, 5, 0.14, 0.34, 220)
+
+INSERT INTO ConfDays VALUES (46, 233, '2018-02-26')
+INSERT INTO Prices VALUES (113, 15, 0.3, 0.5, 240)
+INSERT INTO Prices VALUES (113, 10, 0.28, 0.48, 240)
+INSERT INTO Prices VALUES (113, 5, 0.26, 0.46, 240)
+
+
+--CONFERENCE 47:
+
+INSERT INTO Conferences VALUES ('Sztuki walki', 'Dla każdego!', '2018-03-13', '2018-03-16', 0)
+
+INSERT INTO ConfDays VALUES (47, 164, '2018-03-13')
+INSERT INTO Prices VALUES (114, 15, 0.3, 0.5, 150)
+INSERT INTO Prices VALUES (114, 10, 0.26, 0.46, 150)
+INSERT INTO Prices VALUES (114, 5, 0.22, 0.42, 150)
+
+INSERT INTO ConfDays VALUES (47, 174, '2018-03-14')
+INSERT INTO Prices VALUES (115, 15, 0.3, 0.5, 180)
+INSERT INTO Prices VALUES (115, 10, 0.26, 0.46, 180)
+INSERT INTO Prices VALUES (115, 5, 0.22, 0.42, 180)
+
+INSERT INTO ConfDays VALUES (47, 174, '2018-03-15')
+INSERT INTO Prices VALUES (116, 15, 0.3, 0.5, 150)
+INSERT INTO Prices VALUES (116, 10, 0.26, 0.46, 150)
+INSERT INTO Prices VALUES (116, 5, 0.22, 0.42, 150)
+
+INSERT INTO ConfDays VALUES (47, 174, '2018-03-16')
+INSERT INTO Prices VALUES (117, 15, 0.3, 0.5, 90)
+INSERT INTO Prices VALUES (117, 10, 0.22, 0.42, 90)
+INSERT INTO Prices VALUES (117, 5, 0.14, 0.34, 90)
+
+
+--CONFERENCE 48:
+
+INSERT INTO Conferences VALUES ('Targi językowe', NULL, '2018-03-22', '2018-03-23', 0)
+
+INSERT INTO ConfDays VALUES (48, 161, '2018-03-22')
+INSERT INTO Prices VALUES (118, 15, 0.3, 0.5, 215)
+INSERT INTO Prices VALUES (118, 10, 0.26, 0.46, 215)
+INSERT INTO Prices VALUES (118, 5, 0.22, 0.42, 215)
+
+INSERT INTO ConfDays VALUES (48, 161, '2018-03-23')
+INSERT INTO Prices VALUES (119, 15, 0.3, 0.5, 55)
+INSERT INTO Prices VALUES (119, 10, 0.28, 0.48, 55)
+INSERT INTO Prices VALUES (119, 5, 0.26, 0.46, 55)
+
+
+--CONFERENCE 49:
+
+INSERT INTO Conferences VALUES ('EXPO', 'Bardzo prosty opis', '2018-03-31', '2018-03-31', 0)
+
+INSERT INTO ConfDays VALUES (49, 228, '2018-03-31')
+INSERT INTO Prices VALUES (120, 15, 0.3, 0.5, 80)
+INSERT INTO Prices VALUES (120, 10, 0.26, 0.46, 80)
+INSERT INTO Prices VALUES (120, 5, 0.22, 0.42, 80)
+
+
+--CONFERENCE 50:
+
+INSERT INTO Conferences VALUES ('Technologia a zdrowie', NULL, '2018-04-15', '2018-04-18', 0)
+
+INSERT INTO ConfDays VALUES (50, 183, '2018-04-15')
+INSERT INTO Prices VALUES (121, 15, 0.3, 0.5, 115)
+INSERT INTO Prices VALUES (121, 10, 0.28, 0.48, 115)
+INSERT INTO Prices VALUES (121, 5, 0.26, 0.46, 115)
+
+INSERT INTO ConfDays VALUES (50, 183, '2018-04-16')
+INSERT INTO Prices VALUES (122, 15, 0.3, 0.5, 245)
+INSERT INTO Prices VALUES (122, 10, 0.26, 0.46, 245)
+INSERT INTO Prices VALUES (122, 5, 0.22, 0.42, 245)
+
+INSERT INTO ConfDays VALUES (50, 183, '2018-04-17')
+INSERT INTO Prices VALUES (123, 15, 0.3, 0.5, 170)
+INSERT INTO Prices VALUES (123, 10, 0.24, 0.44, 170)
+INSERT INTO Prices VALUES (123, 5, 0.18, 0.38, 170)
+
+INSERT INTO ConfDays VALUES (50, 193, '2018-04-18')
+INSERT INTO Prices VALUES (124, 15, 0.3, 0.5, 185)
+INSERT INTO Prices VALUES (124, 10, 0.26, 0.46, 185)
+INSERT INTO Prices VALUES (124, 5, 0.22, 0.42, 185)
+
+
+--CONFERENCE 51:
+
+INSERT INTO Conferences VALUES ('Infrastruktura miasta', NULL, '2018-04-23', '2018-04-24', 0)
+
+INSERT INTO ConfDays VALUES (51, 146, '2018-04-23')
+INSERT INTO Prices VALUES (125, 15, 0.3, 0.5, 280)
+INSERT INTO Prices VALUES (125, 10, 0.24, 0.44, 280)
+INSERT INTO Prices VALUES (125, 5, 0.18, 0.38, 280)
+
+INSERT INTO ConfDays VALUES (51, 146, '2018-04-24')
+INSERT INTO Prices VALUES (126, 15, 0.3, 0.5, 60)
+INSERT INTO Prices VALUES (126, 10, 0.24, 0.44, 60)
+INSERT INTO Prices VALUES (126, 5, 0.18, 0.38, 60)
+
+
+--CONFERENCE 52:
+
+INSERT INTO Conferences VALUES ('Targi gier', NULL, '2018-05-09', '2018-05-12', 0)
+
+INSERT INTO ConfDays VALUES (52, 222, '2018-05-09')
+INSERT INTO Prices VALUES (127, 15, 0.3, 0.5, 85)
+INSERT INTO Prices VALUES (127, 10, 0.28, 0.48, 85)
+INSERT INTO Prices VALUES (127, 5, 0.26, 0.46, 85)
+
+INSERT INTO ConfDays VALUES (52, 222, '2018-05-10')
+INSERT INTO Prices VALUES (128, 15, 0.3, 0.5, 85)
+INSERT INTO Prices VALUES (128, 10, 0.22, 0.42, 85)
+INSERT INTO Prices VALUES (128, 5, 0.14, 0.34, 85)
+
+INSERT INTO ConfDays VALUES (52, 232, '2018-05-11')
+INSERT INTO Prices VALUES (129, 15, 0.3, 0.5, 110)
+INSERT INTO Prices VALUES (129, 10, 0.22, 0.42, 110)
+INSERT INTO Prices VALUES (129, 5, 0.14, 0.34, 110)
+
+INSERT INTO ConfDays VALUES (52, 222, '2018-05-12')
+INSERT INTO Prices VALUES (130, 15, 0.3, 0.5, 60)
+INSERT INTO Prices VALUES (130, 10, 0.22, 0.42, 60)
+INSERT INTO Prices VALUES (130, 5, 0.14, 0.34, 60)
+
+
+--CONFERENCE 53:
+
+INSERT INTO Conferences VALUES ('Nieznani naukowcy', 'Konferencja dla ambitnych', '2018-05-18', '2018-05-20', 0)
+
+INSERT INTO ConfDays VALUES (53, 293, '2018-05-18')
+INSERT INTO Prices VALUES (131, 15, 0.3, 0.5, 50)
+INSERT INTO Prices VALUES (131, 10, 0.28, 0.48, 50)
+INSERT INTO Prices VALUES (131, 5, 0.26, 0.46, 50)
+
+INSERT INTO ConfDays VALUES (53, 293, '2018-05-19')
+INSERT INTO Prices VALUES (132, 15, 0.3, 0.5, 190)
+INSERT INTO Prices VALUES (132, 10, 0.22, 0.42, 190)
+INSERT INTO Prices VALUES (132, 5, 0.14, 0.34, 190)
+
+INSERT INTO ConfDays VALUES (53, 293, '2018-05-20')
+INSERT INTO Prices VALUES (133, 15, 0.3, 0.5, 235)
+INSERT INTO Prices VALUES (133, 10, 0.24, 0.44, 235)
+INSERT INTO Prices VALUES (133, 5, 0.18, 0.38, 235)
+
+
+--CONFERENCE 54:
+
+INSERT INTO Conferences VALUES ('Nowe technologie', NULL, '2018-05-25', '2018-05-25', 0)
+
+INSERT INTO ConfDays VALUES (54, 118, '2018-05-25')
+INSERT INTO Prices VALUES (134, 15, 0.3, 0.5, 55)
+INSERT INTO Prices VALUES (134, 10, 0.28, 0.48, 55)
+INSERT INTO Prices VALUES (134, 5, 0.26, 0.46, 55)
+
+
+--CONFERENCE 55:
+
+INSERT INTO Conferences VALUES ('Religie świata', 'Bardzo prosty opis', '2018-06-03', '2018-06-06', 0)
+
+INSERT INTO ConfDays VALUES (55, 161, '2018-06-03')
+INSERT INTO Prices VALUES (135, 15, 0.3, 0.5, 280)
+INSERT INTO Prices VALUES (135, 10, 0.26, 0.46, 280)
+INSERT INTO Prices VALUES (135, 5, 0.22, 0.42, 280)
+
+INSERT INTO ConfDays VALUES (55, 151, '2018-06-04')
+INSERT INTO Prices VALUES (136, 15, 0.3, 0.5, 290)
+INSERT INTO Prices VALUES (136, 10, 0.24, 0.44, 290)
+INSERT INTO Prices VALUES (136, 5, 0.18, 0.38, 290)
+
+INSERT INTO ConfDays VALUES (55, 161, '2018-06-05')
+INSERT INTO Prices VALUES (137, 15, 0.3, 0.5, 185)
+INSERT INTO Prices VALUES (137, 10, 0.26, 0.46, 185)
+INSERT INTO Prices VALUES (137, 5, 0.22, 0.42, 185)
+
+INSERT INTO ConfDays VALUES (55, 161, '2018-06-06')
+INSERT INTO Prices VALUES (138, 15, 0.3, 0.5, 135)
+INSERT INTO Prices VALUES (138, 10, 0.24, 0.44, 135)
+INSERT INTO Prices VALUES (138, 5, 0.18, 0.38, 135)
+
+
+--CONFERENCE 56:
+
+INSERT INTO Conferences VALUES ('Religie świata', 'Spełnij marzenia', '2018-06-23', '2018-06-26', 0)
+
+INSERT INTO ConfDays VALUES (56, 168, '2018-06-23')
+INSERT INTO Prices VALUES (139, 15, 0.3, 0.5, 145)
+INSERT INTO Prices VALUES (139, 10, 0.26, 0.46, 145)
+INSERT INTO Prices VALUES (139, 5, 0.22, 0.42, 145)
+
+INSERT INTO ConfDays VALUES (56, 158, '2018-06-24')
+INSERT INTO Prices VALUES (140, 15, 0.3, 0.5, 150)
+INSERT INTO Prices VALUES (140, 10, 0.22, 0.42, 150)
+INSERT INTO Prices VALUES (140, 5, 0.14, 0.34, 150)
+
+INSERT INTO ConfDays VALUES (56, 168, '2018-06-25')
+INSERT INTO Prices VALUES (141, 15, 0.3, 0.5, 185)
+INSERT INTO Prices VALUES (141, 10, 0.26, 0.46, 185)
+INSERT INTO Prices VALUES (141, 5, 0.22, 0.42, 185)
+
+INSERT INTO ConfDays VALUES (56, 178, '2018-06-26')
+INSERT INTO Prices VALUES (142, 15, 0.3, 0.5, 90)
+INSERT INTO Prices VALUES (142, 10, 0.24, 0.44, 90)
+INSERT INTO Prices VALUES (142, 5, 0.18, 0.38, 90)
+
+
+--CONFERENCE 57:
+
+INSERT INTO Conferences VALUES ('Bezpieczeństwo w życiu', 'Tylko dla doświadczonych', '2018-07-07', '2018-07-08', 0)
+
+INSERT INTO ConfDays VALUES (57, 284, '2018-07-07')
+INSERT INTO Prices VALUES (143, 15, 0.3, 0.5, 295)
+INSERT INTO Prices VALUES (143, 10, 0.28, 0.48, 295)
+INSERT INTO Prices VALUES (143, 5, 0.26, 0.46, 295)
+
+INSERT INTO ConfDays VALUES (57, 284, '2018-07-08')
+INSERT INTO Prices VALUES (144, 15, 0.3, 0.5, 235)
+INSERT INTO Prices VALUES (144, 10, 0.26, 0.46, 235)
+INSERT INTO Prices VALUES (144, 5, 0.22, 0.42, 235)
+
+
+--CONFERENCE 58:
+
+INSERT INTO Conferences VALUES ('EXPO', NULL, '2018-07-25', '2018-07-26', 0)
+
+INSERT INTO ConfDays VALUES (58, 184, '2018-07-25')
+INSERT INTO Prices VALUES (145, 15, 0.3, 0.5, 60)
+INSERT INTO Prices VALUES (145, 10, 0.22, 0.42, 60)
+INSERT INTO Prices VALUES (145, 5, 0.14, 0.34, 60)
+
+INSERT INTO ConfDays VALUES (58, 164, '2018-07-26')
+INSERT INTO Prices VALUES (146, 15, 0.3, 0.5, 230)
+INSERT INTO Prices VALUES (146, 10, 0.28, 0.48, 230)
+INSERT INTO Prices VALUES (146, 5, 0.26, 0.46, 230)
+
+
+--CONFERENCE 59:
+
+INSERT INTO Conferences VALUES ('Samoobrona', NULL, '2018-08-02', '2018-08-05', 0)
+
+INSERT INTO ConfDays VALUES (59, 122, '2018-08-02')
+INSERT INTO Prices VALUES (147, 15, 0.3, 0.5, 205)
+INSERT INTO Prices VALUES (147, 10, 0.22, 0.42, 205)
+INSERT INTO Prices VALUES (147, 5, 0.14, 0.34, 205)
+
+INSERT INTO ConfDays VALUES (59, 122, '2018-08-03')
+INSERT INTO Prices VALUES (148, 15, 0.3, 0.5, 280)
+INSERT INTO Prices VALUES (148, 10, 0.28, 0.48, 280)
+INSERT INTO Prices VALUES (148, 5, 0.26, 0.46, 280)
+
+INSERT INTO ConfDays VALUES (59, 112, '2018-08-04')
+INSERT INTO Prices VALUES (149, 15, 0.3, 0.5, 110)
+INSERT INTO Prices VALUES (149, 10, 0.26, 0.46, 110)
+INSERT INTO Prices VALUES (149, 5, 0.22, 0.42, 110)
+
+INSERT INTO ConfDays VALUES (59, 122, '2018-08-05')
+INSERT INTO Prices VALUES (150, 15, 0.3, 0.5, 220)
+INSERT INTO Prices VALUES (150, 10, 0.22, 0.42, 220)
+INSERT INTO Prices VALUES (150, 5, 0.14, 0.34, 220)
+
+
+--CONFERENCE 60:
+
+INSERT INTO Conferences VALUES ('Sztuki walki', 'Prosty opis', '2018-08-13', '2018-08-16', 0)
+
+INSERT INTO ConfDays VALUES (60, 224, '2018-08-13')
+INSERT INTO Prices VALUES (151, 15, 0.3, 0.5, 225)
+INSERT INTO Prices VALUES (151, 10, 0.24, 0.44, 225)
+INSERT INTO Prices VALUES (151, 5, 0.18, 0.38, 225)
+
+INSERT INTO ConfDays VALUES (60, 234, '2018-08-14')
+INSERT INTO Prices VALUES (152, 15, 0.3, 0.5, 160)
+INSERT INTO Prices VALUES (152, 10, 0.26, 0.46, 160)
+INSERT INTO Prices VALUES (152, 5, 0.22, 0.42, 160)
+
+INSERT INTO ConfDays VALUES (60, 224, '2018-08-15')
+INSERT INTO Prices VALUES (153, 15, 0.3, 0.5, 65)
+INSERT INTO Prices VALUES (153, 10, 0.26, 0.46, 65)
+INSERT INTO Prices VALUES (153, 5, 0.22, 0.42, 65)
+
+INSERT INTO ConfDays VALUES (60, 224, '2018-08-16')
+INSERT INTO Prices VALUES (154, 15, 0.3, 0.5, 105)
+INSERT INTO Prices VALUES (154, 10, 0.24, 0.44, 105)
+INSERT INTO Prices VALUES (154, 5, 0.18, 0.38, 105)
+
+
+--CONFERENCE 61:
+
+INSERT INTO Conferences VALUES ('EXPO', 'Tytuł konferencji już jest wymowny', '2018-08-20', '2018-08-20', 0)
+
+INSERT INTO ConfDays VALUES (61, 281, '2018-08-20')
+INSERT INTO Prices VALUES (155, 15, 0.3, 0.5, 100)
+INSERT INTO Prices VALUES (155, 10, 0.26, 0.46, 100)
+INSERT INTO Prices VALUES (155, 5, 0.22, 0.42, 100)
+
+
+--CONFERENCE 62:
+
+INSERT INTO Conferences VALUES ('Infrastruktura miasta', NULL, '2018-09-02', '2018-09-04', 0)
+
+INSERT INTO ConfDays VALUES (62, 126, '2018-09-02')
+INSERT INTO Prices VALUES (156, 15, 0.3, 0.5, 220)
+INSERT INTO Prices VALUES (156, 10, 0.22, 0.42, 220)
+INSERT INTO Prices VALUES (156, 5, 0.14, 0.34, 220)
+
+INSERT INTO ConfDays VALUES (62, 136, '2018-09-03')
+INSERT INTO Prices VALUES (157, 15, 0.3, 0.5, 75)
+INSERT INTO Prices VALUES (157, 10, 0.24, 0.44, 75)
+INSERT INTO Prices VALUES (157, 5, 0.18, 0.38, 75)
+
+INSERT INTO ConfDays VALUES (62, 136, '2018-09-04')
+INSERT INTO Prices VALUES (158, 15, 0.3, 0.5, 85)
+INSERT INTO Prices VALUES (158, 10, 0.28, 0.48, 85)
+INSERT INTO Prices VALUES (158, 5, 0.26, 0.46, 85)
+
+
+--CONFERENCE 63:
+
+INSERT INTO Conferences VALUES ('Nowe technologie', NULL, '2018-09-12', '2018-09-15', 0)
+
+INSERT INTO ConfDays VALUES (63, 257, '2018-09-12')
+INSERT INTO Prices VALUES (159, 15, 0.3, 0.5, 55)
+INSERT INTO Prices VALUES (159, 10, 0.22, 0.42, 55)
+INSERT INTO Prices VALUES (159, 5, 0.14, 0.34, 55)
+
+INSERT INTO ConfDays VALUES (63, 257, '2018-09-13')
+INSERT INTO Prices VALUES (160, 15, 0.3, 0.5, 195)
+INSERT INTO Prices VALUES (160, 10, 0.28, 0.48, 195)
+INSERT INTO Prices VALUES (160, 5, 0.26, 0.46, 195)
+
+INSERT INTO ConfDays VALUES (63, 257, '2018-09-14')
+INSERT INTO Prices VALUES (161, 15, 0.3, 0.5, 155)
+INSERT INTO Prices VALUES (161, 10, 0.24, 0.44, 155)
+INSERT INTO Prices VALUES (161, 5, 0.18, 0.38, 155)
+
+INSERT INTO ConfDays VALUES (63, 257, '2018-09-15')
+INSERT INTO Prices VALUES (162, 15, 0.3, 0.5, 250)
+INSERT INTO Prices VALUES (162, 10, 0.24, 0.44, 250)
+INSERT INTO Prices VALUES (162, 5, 0.18, 0.38, 250)
+
+
+--CONFERENCE 64:
+
+INSERT INTO Conferences VALUES ('EXPO', 'Bardzo prosty opis', '2018-09-20', '2018-09-21', 0)
+
+INSERT INTO ConfDays VALUES (64, 163, '2018-09-20')
+INSERT INTO Prices VALUES (163, 15, 0.3, 0.5, 165)
+INSERT INTO Prices VALUES (163, 10, 0.24, 0.44, 165)
+INSERT INTO Prices VALUES (163, 5, 0.18, 0.38, 165)
+
+INSERT INTO ConfDays VALUES (64, 163, '2018-09-21')
+INSERT INTO Prices VALUES (164, 15, 0.3, 0.5, 140)
+INSERT INTO Prices VALUES (164, 10, 0.28, 0.48, 140)
+INSERT INTO Prices VALUES (164, 5, 0.26, 0.46, 140)
+
+
+--CONFERENCE 65:
+
+INSERT INTO Conferences VALUES ('Targi gier', NULL, '2018-10-04', '2018-10-06', 0)
+
+INSERT INTO ConfDays VALUES (65, 179, '2018-10-04')
+INSERT INTO Prices VALUES (165, 15, 0.3, 0.5, 275)
+INSERT INTO Prices VALUES (165, 10, 0.26, 0.46, 275)
+INSERT INTO Prices VALUES (165, 5, 0.22, 0.42, 275)
+
+INSERT INTO ConfDays VALUES (65, 179, '2018-10-05')
+INSERT INTO Prices VALUES (166, 15, 0.3, 0.5, 65)
+INSERT INTO Prices VALUES (166, 10, 0.24, 0.44, 65)
+INSERT INTO Prices VALUES (166, 5, 0.18, 0.38, 65)
+
+INSERT INTO ConfDays VALUES (65, 179, '2018-10-06')
+INSERT INTO Prices VALUES (167, 15, 0.3, 0.5, 205)
+INSERT INTO Prices VALUES (167, 10, 0.26, 0.46, 205)
+INSERT INTO Prices VALUES (167, 5, 0.22, 0.42, 205)
+
+
+--CONFERENCE 66:
+
+INSERT INTO Conferences VALUES ('Nowe technologie', 'Tylko dla doświadczonych', '2018-10-20', '2018-10-20', 0)
+
+INSERT INTO ConfDays VALUES (66, 286, '2018-10-20')
+INSERT INTO Prices VALUES (168, 15, 0.3, 0.5, 285)
+INSERT INTO Prices VALUES (168, 10, 0.28, 0.48, 285)
+INSERT INTO Prices VALUES (168, 5, 0.26, 0.46, 285)
+
+
+--CONFERENCE 67:
+
+INSERT INTO Conferences VALUES ('Sztuki walki', NULL, '2018-11-04', '2018-11-06', 0)
+
+INSERT INTO ConfDays VALUES (67, 130, '2018-11-04')
+INSERT INTO Prices VALUES (169, 15, 0.3, 0.5, 245)
+INSERT INTO Prices VALUES (169, 10, 0.26, 0.46, 245)
+INSERT INTO Prices VALUES (169, 5, 0.22, 0.42, 245)
+
+INSERT INTO ConfDays VALUES (67, 150, '2018-11-05')
+INSERT INTO Prices VALUES (170, 15, 0.3, 0.5, 295)
+INSERT INTO Prices VALUES (170, 10, 0.26, 0.46, 295)
+INSERT INTO Prices VALUES (170, 5, 0.22, 0.42, 295)
+
+INSERT INTO ConfDays VALUES (67, 140, '2018-11-06')
+INSERT INTO Prices VALUES (171, 15, 0.3, 0.5, 140)
+INSERT INTO Prices VALUES (171, 10, 0.26, 0.46, 140)
+INSERT INTO Prices VALUES (171, 5, 0.22, 0.42, 140)
+
+
+--CONFERENCE 68:
+
+INSERT INTO Conferences VALUES ('Targi gier', NULL, '2018-11-13', '2018-11-14', 0)
+
+INSERT INTO ConfDays VALUES (68, 204, '2018-11-13')
+INSERT INTO Prices VALUES (172, 15, 0.3, 0.5, 120)
+INSERT INTO Prices VALUES (172, 10, 0.26, 0.46, 120)
+INSERT INTO Prices VALUES (172, 5, 0.22, 0.42, 120)
+
+INSERT INTO ConfDays VALUES (68, 204, '2018-11-14')
+INSERT INTO Prices VALUES (173, 15, 0.3, 0.5, 285)
+INSERT INTO Prices VALUES (173, 10, 0.24, 0.44, 285)
+INSERT INTO Prices VALUES (173, 5, 0.18, 0.38, 285)
+
+
+--CONFERENCE 69:
+
+INSERT INTO Conferences VALUES ('Wielcy naukowcy', 'Konferencja dla ambitnych', '2018-11-24', '2018-11-27', 0)
+
+INSERT INTO ConfDays VALUES (69, 208, '2018-11-24')
+INSERT INTO Prices VALUES (174, 15, 0.3, 0.5, 95)
+INSERT INTO Prices VALUES (174, 10, 0.28, 0.48, 95)
+INSERT INTO Prices VALUES (174, 5, 0.26, 0.46, 95)
+
+INSERT INTO ConfDays VALUES (69, 198, '2018-11-25')
+INSERT INTO Prices VALUES (175, 15, 0.3, 0.5, 180)
+INSERT INTO Prices VALUES (175, 10, 0.26, 0.46, 180)
+INSERT INTO Prices VALUES (175, 5, 0.22, 0.42, 180)
+
+INSERT INTO ConfDays VALUES (69, 198, '2018-11-26')
+INSERT INTO Prices VALUES (176, 15, 0.3, 0.5, 160)
+INSERT INTO Prices VALUES (176, 10, 0.26, 0.46, 160)
+INSERT INTO Prices VALUES (176, 5, 0.22, 0.42, 160)
+
+INSERT INTO ConfDays VALUES (69, 198, '2018-11-27')
+INSERT INTO Prices VALUES (177, 15, 0.3, 0.5, 80)
+INSERT INTO Prices VALUES (177, 10, 0.22, 0.42, 80)
+INSERT INTO Prices VALUES (177, 5, 0.14, 0.34, 80)
+
+
+--CONFERENCE 70:
+
+INSERT INTO Conferences VALUES ('Religie świata', 'Konferencja rozwijająca', '2018-12-08', '2018-12-08', 0)
+
+INSERT INTO ConfDays VALUES (70, 135, '2018-12-08')
+INSERT INTO Prices VALUES (178, 15, 0.3, 0.5, 100)
+INSERT INTO Prices VALUES (178, 10, 0.22, 0.42, 100)
+INSERT INTO Prices VALUES (178, 5, 0.14, 0.34, 100)
+
+
+--CONFERENCE 71:
+
+INSERT INTO Conferences VALUES ('Praca za granicą', NULL, '2018-12-18', '2018-12-21', 0)
+
+INSERT INTO ConfDays VALUES (71, 292, '2018-12-18')
+INSERT INTO Prices VALUES (179, 15, 0.3, 0.5, 240)
+INSERT INTO Prices VALUES (179, 10, 0.26, 0.46, 240)
+INSERT INTO Prices VALUES (179, 5, 0.22, 0.42, 240)
+
+INSERT INTO ConfDays VALUES (71, 282, '2018-12-19')
+INSERT INTO Prices VALUES (180, 15, 0.3, 0.5, 185)
+INSERT INTO Prices VALUES (180, 10, 0.24, 0.44, 185)
+INSERT INTO Prices VALUES (180, 5, 0.18, 0.38, 185)
+
+INSERT INTO ConfDays VALUES (71, 292, '2018-12-20')
+INSERT INTO Prices VALUES (181, 15, 0.3, 0.5, 180)
+INSERT INTO Prices VALUES (181, 10, 0.22, 0.42, 180)
+INSERT INTO Prices VALUES (181, 5, 0.14, 0.34, 180)
+
+INSERT INTO ConfDays VALUES (71, 282, '2018-12-21')
+INSERT INTO Prices VALUES (182, 15, 0.3, 0.5, 210)
+INSERT INTO Prices VALUES (182, 10, 0.26, 0.46, 210)
+INSERT INTO Prices VALUES (182, 5, 0.22, 0.42, 210)
+
+
+--CONFERENCE 72:
+
+INSERT INTO Conferences VALUES ('Ogólnopolska burza mózgów', 'Prosty opis', '2018-12-27', '2018-12-30', 0)
+
+INSERT INTO ConfDays VALUES (72, 282, '2018-12-27')
+INSERT INTO Prices VALUES (183, 15, 0.3, 0.5, 280)
+INSERT INTO Prices VALUES (183, 10, 0.28, 0.48, 280)
+INSERT INTO Prices VALUES (183, 5, 0.26, 0.46, 280)
+
+INSERT INTO ConfDays VALUES (72, 282, '2018-12-28')
+INSERT INTO Prices VALUES (184, 15, 0.3, 0.5, 195)
+INSERT INTO Prices VALUES (184, 10, 0.26, 0.46, 195)
+INSERT INTO Prices VALUES (184, 5, 0.22, 0.42, 195)
+
+INSERT INTO ConfDays VALUES (72, 272, '2018-12-29')
+INSERT INTO Prices VALUES (185, 15, 0.3, 0.5, 140)
+INSERT INTO Prices VALUES (185, 10, 0.28, 0.48, 140)
+INSERT INTO Prices VALUES (185, 5, 0.26, 0.46, 140)
+
+INSERT INTO ConfDays VALUES (72, 282, '2018-12-30')
+INSERT INTO Prices VALUES (186, 15, 0.3, 0.5, 205)
+INSERT INTO Prices VALUES (186, 10, 0.26, 0.46, 205)
+INSERT INTO Prices VALUES (186, 5, 0.22, 0.42, 205)
+

@@ -1,5 +1,7 @@
 package com.company;
 
+import com.sun.istack.internal.NotNull;
+
 import java.io.BufferedWriter;
 import java.io.IOException;
 import java.text.DecimalFormat;
@@ -48,10 +50,12 @@ public class Prices {
         writer.write(mainBuilder.toString());
     }
     
+    @NotNull
     private static String generateDiscount(int i) {
         return new DecimalFormat("#.##").format(normalDisc - diff*i);        
     }
 
+    @NotNull
     private static String generateStudentDiscount(int i) {
         return new DecimalFormat("#.##").format(studentDisc - diff * i);
     }
