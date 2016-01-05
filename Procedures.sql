@@ -688,3 +688,99 @@ AS
 	WHERE wr.WorkResID = @workresid
 GO
 
+CREATE PROCEDURE Policz_ile_studentow
+(
+@confresid int
+)
+AS
+	RETURN (SELECT COUNT(*)
+	FROM ConfReservation AS cr
+	JOIN ConfResDetails AS crd
+	ON cr.ConfResID = crd.ConfResID
+	JOIN People AS p
+	ON crd.PersonID = p.PersonID
+	WHERE cr.ConfResID = @confresid AND p.StudentID IS NOT NULL)
+GO
+
+CREATE PROCEDURE Policz_ile_niestudentow
+(
+@confresid int
+)
+AS
+	RETURN (SELECT COUNT(*)
+	FROM ConfReservation AS cr
+	JOIN ConfResDetails AS crd
+	ON cr.ConfResID = crd.ConfResID
+	JOIN People AS p
+	ON crd.PersonID = p.PersonID
+	WHERE cr.ConfResID = @confresid AND p.StudentID IS NULL)
+GO
+
+CREATE PROCEDURE Czy_rez_jest_przynaj_dwa_tyg_wczes
+(
+@confresid int
+)
+AS
+	IF(SELECT cr.ReservationDate
+	FROM ConfReservation AS cr
+	WHERE cr.ConfResID  = @confresid
+	)<(DATEADD(DAY, -14, (SELECT TOP 1 cd.date
+	FROM ConfDays as cd
+	JOIN ConfReservation as cr
+	ON cr.DayID = cd.DayID 
+	WHERE cr.ConfResID = @confresid
+	ORDER BY Date)))
+	RETURN 1
+	ELSE
+	RETURN 0
+GO
+
+CREATE PROCEDURE Policz_cene_rezerwacji_konf
+(
+@confresid int 
+)
+AS
+	DECLARE @howManyStudents INT
+	DECLARE @howManyNotStudents INT
+	DECLARE @ifTwoWeeksBefore INT
+	EXEC @howManyStudents = Policz_ile_studentow @confresid
+	EXEC @howManyNotStudents = Policz_ile_niestudentow @confresid
+	EXEC @ifTwoWeeksBefore = Czy_rez_jest_przynaj_dwa_tyg_wczes @confresid
+	IF(@ifTwoWeeksBefore = 1)
+	(
+		SELECT SUM(@howManyNotStudents*p.PricePerSlot*(1-p.Discount) + @howManyStudents*p.PricePerSlot*(1-p.StudentDiscount))
+		FROM ConfReservation AS cr
+		JOIN ConfDays AS cd
+		ON cr.DayID = cd.DayID
+		JOIN Prices AS p
+		ON cd.DayID = p.DayID
+		WHERE cr.ConfResID = @confresid
+		
+	)
+	ELSE
+	(
+		SELECT SUM(@howManyNotStudents*p.PricePerSlot + @howManyStudents*p.PricePerSlot*(1-p.StudentDiscount))
+		FROM ConfReservation AS cr
+		JOIN ConfDays AS cd
+		ON cr.DayID = cd.DayID
+		JOIN Prices AS p
+		ON cd.DayID = p.DayID
+		WHERE cr.ConfResID = @confresid
+		
+	)
+GO
+
+CREATE PROCEDURE Policz_cene_rezerwacji_wars
+(
+@workresid int 
+)
+AS
+
+	SELECT SUM(wr.Slots*w.PricePerSlot)
+	FROM WorkReservation AS wr
+	JOIN Workshops AS w
+	ON wr.WorkshopID = w.WorkshopID
+	WHERE wr.WorkResID = @workresid
+	
+GO
+

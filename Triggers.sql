@@ -22,7 +22,7 @@ BEGIN
 	RAISERROR ('Nie mozna wpisac wiecej osob na ta konferencje. Brak miejsc', 16, 1)
 	ROLLBACK TRANSACTION
 	END
-END
+GO
 
 
 
@@ -49,7 +49,7 @@ BEGIN
 	RAISERROR ('Nie mozna wpisac wiecej osob na ten warsztat. Brak miejsc', 16, 1)
 	ROLLBACK TRANSACTION
 	END
-END
+GO
 
 
 --Czy_nie_koliduja_warsztaty - sprawdza czy osoba nie jest jednoczenie na dwoch warsztatach
@@ -76,7 +76,7 @@ BEGIN
 RAISERROR ('Ta osoba bierze ju¿ udzia³ w innym warsztacie w tych godzinach.', 16, 1)
 	ROLLBACK TRANSACTION
 	END
-END
+GO
 
 
 
@@ -86,18 +86,21 @@ ON ConfResDetails
 AFTER INSERT,UPDATE AS
 BEGIN
 	IF (SELECT COUNT(*)
-		FROM inserted 
+		FROM inserted AS crdi
 		JOIN ConfReservation AS cr
-		ON inserted.ConfResID = cr.ConfResID
+		ON cr.ConfResID = crdi.ConfResID
+		JOIn ConfReservation AS cr2 ON
+		cr2.DayID = cr.DayID
 		JOIN ConfResDetails AS crd
-		ON crd.ConfResID = cr.ConfResID
-		WHERE inserted.PersonID = crd.PersonID
+		ON crd.ConfResID = cr2.ConfResID
+		WHERE crd.PersonID = crdi.PersonID 
 	)>1
 	BEGIN
 		RAISERROR ('Osoba juz jest na konferencji', 16, 1)
 		ROLLBACK TRANSACTION
 	END
 END
+GO
 
 
 
@@ -121,7 +124,6 @@ WHERE wrdi.PersonID=crd.PersonID
 BEGIN
 RAISERROR ('Osoba nie jest zapisana na konferencje na ktorej jest ten warsztat.', 16, 1)
 ROLLBACK TRANSACTION
-END
 END
 GO
 
