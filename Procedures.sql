@@ -126,7 +126,7 @@ AS
 	ON cr.ClientID = c.ClientID
 	JOIN PaymentDone AS pd
 	ON cr.ConfResID = pd.ConfResID
-	WHERE conf.ConferenceID = @ conferenceid AND cr.Cancelled = 0
+	WHERE conf.ConferenceID = @conferenceid AND cr.Cancelled = 0
 	GROUP BY c.Name, conf.Name, cd.Date
 GO
 
@@ -716,7 +716,7 @@ AS
 	WHERE cr.ConfResID = @confresid AND p.StudentID IS NULL)
 GO
 
-CREATE PROCEDURE Czy_rez_jest_przynaj_dwa_tyg_wczes
+CREATE PROCEDURE Ile_dni_wczesniej
 (
 @confresid int
 )
@@ -724,16 +724,37 @@ AS
 	IF(SELECT cr.ReservationDate
 	FROM ConfReservation AS cr
 	WHERE cr.ConfResID  = @confresid
-	)<(DATEADD(DAY, -14, (SELECT TOP 1 cd.date
+	)<(DATEADD(DAY, -30, (SELECT TOP 1 cd.date
 	FROM ConfDays as cd
 	JOIN ConfReservation as cr
 	ON cr.DayID = cd.DayID 
 	WHERE cr.ConfResID = @confresid
 	ORDER BY Date)))
-	RETURN 1
+	RETURN 30
+	ELSE
+	IF(SELECT cr.ReservationDate
+	FROM ConfReservation AS cr
+	WHERE cr.ConfResID  = @confresid
+	)<(DATEADD(DAY, -20, (SELECT TOP 1 cd.date
+	FROM ConfDays as cd
+	JOIN ConfReservation as cr
+	ON cr.DayID = cd.DayID 
+	WHERE cr.ConfResID = @confresid
+	ORDER BY Date)))
+	RETURN 20
+	ELSE
+	IF(SELECT cr.ReservationDate
+	FROM ConfReservation AS cr
+	WHERE cr.ConfResID  = @confresid
+	)<(DATEADD(DAY, -10, (SELECT TOP 1 cd.date
+	FROM ConfDays as cd
+	JOIN ConfReservation as cr
+	ON cr.DayID = cd.DayID 
+	WHERE cr.ConfResID = @confresid
+	ORDER BY Date)))
+	RETURN 10
 	ELSE
 	RETURN 0
-GO
 
 CREATE PROCEDURE Policz_cene_rezerwacji_konf
 (
