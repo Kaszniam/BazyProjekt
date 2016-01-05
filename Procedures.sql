@@ -11,7 +11,7 @@ CREATE PROCEDURE Osoby_dzien_konf
  @dayid int 
 )
 AS
-	SELECT p.PersonID, p.FirstName, p.LAStName, p.StudentID FROM People AS p
+	SELECT DISTINCT p.PersonID, p.FirstName, p.LAStName, p.StudentID FROM People AS p
 	JOIN ConfResDetails AS crd
 	ON p.PersonID = crd.PersonID
 	JOIN ConfReservation AS cr
@@ -26,17 +26,19 @@ GO
 
 CREATE PROCEDURE Osoby_warsztat
 (
- @dayid int 
+ @workshopid int 
 )
 AS
-	SELECT p.PersonID, p.FirstName, p.LAStName, p.StudentID FROM People AS p
-	JOIN ConfResDetails AS crd
-	ON p.PersonID = crd.PersonID
+	SELECT DISTINCT p.PersonId, p.FirstName, p.LastName, p.StudentID
+	FROM WorkReservation AS wr 
 	JOIN WorkResDetails AS wrd
-	ON crd.ConfResID = wrd.WorkResID
-	JOIn WorkReservation AS wr
 	ON wrd.WorkResID = wr.WorkResID
-	WHERE wr.WorkShopID = @dayid AND wr.Cancelled = 0
+	JOIN ConfResDetails AS crd
+	ON wrd.ConfResID = crd.ConfResid
+	JOIN People AS p
+	ON crd.PersonID = p.PersonID
+	WHERE wr.WorkshopID = @workshopid AND wr.Cancelled = 0 
+	ORDER BY p.PersonID
 GO
 
 
