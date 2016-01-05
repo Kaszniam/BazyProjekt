@@ -25,11 +25,11 @@ public class Days {
     }
     
     private static void generateDay(BufferedWriter writer) throws IOException, ParseException {
-        Data.currentDayID++;
+        Data.dayId++;
         writer.newLine();
         Data.mainBuilder.delete(0, Data.mainBuilder.length());
         Data.mainBuilder.append("   INSERT INTO ConfDays VALUES (");
-        Data.mainBuilder.append(Data.currentConfId);
+        Data.mainBuilder.append(Data.conferenceId);
         Data.mainBuilder.append(", ");
         Data.mainBuilder.append(generateSlots());
         Data.mainBuilder.append(", '");
@@ -42,17 +42,16 @@ public class Days {
     }
     
     private static String generateSlots() {
-        if(Data.r.nextInt(4) != 0) {
-            return Integer.toString(Data.currentConfSlots);
-        }
+        if(Data.r.nextInt(4) != 0) { }
         else {
             if(Data.r.nextInt(2) != 0) {
-                return Integer.toString(Data.currentConfSlots+10);
+                Data.currentConfSlots += 10;
             }
             else {
-                return Integer.toString(Data.currentConfSlots-10);
+                Data.currentConfSlots -= 10;
             }
         }
+        return Integer.toString(Data.currentConfSlots);
     }
     
     private static void updateDate() throws ParseException {

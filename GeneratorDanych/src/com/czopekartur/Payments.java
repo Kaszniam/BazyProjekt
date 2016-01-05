@@ -41,7 +41,7 @@ public class Payments {
         
         Data.mainBuilder.delete(0, Data.mainBuilder.length());
         Data.mainBuilder.append("          INSERT INTO PaymentDone VALUES (");
-        Data.mainBuilder.append(Data.currentResID);
+        Data.mainBuilder.append(Data.confResID);
         Data.mainBuilder.append(", ");
         //System.out.println("PRZED WYGENEROWANIEM: " + Data.onePaymentPrice);
         Data.mainBuilder.append(Data.onePaymentPrice);
@@ -90,7 +90,7 @@ public class Payments {
     }
     
     private static void generateDate() throws ParseException {
-        Data.dateOfPayment = Data.currentResDate;
+        Data.dateOfPayment = Data.currentConfResDate;
         Data.delay = Data.r.nextInt(Data.MAX_DELAY);
 
         Data.c.setTime(Data.FORMAT_CONF.parse(Data.dateOfPayment));

@@ -15,11 +15,11 @@ public class ResDetails {
         Data.listOfStudents = new ArrayList<Integer>();
 
         for (int i = 0; i < Data.amountOfAdults; i++) {
-            generateAdult(writer);
+            generateAdult();
 
             Data.mainBuilder.delete(0, Data.mainBuilder.length());
             Data.mainBuilder.append("          INSERT INTO ConfResDetails VALUES (");
-            Data.mainBuilder.append(Data.currentResID);
+            Data.mainBuilder.append(Data.confResID);
             Data.mainBuilder.append(", ");
             Data.mainBuilder.append(Data.adultID);
             Data.mainBuilder.append(", NULL)");
@@ -32,11 +32,11 @@ public class ResDetails {
 
 
         for (int i = 0; i < Data.amountOfStudents; i++) {
-            generateStudent(writer);
+            generateStudent();
 
             Data.mainBuilder.delete(0, Data.mainBuilder.length());
             Data.mainBuilder.append("          INSERT INTO ConfResDetails VALUES (");
-            Data.mainBuilder.append(Data.currentResID);
+            Data.mainBuilder.append(Data.confResID);
             Data.mainBuilder.append(", ");
             Data.mainBuilder.append(Data.studentID);
             Data.mainBuilder.append(", (SELECT StudentID FROM People WHERE PersonID = ");
@@ -65,28 +65,30 @@ public class ResDetails {
             Data.mainBuilder.append(Data.studentID);
         }
         Data.mainBuilder.append(", ");
-        Data.mainBuilder.append(Data.currentResID);
+        Data.mainBuilder.append(Data.confResID);
         Data.mainBuilder.append(")");
 
         writer.write(Data.mainBuilder.toString());
         writer.newLine();
     }
     
-    private static void generateAdult (BufferedWriter writer) throws IOException {
+    private static void generateAdult () throws IOException {
         
         do {
             Data.adultID = 1 + Data.r.nextInt(Data.AMOUNT_OF_PEOPLE);
-        } while(Data.listOfAdults.contains(Data.adultID));
+        } while(Data.listOfAdultsOnThisConf.contains(Data.adultID));
         
         Data.listOfAdults.add(Data.adultID);
+        Data.listOfAdultsOnThisConf.add(Data.adultID);
     }
         
-    private static void generateStudent(BufferedWriter writer) throws IOException {
+    private static void generateStudent() throws IOException {
            
         do {
             Data.studentID = 1 + Data.AMOUNT_OF_PEOPLE + Data.r.nextInt(Data.AMOUNT_OF_STUDENTS);
-        } while(Data.listOfStudents.contains(Data.studentID));
+        } while(Data.listOfStudentsOnThisConf.contains(Data.studentID));
         
         Data.listOfStudents.add(Data.studentID);
+        Data.listOfStudentsOnThisConf.add(Data.studentID);
         }
 }

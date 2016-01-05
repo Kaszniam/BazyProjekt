@@ -20,9 +20,9 @@ public class WorkReservations {
             Data.mainBuilder.append("      INSERT INTO WorkReservation VALUES (");
             Data.mainBuilder.append(Data.workResWorkId);
             Data.mainBuilder.append(", ");
-            Data.mainBuilder.append(Data.currentResID);
+            Data.mainBuilder.append(Data.confResID);
             Data.mainBuilder.append(", '");
-            Data.mainBuilder.append(Data.currentResDate);
+            Data.mainBuilder.append(Data.currentConfResDate);
             Data.mainBuilder.append("', ");
             Data.mainBuilder.append(Data.confResSize);
             Data.mainBuilder.append(", 0)");

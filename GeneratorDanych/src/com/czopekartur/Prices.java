@@ -15,9 +15,9 @@ public class Prices {
     public static void generate(BufferedWriter writer) throws IOException, ParseException {
         Data.pricesTbl = new Data.Record[3];
         Data.daysBefore = 30;
-        Data.currentDayId++;
+        //Data.currentDayId++;
         Data.DIFF = BigDecimal.valueOf(0.02);
-        Data.DIFF.multiply(BigDecimal.valueOf(Data.r.nextInt(4) + 1));
+        Data.DIFF = Data.DIFF.multiply(BigDecimal.valueOf(Data.r.nextInt(4) + 1));
         Data.pricePerSlot = generatePricePerSlot();
         int i = 0;
         while(Data.daysBefore > 0) {
@@ -41,7 +41,8 @@ public class Prices {
 //        
         Data.mainBuilder.delete(0, Data.mainBuilder.length());
         Data.mainBuilder.append("      INSERT INTO Prices VALUES (");
-        Data.mainBuilder.append(Data.currentDayId);
+        //Data.mainBuilder.append(Data.currentDayId);
+        Data.mainBuilder.append(Data.dayId);
         Data.mainBuilder.append(", ");
         Data.mainBuilder.append(Data.daysBefore);
         Data.mainBuilder.append(", ");
@@ -57,12 +58,16 @@ public class Prices {
     
     @NotNull
     private static BigDecimal generateNormalDiscount(int i) {
-        return Data.normalDisc.subtract(Data.DIFF.multiply(BigDecimal.valueOf(i)));    
+        BigDecimal tmp = Data.DIFF;
+        tmp = tmp.multiply(BigDecimal.valueOf(i));
+        return Data.normalDisc.subtract(tmp);
     }
 
     @NotNull
     private static BigDecimal generateStudentDiscount(int i) {
-        return Data.studentDisc.subtract(Data.DIFF.multiply(BigDecimal.valueOf(i)));
+        BigDecimal tmp = Data.DIFF;
+        tmp = tmp.multiply(BigDecimal.valueOf(i));
+        return Data.studentDisc.subtract(tmp);
     }
     
     private static int generatePricePerSlot() {

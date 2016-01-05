@@ -22,9 +22,9 @@ public class Cancel {
     }
     
     private static void declareValues() {
-        Data.confsToCancel = Data.currentConfId /Data.CONF_CANCEL;
-        Data.confRessToCancel = Data.currentResID / Data.CONF_RES_CANCEL;
-        Data.worksToCancel = Data.currentWorkshopID /Data.WORK_CANCEL;
+        Data.confsToCancel = Data.conferenceId /Data.CONF_CANCEL;
+        Data.confRessToCancel = Data.confResID / Data.CONF_RES_CANCEL;
+        Data.worksToCancel = Data.workshopId /Data.WORK_CANCEL;
         Data.workRessToCancel = Data.workResId / Data.WORK_RES_CANCEL;
     }
     
@@ -37,7 +37,7 @@ public class Cancel {
         for(int i = 0; i < Data.confsToCancel; i++) {
             Data.mainBuilder.delete(0, Data.mainBuilder.length());
             Data.mainBuilder.append("EXEC Anuluj_konferencja ");
-            Data.mainBuilder.append(Data.r.nextInt(Data.currentConfId));
+            Data.mainBuilder.append(Data.r.nextInt(Data.conferenceId));
             Data.mainBuilder.append(";");
             writer.write(Data.mainBuilder.toString());
             writer.newLine();
@@ -55,7 +55,7 @@ public class Cancel {
         for(int i = 0; i < Data.confRessToCancel; i++) {
             Data.mainBuilder.delete(0, Data.mainBuilder.length());
             Data.mainBuilder.append("EXEC Anuluj_rezerwacja_konf ");
-            Data.mainBuilder.append(Data.r.nextInt(Data.currentResID));
+            Data.mainBuilder.append(Data.r.nextInt(Data.confResID));
             Data.mainBuilder.append(";");
             writer.write(Data.mainBuilder.toString());
             writer.newLine();
@@ -73,7 +73,7 @@ public class Cancel {
         for(int i = 0; i < Data.worksToCancel; i++) {
             Data.mainBuilder.delete(0, Data.mainBuilder.length());
             Data.mainBuilder.append("EXEC Anuluj_warsztat ");
-            Data.mainBuilder.append(Data.r.nextInt(Data.currentWorkshopID));
+            Data.mainBuilder.append(Data.r.nextInt(Data.workshopId));
             Data.mainBuilder.append(";");
             writer.write(Data.mainBuilder.toString());
             writer.newLine();

@@ -9,6 +9,7 @@ import java.util.*;
  * Created by czopo on 1/3/16.
  */
 public class Data {
+    
     public final static Random r = new Random();
     public final static StringBuilder builder = new StringBuilder();
     public final static StringBuilder mainBuilder = new StringBuilder();
@@ -38,7 +39,7 @@ public class Data {
     public final static int MIN_DIFF_DAYS_CONF = 7;
     public final static int MAX_DIFF_DAYS_CONF = 21;
     public static String startConfDate = "2016-06-06";
-    public static int currentConfId = 0;
+    public static int conferenceId = 0;
     public static int currentConfDays;
     public static int currentConfSlots;
 
@@ -46,7 +47,7 @@ public class Data {
     //CONFRESERVATIONS
     public final static DateFormat formatwork = new SimpleDateFormat("yyyy-MM-dd hh:mm");
     public final static int MIN_RES_CONF = 5;
-    public final static int MAX_RES_CONF = 15;
+    public final static int MAX_RES_CONF = 40;
     public final static int MIN_ADULT_CONF = 2;
     public final static int MAX_ADULT_CONF = 10;
     public final static int MIN_STUDENT_CONF = 0;
@@ -61,13 +62,14 @@ public class Data {
     public static int amountOfStudents;
     public static int clientID;
     public static int daysBeforeRes;
-    public static String currentResDate="";
-    public static int currentResID = 0;
+    public static int confResID = 0;
+    public static String currentConfResDate ="";
     public static List<Integer> listOfClients;
+    public static List<Integer> listOfAdultsOnThisConf;
+    public static List<Integer> listOfStudentsOnThisConf;
     
     
     //CONFRESDETAILS    
-    public static int confResSlotsLeft;
     public static List<Integer> listOfAdults;
     public static List<Integer> listOfStudents;
     public static int adultID;
@@ -76,16 +78,16 @@ public class Data {
     
     //DAYS
     public static String currentDate;
-    public static int currentDayID = 0;
+    public static int dayId = 0;
     public static List<Integer> workshopsIDs;
     
     
     //PEOPLE
     public final static int DEC = 10;
     public final static String COUNTRY = "Polska";
-    public final static int AMOUNT_OF_PEOPLE = 500;
-    public final static int AMOUNT_OF_STUDENTS = 200;
-    public final static int AMOUNT_OF_CLIENTS = 60;
+    public final static int AMOUNT_OF_PEOPLE = 800;
+    public final static int AMOUNT_OF_STUDENTS = 400;
+    public final static int AMOUNT_OF_CLIENTS = 100;
     public static int companyCounter = -1;
     
     
@@ -100,7 +102,6 @@ public class Data {
     public static int MAX_PRICE = 300;
     public static int daysBefore = 30;
     public static int pricePerSlot;
-    public static int currentDayId = 0;
     public static Record[] pricesTbl;
     public static Map<Integer, Integer> workPrices = new HashMap<>();
     public static BigDecimal onePaymentPrice;
@@ -110,22 +111,23 @@ public class Data {
     public final static int MAX_DELAY = 7;
     public static int amountOfPrices = 1;
     public static String dateOfPayment;
+    public static int daysToConf;
     public static int delay;
     public static BigDecimal priceForReservation;
-    public static int daysToConf;
+ 
     
     
     //WORKSHOPS
     public final static int DIFF_TIME_WORK = 30;           //minutes of interval
-    public final static int MULTI_WORK = 6;
-    public final static int MIN_WORKS = 1;
-    public final static int MAX_WORKS = 5;
+    public final static int MULTI_WORK = 4;
+    public final static int MIN_WORKS = 2;
+    public final static int MAX_WORKS = 6;
     public final static int MIN_PRICE_WORK = 0;
     public final static int MAX_PRICE_WORK = 40;
     public final static int MIN_SLOTS_WORK = 5;
     public static int MAX_SLOTS_WORK;
     public static int AmountOfWorks;
-    public static int currentWorkshopID = 0;
+    public static int workshopId = 0;
     public static int currentSlotsWork;
     public static int currentPriceWork;
     public static String startDateWork;
@@ -189,7 +191,9 @@ public class Data {
             "Audi", "Fiat", "LG", "Nike", "Citroen", "H&M", "LuxMed", "Hp", "Apple", "Siemens", "Orlen",
             "Shell", "Empik", "Filmweb", "Gazeta", "TVN", "Facebook", "Twitter", "Google", "Rzad RP",
             "Paramedics", "SPA-Beauty", "Onet.pl", "Groupon", "Tauron", "Orlen", "KGHM", "Lotos", "Volkswagen",
-            "Azoty", "PGE", "PKP", "Grupa Żywiec", "Valeo", "Żabka", "Mostostal", "Cyfrowy Polsat"
+            "Azoty", "PGE", "PKP", "Grupa Żywiec", "Valeo", "Żabka", "Mostostal", "Cyfrowy Polsat",
+            "Helion", "Polimex", "Gaspol", "PK", "Coursera", "PWN", "FreshMarket", "Medicover",
+            "Transient", "Comarch", "UdaCity", "SoundCloud", "MarketDevs", "Disney", "Pixar", "Chevrolet", "EA"
     };
 
 

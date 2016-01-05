@@ -20,7 +20,7 @@ public class Conferences {
     }
     
     private static void generateConf(BufferedWriter writer) throws IOException, ParseException {
-        Data.currentConfId++;
+        Data.conferenceId++;
         Data.currentConfDays = Data.r.nextInt(Data.MAX_DAYS_CONF - Data.MIN_DAYS_CONF) + Data.MIN_DAYS_CONF;
         Data.currentConfSlots = Data.r.nextInt(Data.MAX_CONF_SLOTS - Data.MIN_CONF_SLOTS) + Data.MIN_CONF_SLOTS;
         String endDate = Data.startConfDate;
@@ -30,7 +30,7 @@ public class Conferences {
         
         
         writer.newLine();
-        writer.write("--CONFERENCE " + Data.currentConfId + ":");
+        writer.write("--CONFERENCE " + Data.conferenceId + ":");
         writer.newLine();
         writer.newLine();
 
