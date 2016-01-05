@@ -1,4 +1,4 @@
-------------------------------------------TRIGGERS-------------------------------------------
+ï»¿------------------------------------------TRIGGERS-------------------------------------------
 
 
 
@@ -7,14 +7,14 @@
 
 CREATE TRIGGER Czy_konf_rez_ok
 ON ConfReservation
-AFTER INSERT,UPDATE AS
+AFTER INSERT AS
 BEGIN
 	IF EXISTS (SELECT 'TAK'
 		FROM inserted 
 		JOIN ConfDays AS cd 
 		ON inserted.DayId =cd.DayId
 		JOIN ConfReservation AS cr ON cd.DayID = cr.DayID
-		WHERE inserted.DayID = cr.DayID
+		WHERE inserted.DayID = cr.DayID AND cr.Cancelled = 0
 		GROUP BY cr.DayID, cd.Slots
 		HAVING SUM(cr.Slots) > cd.Slots
 	)
@@ -22,6 +22,7 @@ BEGIN
 	RAISERROR ('Nie mozna wpisac wiecej osob na ta konferencje. Brak miejsc', 16, 1)
 	ROLLBACK TRANSACTION
 	END
+END
 GO
 
 
@@ -34,14 +35,14 @@ GO
 
 CREATE TRIGGER Czy_wars_rez_ok
 ON WorkReservation
-AFTER INSERT,UPDATE AS
+AFTER INSERT AS
 BEGIN
 	IF EXISTS (SELECT 'TAK'
 		FROM inserted 
 		JOIN Workshops AS w
 		ON inserted.WorkshopID = w.WorkshopID
 		JOIN WorkReservation AS wr ON wr.WorkshopID = w.WorkshopID
-		WHERE inserted.WorkshopID = wr.WorkshopID
+		WHERE inserted.WorkshopID = wr.WorkshopID AND wr.Cancelled = 0
 		GROUP BY wr.WorkshopID, w.Slots
 		HAVING SUM(wr.Slots) > w.Slots
 	)
@@ -49,6 +50,7 @@ BEGIN
 	RAISERROR ('Nie mozna wpisac wiecej osob na ten warsztat. Brak miejsc', 16, 1)
 	ROLLBACK TRANSACTION
 	END
+END
 GO
 
 
@@ -70,12 +72,13 @@ BEGIN
 	ON wrd.WorkResID = wr2.WorkResID
 	JOIN Workshops AS w2
 	ON w2.WorkshopID = wr2.WorkshopID
-	WHERE (w.StartTime < w2.EndTime AND w.EndTime > w2.StartTime)
+	WHERE (w.StartTime < w2.EndTime AND w.EndTime > w2.StartTime) AND w.Cancelled = 0
 )>1
 	BEGIN
-RAISERROR ('Ta osoba bierze ju¿ udzia³ w innym warsztacie w tych godzinach.', 16, 1)
+RAISERROR ('Ta osoba bierze juÂ¿ udziaÂ³ w innym warsztacie w tych godzinach.', 16, 1)
 	ROLLBACK TRANSACTION
 	END
+END
 GO
 
 
@@ -93,7 +96,7 @@ BEGIN
 		cr2.DayID = cr.DayID
 		JOIN ConfResDetails AS crd
 		ON crd.ConfResID = cr2.ConfResID
-		WHERE crd.PersonID = crdi.PersonID 
+		WHERE crd.PersonID = crdi.PersonID AND cr.Cancelled = 0
 	)>1
 	BEGIN
 		RAISERROR ('Osoba juz jest na konferencji', 16, 1)
@@ -119,11 +122,12 @@ JOIN
 ConfReservation AS cr ON cr.ConfResID=ws.ConfResID
 JOIN
 ConfResDetails AS crd ON cr.ConfResID = crd.ConfResID 
-WHERE wrdi.PersonID=crd.PersonID
+WHERE wrdi.PersonID=crd.PersonID AND cr.Cancelled = 0
 )=0
 BEGIN
 RAISERROR ('Osoba nie jest zapisana na konferencje na ktorej jest ten warsztat.', 16, 1)
 ROLLBACK TRANSACTION
+END
 END
 GO
 

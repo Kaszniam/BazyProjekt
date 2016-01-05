@@ -34,7 +34,7 @@ CREATE TABLE People (
 CREATE TABLE Conferences (
     ConferenceID int  NOT NULL IDENTITY(1,1),
     Name nvarchar(50)  NOT NULL,
-    Description text  NULL,
+    Description nvarchar(255)  NULL,
     StartDate date  NOT NULL CHECK (StartDate >  GETDATE()),
     EndDate date  NOT NULL CHECK (EndDate >  GETDATE()),
     Cancelled tinyint NOT NULL DEFAULT 0,
@@ -111,7 +111,7 @@ CREATE TABLE PaymentDone (
 CREATE TABLE Workshops (
     WorkshopID int  NOT NULL IDENTITY(1,1),
     DayID int  NOT NULL,
-    Description text  NULL,
+    Description nvarchar(255)  NULL,
     Slots int  NOT NULL CHECK (Slots > 0),
     StartTime datetime  NOT NULL CHECK (StartTime >  GETDATE()),
     EndTime datetime  NOT NULL CHECK (EndTime >  GETDATE()),

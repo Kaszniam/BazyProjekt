@@ -742,20 +742,19 @@ CREATE PROCEDURE Policz_cene_rezerwacji_konf
 AS
 	DECLARE @howManyStudents INT
 	DECLARE @howManyNotStudents INT
-	DECLARE @ifTwoWeeksBefore INT
+	DECLARE @howManyDaysBefore INT
 	EXEC @howManyStudents = Policz_ile_studentow @confresid
 	EXEC @howManyNotStudents = Policz_ile_niestudentow @confresid
-	EXEC @ifTwoWeeksBefore = Czy_rez_jest_przynaj_dwa_tyg_wczes @confresid
-	IF(@ifTwoWeeksBefore = 1)
+	EXEC @howManyDaysBefore = Ile_dni_wczesniej @confresid
+	IF(@howManyDaysBefore != 0)
 	(
-		SELECT SUM(@howManyNotStudents*p.PricePerSlot*(1-p.Discount) + @howManyStudents*p.PricePerSlot*(1-p.StudentDiscount))
+		SELECT SUM(@howManyNotStudents*p.PricePerSlot*(1-p.Discount) + @howManyStudents*p.PricePerSlot*(1-p.StudentDiscount)*(1-p.Discount))
 		FROM ConfReservation AS cr
 		JOIN ConfDays AS cd
 		ON cr.DayID = cd.DayID
 		JOIN Prices AS p
 		ON cd.DayID = p.DayID
-		WHERE cr.ConfResID = @confresid
-		
+		WHERE cr.ConfResID = @confresid AND p.DaysBefore = @howManyDaysBefore
 	)
 	ELSE
 	(
@@ -765,8 +764,7 @@ AS
 		ON cr.DayID = cd.DayID
 		JOIN Prices AS p
 		ON cd.DayID = p.DayID
-		WHERE cr.ConfResID = @confresid
-		
+		WHERE cr.ConfResID = @confresid AND p.DaysBefore = @howManyDaysBefore
 	)
 GO
 
@@ -783,4 +781,6 @@ AS
 	WHERE wr.WorkResID = @workresid
 	
 GO
+
+
 

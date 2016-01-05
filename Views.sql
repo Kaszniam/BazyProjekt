@@ -40,7 +40,7 @@ AS
 	JOIN ConfResDetails AS crd
 	ON crd.ConfResID = cr.ConfResID
 	GROUP BY conf.ConferenceID, conf.Name
-
+		ORDER BY COUNT (*) DESC
 GO	
 
 
@@ -57,6 +57,7 @@ SELECT TOP 20 work.WorkshopID, work.Description, work.StartTime, work.EndTime, C
 	JOIN WorkResDetails AS wrd
 	ON wr.WorkResID = wrd.WorkResID
 	GROUP BY work.WorkshopID, work.Description, work.StartTime, work.EndTime
+		ORDER BY COUNT (*) DESC
 
 GO
 
@@ -67,12 +68,13 @@ GO
 
 CREATE VIEW Najczesciej_korzystajacy_z_uslug
 AS
-	SELECT Name AS [Client],
+	SELECT TOP 20Name AS [Client],
 	(SELECT COUNT(*)
 	FROM ConfReservation
-	WHERE (Clients.ClientID = ClientID) AND ConfReservation.Cancelled = 0) AS [How many times:]
+	WHERE (Clients.ClientID = ClientID) AND ConfReservation.Cancelled = 0) AS [Ile:]
 	FROM Clients
 	GROUP BY ClientID, Name
+		ORDER BY [Ile:] DESC
 GO
 
 
