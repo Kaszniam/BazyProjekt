@@ -8,7 +8,7 @@
 
 CREATE PROCEDURE Osoby_dzien_konf
 (
- @param int --DayID
+ @dayid int --DayID
 )
 AS
 	SELECT p.PersonID, p.FirstName, p.LastName, p.StudentID FROM People AS p
@@ -16,7 +16,7 @@ AS
 	ON p.PersonID = crd.PersonID
 	JOIN ConfReservation AS cr
 	ON cr.ConfResID = crd.ConfResID
-	WHERE cr.DayID = @param AND cr.Cancelled = 0
+	WHERE cr.DayID = @dayid AND cr.Cancelled = 0
 GO
 
 
@@ -25,7 +25,7 @@ GO
 
 CREATE PROCEDURE Osoby_warsztat
 (
- @param int --DayID parametr
+ @workshopid int --DayID parametr
 )
 AS
 	SELECT p.PersonID, p.FirstName, p.LastName, p.StudentID FROM People AS p
@@ -35,7 +35,7 @@ AS
 	ON crd.ConfResID = wrd.WorkResID
 	JOIn WorkReservation as wr
 	ON wrd.WorkResID = wr.WorkResID
-	WHERE wr.WorkShopID = @param AND wr.Cancelled = 0
+	WHERE wr.WorkShopID = @workshopid AND wr.Cancelled = 0
 GO
 
 
@@ -44,7 +44,7 @@ GO
 
 CREATE PROCEDURE Generuj_id
 (
-@param int --DayID
+@dayid int --DayID
 )
 AS
 	SELECT p.FirstName, p.LastName,
@@ -56,7 +56,7 @@ AS
 	ON crd.ConfResID = cr.ConfResID
 	JOIN Clients AS c
 	ON cr.ClientID = c.ClientID
-	WHERE cr.DayID = @param
+	WHERE cr.DayID = @dayid
 GO
 
 
@@ -65,7 +65,7 @@ GO
 
 CREATE PROCEDURE Moje_konferencje
 (
-@param int --PersonID
+@personid int
 )
 AS
 	SELECT p.FirstName AS [Imie], p.LastName AS [Nazwisko], c.Name AS [Nazwa konferencji]
@@ -78,7 +78,7 @@ AS
 	ON cr.DayID = cd.DayID
 	JOIN Conferences AS c
 	ON cd.ConferenceID = c.ConferenceID
-	WHERE p.PersonID = @param
+	WHERE p.PersonID = @personid 
 GO
 
 
@@ -87,7 +87,7 @@ GO
 
 CREATE PROCEDURE Moje_warsztaty
 (
-@param int --PersonID
+@personid int
 )
 AS
 	SELECT p.FirstName AS [Imie], p.LastName AS [Nazwisko], w.Description AS [Nazwa Warsztatu]
@@ -98,7 +98,7 @@ AS
 	ON wrd.WorkResId = wr.WorkResId
 	JOIN Workshops AS w
 	ON wr.WorkshopID = w.WorkshopID
-	WHERE p.PersonID = @param
+	WHERE p.PersonID = @personid
 GO
 
 
@@ -107,7 +107,7 @@ GO
 
 CREATE PROCEDURE Platnosci_konferencja
 (
-@param int --ConferenceID
+@conferenceid int 
 )
 AS
 	SELECT c.Name AS [Nazwa klienta], conf.Name AS [Nazwa konferencji], cd.Date AS [Dzieñ konferencji], SUM(pd.Amount) AS [P³atnoœci Dokonane]
@@ -120,7 +120,7 @@ AS
 	ON cr.ClientID = c.ClientID
 	JOIN PaymentDone as pd
 	ON cr.ConfResID = pd.ConfResID
-	WHERE conf.ConferenceID = @param ANd cr.Cancelled = 0
+	WHERE conf.ConferenceID = @conferenceid ANd cr.Cancelled = 0
 	GROUP BY c.Name, conf.Name, cd.Date
 GO
 
@@ -130,7 +130,7 @@ GO
 
 CREATE PROCEDURE Platnosci_rezerwacja
 (
-@param int --ReservationID
+@reservationid int 
 )
 AS
 	SELECT c.Name AS [Nazwa klienta], conf.Name AS [Nazwa konferencji], cd.Date AS [Dzieñ konferencji], SUM(pd.Amount) AS [P³atnoœci Dokonane]
@@ -143,7 +143,7 @@ AS
 	ON cr.ClientID = c.ClientID
 	JOIN PaymentDone as pd
 	ON cr.ConfResID = pd.ConfResID
-	WHERE cr.ConfResID = @param ANd cr.Cancelled = 0
+	WHERE cr.ConfResID = @reservationid ANd cr.Cancelled = 0
 	GROUP BY c.Name, conf.Name, cd.Date
 GO
 
@@ -169,7 +169,7 @@ GO
 
 CREATE PROCEDURE Osoby_firma
 (
-@param int
+@clientid int
 )
 AS
 	SELECT p.PersonID, p.FirstName, p.LastName, p .StudentID
@@ -180,13 +180,8 @@ AS
 	ON crd.ConfResID = cr.ConfResID
 	JOIN Clients as c
 	ON cr.ClientID = c.ClientID
-	WHERE c.ClientID = @param
+	WHERE c.ClientID = @clientid
 GO
-
-
-
---osoba_prywatny - wyswietl osoby od danej osoby o podanym id (z klientow)
-
 
 
 --Dodaj_klient_prywatny - dodaje prywatnego klienta (imie, tel, adres, miasto, kod, kraj, studentid)
@@ -524,14 +519,6 @@ CREATE PROCEDURE Dodaj_osoba_do_rez_wars
 AS
 	INSERT INTO WorkResDetails VALUES(@workresid, @personid, (SELECT ConfResID FROM WorkReservation WHERE WorkResId = @workresid))
 GO
-
-
---Policz_cena_osoba - liczy cene osoby za jego konferencje i warsztaty (PersonID)
-
-
-
---Policz_cena_rezerwacja - liczy cene dla danej rezerwacji za konferencje i warsztaty (ConfResID)
-
 
 
 --Anuluj_konferencja - anuluje konferencje (ConferenceID). UWAGA! ANULUJAC KONFERENCJE ANUUJEMY WARSZTATY I WSZYSTKIE REZERWACJE!
