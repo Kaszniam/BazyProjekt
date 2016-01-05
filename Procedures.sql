@@ -755,6 +755,7 @@ AS
 	RETURN 10
 	ELSE
 	RETURN 0
+GO
 
 CREATE PROCEDURE Policz_cene_rezerwacji_konf
 (
