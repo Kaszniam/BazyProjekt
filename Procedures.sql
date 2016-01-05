@@ -788,7 +788,7 @@ AS
 		ON cr.DayID = cd.DayID
 		JOIN Prices AS p
 		ON cd.DayID = p.DayID
-		WHERE cr.ConfResID = @confresid AND p.DaysBefore = @howManyDaysBefore
+		WHERE cr.ConfResID = @confresid AND p.DaysBefore = 10
 	)
 GO
 
