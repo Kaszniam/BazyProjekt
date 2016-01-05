@@ -9,7 +9,7 @@ CREATE TRIGGER Czy_konf_rez_ok
 ON ConfReservation
 AFTER INSERT,UPDATE AS
 BEGIN
-	IF EXISTS (SELECT [TAK]
+	IF EXISTS (SELECT 'TAK'
 		FROM inserted 
 		JOIN ConfDays AS cd 
 		ON inserted.DayId =cd.DayId
@@ -36,7 +36,7 @@ CREATE TRIGGER Czy_wars_rez_ok
 ON WorkReservation
 AFTER INSERT,UPDATE AS
 BEGIN
-	IF EXISTS (SELECT [TAK]
+	IF EXISTS (SELECT 'TAK'
 		FROM inserted 
 		JOIN Workshops AS w
 		ON inserted.WorkshopID = w.WorkshopID
