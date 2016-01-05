@@ -8,10 +8,10 @@
 
 CREATE PROCEDURE Osoby_dzien_konf
 (
- @dayid int --DayID
+ @dayid int 
 )
 AS
-	SELECT p.PersonID, p.FirstName, p.LastName, p.StudentID FROM People AS p
+	SELECT p.PersonID, p.FirstName, p.LAStName, p.StudentID FROM People AS p
 	JOIN ConfResDetails AS crd
 	ON p.PersonID = crd.PersonID
 	JOIN ConfReservation AS cr
@@ -21,22 +21,24 @@ GO
 
 
 
+
 --Osoby_warsztat(WorkshopID) - pokazuje wszystkie osoby zapisane na dany warsztat
 
 CREATE PROCEDURE Osoby_warsztat
 (
- @workshopid int --DayID parametr
+ @dayid int 
 )
 AS
-	SELECT p.PersonID, p.FirstName, p.LastName, p.StudentID FROM People AS p
+	SELECT p.PersonID, p.FirstName, p.LAStName, p.StudentID FROM People AS p
 	JOIN ConfResDetails AS crd
 	ON p.PersonID = crd.PersonID
 	JOIN WorkResDetails AS wrd
 	ON crd.ConfResID = wrd.WorkResID
-	JOIn WorkReservation as wr
+	JOIn WorkReservation AS wr
 	ON wrd.WorkResID = wr.WorkResID
-	WHERE wr.WorkShopID = @workshopid AND wr.Cancelled = 0
+	WHERE wr.WorkShopID = @dayid AND wr.Cancelled = 0
 GO
+
 
 
 
@@ -44,11 +46,11 @@ GO
 
 CREATE PROCEDURE Generuj_id
 (
-@dayid int --DayID
+@dayid int
 )
 AS
-	SELECT p.FirstName, p.LastName,
-	CAST(cr.DayID as nvarchar(5)) + '-' + CAST(cr.ConfResID as nvarchar(5)) + '-' + CAST(p.PersonID as nvarchar(5)) + SUBSTRING(p.FirstName, 0,5) + SUBSTRING(p.LastName,0,5) + '-' + SUBSTRING(c.Name, 0,4) AS [Identyfikator]
+	SELECT p.FirstName, p.LAStName,
+CAST(cr.DayID AS nvarchar(5)) + '-' + CAST(cr.ConfResID AS nvarchar(5)) + '-' + CAST(p.PersonID AS nvarchar(5)) + SUBSTRING(p.FirstName, 0,5) + SUBSTRING(p.LAStName,0,5) + '-' + SUBSTRING(c.Name, 0,4) AS [Identyfikator]
 	FROM People AS p
 	JOIN ConfResDetails AS crd
 	ON p.PersonID = crd.PersonID
@@ -61,6 +63,7 @@ GO
 
 
 
+
 --Moje_konferencje - generuje dla osoby o podanym id liste konferencji w ktorych uczestniczy
 
 CREATE PROCEDURE Moje_konferencje
@@ -68,18 +71,19 @@ CREATE PROCEDURE Moje_konferencje
 @personid int
 )
 AS
-	SELECT p.FirstName AS [Imie], p.LastName AS [Nazwisko], c.Name AS [Nazwa konferencji]
+SELECT p.FirstName AS [Imie], p.LAStName AS [Nazwisko], c.Name AS [Nazwa konferencji]
 	FROM People AS p
-	JOIN ConfResDetails as crd
+	JOIN ConfResDetails AS crd
 	ON p.PersonId= crd.PersonID
-	JOIN ConfReservation as cr
+	JOIN ConfReservation AS cr
 	ON crd.ConfResID = cr.ConfResID
-	JOIN ConfDays as cd
+	JOIN ConfDays AS cd
 	ON cr.DayID = cd.DayID
 	JOIN Conferences AS c
 	ON cd.ConferenceID = c.ConferenceID
-	WHERE p.PersonID = @personid 
+	WHERE p.PersonID = @personid
 GO
+
 
 
 
@@ -87,10 +91,10 @@ GO
 
 CREATE PROCEDURE Moje_warsztaty
 (
-@personid int
+@personid int 
 )
 AS
-	SELECT p.FirstName AS [Imie], p.LastName AS [Nazwisko], w.Description AS [Nazwa Warsztatu]
+	SELECT p.FirstName AS [Imie], p.LAStName AS [Nazwisko], w.Description AS [Nazwa Warsztatu]
 	FROM People AS p
 	JOIN WorkResDetails AS wrd
 	ON p.PersonID = wrd.PersonID
@@ -103,6 +107,8 @@ GO
 
 
 
+
+
 --Platnosci_konferencja - wyswietla platnosci dla danego id konferencji
 
 CREATE PROCEDURE Platnosci_konferencja
@@ -110,19 +116,20 @@ CREATE PROCEDURE Platnosci_konferencja
 @conferenceid int 
 )
 AS
-	SELECT c.Name AS [Nazwa klienta], conf.Name AS [Nazwa konferencji], cd.Date AS [Dzieñ konferencji], SUM(pd.Amount) AS [P³atnoœci Dokonane]
+	SELECT c.Name AS [Nazwa klienta], conf.Name AS [Nazwa konferencji], cd.Date AS [Dzień konferencji], SUM(pd.Amount) AS [Płatności Dokonane]
 	FROM Conferences AS conf
 	JOIN ConfDays AS cd
 	ON conf.ConferenceId = cd.ConferenceID
 	JOIN ConfReservation AS cr
 	ON cd.DayID  = cr.DayID
-	JOIN Clients as c
+	JOIN Clients AS c
 	ON cr.ClientID = c.ClientID
-	JOIN PaymentDone as pd
+	JOIN PaymentDone AS pd
 	ON cr.ConfResID = pd.ConfResID
-	WHERE conf.ConferenceID = @conferenceid ANd cr.Cancelled = 0
+	WHERE conf.ConferenceID = @ conferenceid AND cr.Cancelled = 0
 	GROUP BY c.Name, conf.Name, cd.Date
 GO
+
 
 
 
@@ -130,22 +137,23 @@ GO
 
 CREATE PROCEDURE Platnosci_rezerwacja
 (
-@reservationid int 
+@reservationid int
 )
 AS
-	SELECT c.Name AS [Nazwa klienta], conf.Name AS [Nazwa konferencji], cd.Date AS [Dzieñ konferencji], SUM(pd.Amount) AS [P³atnoœci Dokonane]
+	SELECT c.Name AS [Nazwa klienta], conf.Name AS [Nazwa konferencji], cd.Date AS [Dzień konferencji], SUM(pd.Amount) AS [Płatności Dokonane]
 	FROM Conferences AS conf
 	JOIN ConfDays AS cd
 	ON conf.ConferenceId = cd.ConferenceID
 	JOIN ConfReservation AS cr
 	ON cd.DayID  = cr.DayID
-	JOIN Clients as c
+	JOIN Clients AS c
 	ON cr.ClientID = c.ClientID
-	JOIN PaymentDone as pd
+	JOIN PaymentDone AS pd
 	ON cr.ConfResID = pd.ConfResID
 	WHERE cr.ConfResID = @reservationid ANd cr.Cancelled = 0
 	GROUP BY c.Name, conf.Name, cd.Date
 GO
+
 
 
 
@@ -157,11 +165,12 @@ CREATE PROCEDURE Progi_cenowe
 )
 AS
 	SELECT pr.DayID, pr.DaysBefore, FORMAT(pr.PricePerSlot*(1-pr.Discount), 'N', 'en-us') AS [Cena normalna],
-	 FORMAT(pr.PricePerSlot*(1-pr.StudentDiscount), 'N', 'en-us') AS [Cena studencka] FROM Prices AS pr
+	FORMAT(pr.PricePerSlot*(1-pr.StudentDiscount), 'N', 'en-us') AS [Cena studencka] FROM Prices AS pr
 	 JOIN ConfDays AS cd
 	 ON pr.DayID = cd.DayID
 	 WHERE cd.ConferenceID = @confid
 GO
+
 
 
 
@@ -172,33 +181,35 @@ CREATE PROCEDURE Osoby_firma
 @clientid int
 )
 AS
-	SELECT p.PersonID, p.FirstName, p.LastName, p .StudentID
-	FROM People as p
-	JOIN ConfResDetails as crd
+	SELECT p.PersonID, p.FirstName, p.LAStName, p.StudentID
+	FROM People AS p
+	JOIN ConfResDetails AS crd
 	ON p.PersonID = crd.PersonID
-	JOIN ConfReservation as cr
+	JOIN ConfReservation AS cr
 	ON crd.ConfResID = cr.ConfResID
-	JOIN Clients as c
+	JOIN Clients AS c
 	ON cr.ClientID = c.ClientID
 	WHERE c.ClientID = @clientid
 GO
+
 
 
 --Dodaj_klient_prywatny - dodaje prywatnego klienta (imie, tel, adres, miasto, kod, kraj, studentid)
 
 CREATE PROCEDURE Dodaj_klient_prywatny
 (
-@imie nvarchar(50),
-@tel nvarchar(12),
+@name nvarchar(50),
+@phone nvarchar(12),
 @adres nvarchar(50),
-@miasto nvarchar(50),
-@kod nvarchar(6),
-@kraj nvarchar(50),
+@city nvarchar(50),
+@postcode nvarchar(6),
+@country nvarchar(50),
 @studentid nvarchar(50)
 )
 AS
-	INSERT INTO Clients VALUES(0, @imie, @tel, @adres, @miasto, @kod, @kraj, @studentid, NULL)
+INSERT INTO Clients VALUES(0, @name, @phone, @adres, @city, @postcode, @country, @studentid, NULL)
 GO
+
 
 
 
@@ -206,17 +217,18 @@ GO
 
 CREATE PROCEDURE Dodaj_klient_firma
 (
-@imie nvarchar(50),
-@tel nvarchar(12),
+@name nvarchar(50),
+@phone nvarchar(12),
 @adres nvarchar(50),
-@miasto nvarchar(50),
-@kod nvarchar(6),
-@kraj nvarchar(50),
+@city nvarchar(50),
+@postcode nvarchar(6),
+@country nvarchar(50),
 @nip nvarchar(50)
 )
 AS
-	INSERT INTO Clients VALUES(1, @imie, @tel, @adres, @miasto, @kod, @kraj, NULL, @nip)
+INSERT INTO Clients VALUES(1, @name, @phone, @adres, @city, @postcode, @country, NULL, @nip)
 GO
+
 
 
 
@@ -225,26 +237,26 @@ GO
 CREATE PROCEDURE Zmien_dane_prywatny
 (
 @id int,
-@imie nvarchar(50)=NULL,
-@tel nvarchar(12)=NULL,
+@name nvarchar(50)=NULL,
+@phone nvarchar(12)=NULL,
 @adres nvarchar(50)=NULL,
-@miasto nvarchar(50)=NULL,
-@kod nvarchar(6)=NULL,
-@kraj nvarchar(50)=NULL,
+@city nvarchar(50)=NULL,
+@postcode nvarchar(6)=NULL,
+@country nvarchar(50)=NULL,
 @studentid nvarchar(50)=NULL
 )
 AS
-	IF @imie IS NOT NULL
+	IF @name IS NOT NULL
 	BEGIN
 		UPDATE Clients
-		SET Clients.Name = @imie
+		SET Clients.Name = @name
 		WHERE Clients.ClientID = @id AND Clients.Company = 0
 	END
 
-	IF @tel IS NOT NULL
+	IF @phone IS NOT NULL
 	BEGIN
 		UPDATE Clients
-		SET Clients.Phone = @tel
+		SET Clients.Phone = @phone
 		WHERE Clients.ClientID = @id AND Clients.Company = 0
 	END
 
@@ -255,24 +267,24 @@ AS
 		WHERE Clients.ClientID = @id AND Clients.Company = 0
 	END
 
-	IF @miasto IS NOT NULL
+	IF @city IS NOT NULL
 	BEGIN
 		UPDATE Clients
-		SET Clients.City = @miasto
+		SET Clients.City = @city
 		WHERE Clients.ClientID = @id AND Clients.Company = 0
 	END
 
-	IF @kod IS NOT NULL
+	IF @postcode IS NOT NULL
 	BEGIN
 		UPDATE Clients
-		SET Clients.PostalCode = @kod
+		SET Clients.PostalCode = @postcode
 		WHERE Clients.ClientID = @id AND Clients.Company = 0
 	END
 
-	IF @kraj IS NOT NULL
+	IF @country IS NOT NULL
 	BEGIN
 		UPDATE Clients
-		SET Clients.Country = @kraj
+		SET Clients.Country = @country
 		WHERE Clients.ClientID = @id AND Clients.Company = 0
 	END
 
@@ -286,31 +298,32 @@ GO
 
 
 
+
 --Zmien_dane_firma- zmienia dane firmy, jesli czeogs nie zmienia przekazujemy null
 
 CREATE PROCEDURE Zmien_dane_firma
 (
 @id int,
-@imie nvarchar(50)=NULL,
-@tel nvarchar(12)=NULL,
+@name nvarchar(50)=NULL,
+@phone nvarchar(12)=NULL,
 @adres nvarchar(50)=NULL,
-@miasto nvarchar(50)=NULL,
-@kod nvarchar(6)=NULL,
-@kraj nvarchar(50)=NULL,
+@city nvarchar(50)=NULL,
+@postcode nvarchar(6)=NULL,
+@country nvarchar(50)=NULL,
 @nip nvarchar(50)=NULL
 )
 AS
-	IF @imie IS NOT NULL
+	IF @name IS NOT NULL
 	BEGIN
 		UPDATE Clients
-		SET Clients.Name = @imie
+		SET Clients.Name = @name
 		WHERE Clients.ClientID = @id AND Clients.Company = 1
 	END
 
-	IF @tel IS NOT NULL
+	IF @phone IS NOT NULL
 	BEGIN
 		UPDATE Clients
-		SET Clients.Phone = @tel
+		SET Clients.Phone = @phone
 		WHERE Clients.ClientID = @id AND Clients.Company = 1
 	END
 
@@ -321,24 +334,24 @@ AS
 		WHERE Clients.ClientID = @id AND Clients.Company = 1
 	END
 
-	IF @miasto IS NOT NULL
+	IF @city IS NOT NULL
 	BEGIN
 		UPDATE Clients
-		SET Clients.City = @miasto
+		SET Clients.City = @city
 		WHERE Clients.ClientID = @id AND Clients.Company = 1
 	END
 
-	IF @kod IS NOT NULL
+	IF @postcode IS NOT NULL
 	BEGIN
 		UPDATE Clients
-		SET Clients.PostalCode = @kod
+		SET Clients.PostalCode = @postcode
 		WHERE Clients.ClientID = @id AND Clients.Company = 1
 	END
 
-	IF @kraj IS NOT NULL
+	IF @country IS NOT NULL
 	BEGIN
 		UPDATE Clients
-		SET Clients.Country = @kraj
+		SET Clients.Country = @country
 		WHERE Clients.ClientID = @id AND Clients.Company = 1
 	END
 
@@ -352,17 +365,19 @@ GO
 
 
 
+
 --Dodaj_osoba - dodaje osobe (imie, nazwisko, studentid)
 
 CREATE PROCEDURE Dodaj_osoba
 (
-@imie nvarchar(50),
-@nazwisko nvarchar(50),
+@firstname nvarchar(50),
+@sname nvarchar(50),
 @studentid nvarchar(50)
 )
 AS
-	INSERT INTO People VALUES(@imie, @nazwisko, @studentid)
+	INSERT INTO People VALUES(@firstname, @sname, @studentid)
 GO
+
 
 
 
@@ -378,6 +393,7 @@ AS
 	SET People.StudentID = @studentid
 	WHERE People.PersonID = @id
 GO
+
 	
 
 
@@ -385,18 +401,18 @@ GO
 
 CREATE PROCEDURE Dodaj_konferencje
 (
-@nazwa nvarchar(50),
-@opis text,
+@name nvarchar(50),
+@desc text,
 @start date,
-@koniec date,
+@end date,
 @slots int
 )
 AS
-	INSERT INTO Conferences VALUES (@nazwa, @opis, @start, @koniec,0);
-	DECLARE @days int  = DATEDIFF(DAY, @start, @koniec) + 1;
+	INSERT INTO Conferences VALUES (@name, @desc, @start, @end,0);
+	DECLARE @days int  = DATEDIFF(DAY, @start, @end) + 1;
 	DECLARE @cnt int = 0;
 	DECLARE @currentDate date = @start;
-	DECLARE @confId int = (SELECT ConferenceID FROM Conferences WHERE Name = @nazwa AND StartDate = @start AND EndDate = @koniec);
+DECLARE @confId int = (SELECT ConferenceID FROM Conferences WHERE Name = @name AND StartDate = @start AND EndDate = @end);
 	WHILE @cnt < @days
 	BEGIN
 		INSERT INTO ConfDays VALUES(@confId, @slots, @currentDate);
@@ -404,6 +420,7 @@ AS
 		SET @cnt = @cnt + 1;
 	END;
 GO
+
 
 
 
@@ -422,6 +439,7 @@ GO
 
 
 
+
 --Dodaj_rezerwacja_konf - dodaje rezerwacje klienta na konferencje na ustalona ilosc miejsc (ClientID, DayId, Slots)
 
 CREATE PROCEDURE Dodaj_rezerwacja_konf
@@ -436,6 +454,7 @@ GO
 
 
 
+
 --Dodaj_osoba_do_rez_konf - dodaje osobe do rezerwacji na konferencje (confResID, PersonID)
 
 CREATE PROCEDURE Dodaj_osoba_do_rez_konf
@@ -444,8 +463,9 @@ CREATE PROCEDURE Dodaj_osoba_do_rez_konf
 @personid int
 )
 AS
-	INSERT INTO ConfResDetails VALUES(@confresid, @personid, (SELECT StudentID FROM People WHERE PersonID = @personid))
+INSERT INTO ConfResDetails VALUES(@confresid, @personid, (SELECT StudentID FROM People WHERE PersonID = @personid))
 GO
+
 
 
 
@@ -455,13 +475,14 @@ CREATE PROCEDURE Dodaj_prog_cenowy
 (
 @dayid int,
 @daysbefore int,
-@discount decimal(3,2),
+@disc decimal(3,2),
 @studentdisc decimal(3,2),
 @price money
 )
 AS
-	INSERT INTO Prices VALUES(@dayid, @daysbefore, @discount, @studentdisc, @price)
+INSERT INTO Prices VALUES(@dayid, @daysbefore, @disc, @studentdisc, @price)
 GO
+
 
 
 
@@ -477,8 +498,9 @@ CREATE PROCEDURE Dodaj_warsztat
 @price money
 )
 AS
-	INSERT INTO Workshops VALUES(@dayid, @desc, @slots, @starttime, @endtime, @price, 0)
+INSERT INTO Workshops VALUES(@dayid, @desc, @slots, @starttime, @endtime, @price, 0)
 GO
+
 
 
 
@@ -496,6 +518,7 @@ GO
 
 
 
+
 --Zmien_miejsca_wars - zmienia ilosc miejsc na dany warsztat (workshopId, slots)
 
 CREATE PROCEDURE Zmien_miejsca_wars
@@ -509,6 +532,7 @@ AS
 		WHERE WorkshopID = @workid
 GO
 
+
 --Dodaj_osoba_do_rez_wars - dodaje osobe do rezerwacji na warsztat (WorkResID, PersonID)
 
 CREATE PROCEDURE Dodaj_osoba_do_rez_wars
@@ -519,6 +543,8 @@ CREATE PROCEDURE Dodaj_osoba_do_rez_wars
 AS
 	INSERT INTO WorkResDetails VALUES(@workresid, @personid, (SELECT ConfResID FROM WorkReservation WHERE WorkResId = @workresid))
 GO
+
+
 
 
 --Anuluj_konferencja - anuluje konferencje (ConferenceID). UWAGA! ANULUJAC KONFERENCJE ANUUJEMY WARSZTATY I WSZYSTKIE REZERWACJE!
@@ -569,6 +595,7 @@ GO
 
 
 
+
 --Anuluj_rezerwacja_konf - anuluje dana rezerwacje na konferencje (ConfResID) UWAGA! REZERWACJA NA WARSZTATY TAKZE IDZIE W ZAPOMNIENIE!
 
 CREATE PROCEDURE Anuluj_rezerwacja_konf
@@ -586,6 +613,7 @@ AS
 	SET WorkReservation.Cancelled = 1
 	WHERE ConfResID = @confresid
 GO
+
 
 
 
@@ -609,6 +637,7 @@ GO
 
 
 
+
 --Anuluj_rezerwacja_warsztat - anuluje rezerwacje na warsztat (WorkResID) PRZY REZERWACJACH WARTO UWZGLEDNIC AKTUALIZACJE CEN
 
 CREATE PROCEDURE Anuluj_rezerwacja_warsztat
@@ -616,10 +645,12 @@ CREATE PROCEDURE Anuluj_rezerwacja_warsztat
 @workresid int
 )
 AS
-		UPDATE WorkReservation
-		SET WorkReservation.Cancelled = 1
-		WHERE WorkResID = @workresid
+	UPDATE WorkReservation
+	SET WorkReservation.Cancelled = 1
+	WHERE WorkResID = @workresid
 GO
+
+
 
 
 
@@ -630,7 +661,7 @@ CREATE PROCEDURE Pokaz_rezerwacja_konf
 @confresid int
 )
 AS
-	SELECT p.FirstName, p.LastName, p.StudentID, cr.Cancelled
+	SELECT p.FirstName, p.LAStName, p.StudentID, cr.Cancelled
 	FROM People AS p
 	JOIN ConfResDetails AS crd
 	ON p.PersonID = crd.PersonID
@@ -648,7 +679,7 @@ CREATE PROCEDURE Pokaz_rezerwacja_wars
 @workresid int
 )
 AS
-	SELECT p.FirstName, p.LastName, p.StudentID, wr.Cancelled
+	SELECT p.FirstName, p.LAStName, p.StudentID, wr.Cancelled
 	FROM People AS p
 	JOIN WorkResDetails AS wrd
 	ON p.PersonID = wrd.PersonID
@@ -656,3 +687,4 @@ AS
 	ON wrd.WorkResID = wr.WorkResID
 	WHERE wr.WorkResID = @workresid
 GO
+
