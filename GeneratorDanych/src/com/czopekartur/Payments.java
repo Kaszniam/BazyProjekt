@@ -11,7 +11,7 @@ import java.util.Calendar;
  */
 public class Payments {
     
-    public static void generate(BufferedWriter writer, boolean workshop) throws ParseException, IOException {
+    public static void generate(BufferedWriter writer) throws ParseException, IOException {
         
         boolean generatedPrice = false;
         Data.priceForReservation = BigDecimal.valueOf(0);
@@ -22,7 +22,7 @@ public class Payments {
             
             if(!generatedPrice) {
                 generateAmountOfPrices();
-                generatePrice(workshop);
+                generatePrice();
                 Data.priceForReservation =
                         Data.priceForReservation.divide(BigDecimal.valueOf(Data.amountOfPrices));
                 //System.out.println("PriceForReservation " + Data.priceForReservation);
@@ -53,7 +53,7 @@ public class Payments {
         writer.newLine();
     }
 
-    private static void generatePrice(boolean workshop) {
+    private static void generatePrice() {
 
 
             if(Data.daysToConf >= 30) {
@@ -80,7 +80,7 @@ public class Payments {
                 Data.priceForReservation = Data.priceForReservation.add(BigDecimal.valueOf(Data.confResSize).multiply(BigDecimal.valueOf(Data.pricePerSlot)));
             }
         
-        if(workshop) Data.priceForReservation = Data.priceForReservation.add(BigDecimal.valueOf(Data.confResSize).multiply(BigDecimal.valueOf
+        if(Data.makeWorkshopRes == true) Data.priceForReservation = Data.priceForReservation.add(BigDecimal.valueOf(Data.confResSize).multiply(BigDecimal.valueOf
                 (Data.workPrices.get(Data.workResWorkId))));
 
     }

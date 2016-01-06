@@ -4,7 +4,7 @@ import java.io.BufferedWriter;
 import java.io.IOException;
 import java.text.ParseException;
 import java.util.Calendar;
-import java.util.LinkedList;
+import java.util.HashSet;
 
 /**
  * Created by czopo on 1/2/16.
@@ -15,19 +15,14 @@ public class ConfReservations {
         Data.confSlotsLeft = Data.currentConfSlots;
         Data.workSlotsLeft = Data.currentSlotsWork;
         Data.amountOfConfRes = Data.MIN_RES_CONF + Data.r.nextInt(Data.MAX_RES_CONF - Data.MIN_RES_CONF);
+
+
+        Data.listOfAdultsOnThisConf = new HashSet<>();
+        Data.listOfStudentsOnThisConf = new HashSet<>();
         
-        boolean workshop;
         
         for(int i = 0; i < Data.amountOfConfRes; i++) {
             generateConfRes(writer);
-            if(Data.r.nextInt(5) != 0) {
-                WorkReservations.generate(writer);
-                workshop = true;
-            } else {
-                workshop = false;
-            }
-            ResDetails.generate(writer, workshop);
-            Payments.generate(writer,workshop);
         }
         writer.newLine();
     }
@@ -38,17 +33,14 @@ public class ConfReservations {
         generateConfResSize();
         generateReservationDate();
         Data.confSlotsLeft -= Data.confResSize;
-        Data.listOfClients = new LinkedList<Integer>();
-        Data.listOfAdultsOnThisConf = new LinkedList<Integer>();
-        Data.listOfStudentsOnThisConf = new LinkedList<Integer>();
- 
+        Data.listOfClients = new HashSet<>();
+        
         do {
             Data.clientID = 1 + Data.r.nextInt(Data.AMOUNT_OF_CLIENTS);
-        } while(Data.listOfClients.contains(Data.clientID));
+        } while(Data.listOfClients.contains(Integer.valueOf(Data.clientID)));
         
-        Data.listOfClients.add(Data.clientID);
-
         if(Data.confSlotsLeft >= 0) {
+            Data.listOfClients.add(Data.clientID);
             Data.confResID++;
             writer.newLine();
             Data.mainBuilder.delete(0, Data.mainBuilder.length());
@@ -63,6 +55,17 @@ public class ConfReservations {
             Data.mainBuilder.append(", 0)");
             writer.write(Data.mainBuilder.toString());
             writer.newLine();
+
+            if(Data.r.nextInt(5) != 0) {
+                Data.makeWorkshopRes = true;
+                WorkReservations.generate(writer);
+            } else {
+                Data.makeWorkshopRes = false;
+            }
+            ResDetails.generate(writer);
+            Payments.generate(writer);
+            
+            
         }
     }
     

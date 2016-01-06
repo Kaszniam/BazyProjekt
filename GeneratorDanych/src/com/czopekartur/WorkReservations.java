@@ -30,6 +30,8 @@ public class WorkReservations {
             writer.newLine();
             writer.newLine();
             Data.listOfWorkshopSlots.set(el, Data.workResWorkSlots - Data.confResSize);
+        } else {
+            Data.makeWorkshopRes = false;
         }
     }
 }

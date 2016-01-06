@@ -2,17 +2,18 @@ package com.czopekartur;
 
 import java.io.BufferedWriter;
 import java.io.IOException;
-import java.util.ArrayList;
+import java.util.HashSet;
 
 /**
  * Created by czopo on 1/3/16.
  */
 public class ResDetails {
 
-    public static void generate(BufferedWriter writer, boolean workshop) throws IOException {
+    public static void generate(BufferedWriter writer) throws IOException {
 
-        Data.listOfAdults = new ArrayList<Integer>();
-        Data.listOfStudents = new ArrayList<Integer>();
+        Data.listOfAdultsInThisRes = new HashSet<>();
+        Data.listOfStudentsInThisRes =  new HashSet<>();
+
 
         for (int i = 0; i < Data.amountOfAdults; i++) {
             generateAdult();
@@ -27,7 +28,9 @@ public class ResDetails {
             writer.write(Data.mainBuilder.toString());
             writer.newLine();
 
-            if (workshop) addToWork(writer, "ADULT");
+            if (Data.makeWorkshopRes == true) {
+                addToWork(writer, "ADULT");
+            }
         }
 
 
@@ -46,7 +49,9 @@ public class ResDetails {
             writer.write(Data.mainBuilder.toString());
             writer.newLine();
 
-            if (workshop) addToWork(writer, "STUDENT");
+            if (Data.makeWorkshopRes == true) {
+                addToWork(writer, "STUDENT");
+            }
         }
 
         writer.newLine();
@@ -76,19 +81,21 @@ public class ResDetails {
         
         do {
             Data.adultID = 1 + Data.r.nextInt(Data.AMOUNT_OF_PEOPLE);
-        } while(Data.listOfAdultsOnThisConf.contains(Data.adultID));
+        } while(Data.listOfAdultsOnThisConf.contains(Integer.valueOf(Data.adultID))
+                || Data.listOfAdultsInThisRes.contains(Integer.valueOf(Data.adultID)));
         
-        Data.listOfAdults.add(Data.adultID);
-        Data.listOfAdultsOnThisConf.add(Data.adultID);
+        Data.listOfAdultsInThisRes.add(Integer.valueOf(Data.adultID));
+        Data.listOfAdultsOnThisConf.add(Integer.valueOf(Data.adultID));
     }
         
     private static void generateStudent() throws IOException {
            
         do {
             Data.studentID = 1 + Data.AMOUNT_OF_PEOPLE + Data.r.nextInt(Data.AMOUNT_OF_STUDENTS);
-        } while(Data.listOfStudentsOnThisConf.contains(Data.studentID));
+        } while(Data.listOfStudentsOnThisConf.contains(Integer.valueOf(Data.studentID)) ||
+                Data.listOfStudentsInThisRes.contains(Integer.valueOf(Data.studentID)));
         
-        Data.listOfStudents.add(Data.studentID);
-        Data.listOfStudentsOnThisConf.add(Data.studentID);
+        Data.listOfStudentsInThisRes.add(Integer.valueOf(Data.studentID));
+        Data.listOfStudentsOnThisConf.add(Integer.valueOf(Data.studentID));
         }
 }

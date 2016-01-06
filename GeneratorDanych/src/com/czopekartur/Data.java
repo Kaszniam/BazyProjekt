@@ -64,16 +64,17 @@ public class Data {
     public static int daysBeforeRes;
     public static int confResID = 0;
     public static String currentConfResDate ="";
-    public static List<Integer> listOfClients;
-    public static List<Integer> listOfAdultsOnThisConf;
-    public static List<Integer> listOfStudentsOnThisConf;
+    public static Set<Integer> listOfClients;
+    public static Set<Integer> listOfAdultsOnThisConf;
+    public static Set<Integer> listOfStudentsOnThisConf;
     
     
     //CONFRESDETAILS    
-    public static List<Integer> listOfAdults;
-    public static List<Integer> listOfStudents;
+    public static Set<Integer> listOfAdultsInThisRes;
+    public static Set<Integer> listOfStudentsInThisRes;
     public static int adultID;
     public static int studentID;
+    public static boolean makeWorkshopRes;
     
     
     //DAYS
@@ -119,7 +120,7 @@ public class Data {
     
     //WORKSHOPS
     public final static int DIFF_TIME_WORK = 30;           //minutes of interval
-    public final static int MULTI_WORK = 4;
+    public final static int MULTI_WORK = 5;
     public final static int MIN_WORKS = 2;
     public final static int MAX_WORKS = 6;
     public final static int MIN_PRICE_WORK = 0;
